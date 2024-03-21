@@ -1,0 +1,12 @@
+position = "bottom"
+height = 30
+
+[[start]]
+type = "workspaces"
+
+[[center]]
+type = "clock"
+format = "%A, %b %d | %I:%M %p"
+
+[[end]]
+type = "upower"

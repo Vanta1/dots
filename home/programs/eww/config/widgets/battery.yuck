@@ -1,0 +1,10 @@
+(defpoll bat :initial "100" :interval "30s" `get_battery.sh`)
+(defpoll left :initial "5:00:00" :interval "30s" `acpi -b | cut -d ' ' -f 5,6,7`)
+
+(defwidget battery []
+    (box
+        :class "${ bat <= 15 ? 'low-battery' : (bat == 100 ? 'full-battery' : 'battery') }"
+        :tooltip "${left}"
+        "${bat}%"
+    )
+)

@@ -1,5 +1,3 @@
-#!/bin/bash
-
 kitty @ set-colors background="#2D353B"
 kitty @ set-background-opacity 1.0
 nvim $*

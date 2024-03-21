@@ -1,7 +1,4 @@
-#!/bin/bash
-
 cmd=$(pactl subscribe | grep "Event 'change' on sink")
-
 stdbuf -oL $cmd |
   while IFS= read -r line
   do

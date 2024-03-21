@@ -1,5 +1,3 @@
-#!/bin/bash
-
 FILENAME=$HOME'/screenshots/%Y-%m-%d_$wx$h.png'
 
 if [[ $# == 0 ]]; then

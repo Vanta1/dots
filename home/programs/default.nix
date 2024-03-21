@@ -26,6 +26,7 @@
     vlc
     chromium
     wireplumber
+    xdg-utils
   ];
 
   programs.obs-studio.enable = true;

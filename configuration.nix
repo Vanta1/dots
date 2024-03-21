@@ -5,7 +5,7 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = [ "i915.enable_guc=3" ]; # should prob move to hardware-configuration.nix
+  boot.kernelParams = [ "i915.enable_guc=3" ]; # should prob move to hardware-configuration.nix, but it's for hardware accel for jellyfin
 
   networking.hostName = "nixtop"; 
   networking.networkmanager.enable = true;
@@ -29,20 +29,20 @@
   # for using waydroid: https://nixos.wiki/wiki/WayDroid
   virtualisation.waydroid.enable = true;
 
-  time.timeZone = "America/Toronto";
+  time.timeZone = "America/Toronto"; # TODO: anonymize this
   i18n.defaultLocale = "en_CA.UTF-8";
 
   # Packages
   environment.systemPackages = with pkgs; [ # packages available to all users
-     git
-     vim
-     unzip 
-     exfat
-     ntfs3g
-     jellyfin
-     jellyfin-web
-     jellyfin-ffmpeg
-     intel-gpu-tools
+    git
+    vim
+    unzip 
+    exfat
+    ntfs3g
+    jellyfin
+    jellyfin-web
+    jellyfin-ffmpeg
+    intel-gpu-tools
   ];
 
   fonts.packages = with pkgs; [
@@ -74,7 +74,7 @@
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
   
-  services.upower.enable = true;
+  services.upower.enable = true; # for ironbar, probably don't need if i update that to use get_battery.sh
 
   services.mullvad-vpn.enable = true;
 

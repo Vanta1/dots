@@ -7,15 +7,14 @@
   home.packages = with pkgs; [
     tofi
     waypaper
-    swaybg
+    swaybg # backend for waypaper
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
-    ];
+    plugins = [ inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars ];
+    
     settings = {
       exec-once = "waypaper --restore";
       monitor = "eDP-1,1920x1200,0x0,1";

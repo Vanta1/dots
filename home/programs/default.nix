@@ -2,9 +2,11 @@
   imports = [
     ./zsh.nix
 
+    # window manager / desktop stuff
     ./hyprland
     ./ironbar
 
+    # other programs
     ./firefox.nix
     ./zathura.nix
     ./kitty.nix
@@ -24,9 +26,8 @@
     qbittorrent
     wf-recorder
     vlc
-    chromium
-    wireplumber
-    xdg-utils
+    wireplumber # wpctl - pipewire controls
+    xdg-utils # open links in browser
   ];
 
   programs.obs-studio.enable = true;

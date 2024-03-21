@@ -10,11 +10,6 @@
     swaybg
   ];
 
-  xdg.portal = { 
-    enable = true; 
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; 
-  };
-
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;

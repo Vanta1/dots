@@ -65,6 +65,11 @@
     shell = pkgs.zsh;
   };
 
+  xdg.portal = { 
+    enable = true; 
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ]; 
+  };
+
   services.jellyfin = {
     enable = true;
     user = "vanta";

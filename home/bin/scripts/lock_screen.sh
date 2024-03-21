@@ -1,4 +1,3 @@
-#!/bin/bash
 source ~/.config/herbstluftwm/themes/everforest.sh
 
 bg=$(cat ~/.fehbg | cut -d " " -f 4 | awk 'NR==2 {print substr($0, 2, length($0) - 2)}')

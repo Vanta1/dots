@@ -1,5 +1,3 @@
-#!/bin/bash
-
 update_active_workspaces() {
   eww update workspace1_has_client="$(herbstclient list_clients --tag=1)"
   eww update workspace2_has_client="$(herbstclient list_clients --tag=2)"

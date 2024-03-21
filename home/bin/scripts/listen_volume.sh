@@ -1,5 +1,3 @@
-#!/bin/bash
-
 update_volume() {
   eww update current_volume=$(get_volume.sh)
   eww update mute=$(pactl get-default-sink | xargs pactl get-sink-mute $1 | cut -d ' ' -f 2)

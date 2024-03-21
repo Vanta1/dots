@@ -1,4 +1,3 @@
-#!/bin/bash
 # Get your latitude and longitude quick n easy
 
 LAT_LONG="$(curl --silent ipinfo.io | jq .loc)"

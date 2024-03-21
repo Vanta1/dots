@@ -1,5 +1,3 @@
-#!/usr/bin/bash
-
 vol=`pactl get-sink-volume @DEFAULT_SINK@`
 def=`echo $vol | cut -d " " -f 5`
 

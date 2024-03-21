@@ -1,5 +1,3 @@
-#!/bin/bash
-
 bat=`acpi -b | cut -d " " -f 4`
 if [[ $bat == *,*  ]] 
 then

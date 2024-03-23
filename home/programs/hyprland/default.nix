@@ -51,10 +51,13 @@
           enabled = "false"; 
         };
       };
+      gestures = {
+        workspace_swipe = "true";
+        workspace_swipe_invert = "false";
+      };
       animations.enabled = "no";
       dwindle.preserve_split = "yes";
       master.new_is_master = "true";
-      gestures.workspace_swipe = "off";
       misc.disable_hyprland_logo = "true";
     };
     # for some reason, home-manager puts '.extraConfig' after plugins are imported, but '.settings' before, which means plugins need to be configured in '.extraConfig'.

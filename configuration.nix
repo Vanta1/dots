@@ -83,7 +83,7 @@
   hardware.opengl = {
     enable = true; # need this for Hyprland to work when enabled with home-manager
     extraPackages = with pkgs; [ # TODO: clean this up, along w kernelParams and the other intel-gpu mess i made
-      intel-media-driver
+      intel-media-driver # these are for 1
       intel-compute-runtime 
       intel-vaapi-driver 
       vaapiVdpau
@@ -97,6 +97,12 @@
 
   programs.zsh.enable = true; # must be enabled in configuration.nix to be set as the default user shell, but I've configured it with home-manager
  
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  };
+
   services.avahi = {
     enable = true;
     nssmdns = true; # enables '.local' addresses 

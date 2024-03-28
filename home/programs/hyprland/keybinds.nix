@@ -23,6 +23,7 @@
       "$mod, W, exec, waypaper" # wallpaper setter
       "$mod SHIFT, P, exec, manage_airpods.sh" # toggles my airpods TODO: move to some custom just-for-me file, so this is redistributable
       "$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # launcher
+      "$mod SHIFT, C, exec, code"
 
       # misc important
       "$mod CTRL, Q, exit,"

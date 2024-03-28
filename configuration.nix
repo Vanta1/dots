@@ -1,5 +1,6 @@
 { config, pkgs, ... }: {
   imports = [  
+    ./secrets.nix # my secrets
     ./hardware-configuration.nix
   ];
 
@@ -29,7 +30,7 @@
   # for using waydroid: https://nixos.wiki/wiki/WayDroid
   virtualisation.waydroid.enable = true;
 
-  time.timeZone = "America/Toronto"; # TODO: anonymize this
+  time.timeZone = secrets.location;
   i18n.defaultLocale = "en_CA.UTF-8";
 
   # Packages

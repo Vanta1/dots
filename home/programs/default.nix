@@ -7,7 +7,7 @@
     ./ironbar
 
     # other programs
-    ./firefox.nix
+    ./firefox
     ./zathura.nix
     ./kitty.nix
   ];
@@ -28,6 +28,9 @@
     vlc
     wireplumber # wpctl - pipewire controls
     xdg-utils # open links in browser
+    chromium
+    feh
+    moonlight-qt
   ];
 
   programs.obs-studio.enable = true;

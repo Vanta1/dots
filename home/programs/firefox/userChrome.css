@@ -1,23 +1,16 @@
-{ config, pkgs, ... }: {
-  programs.firefox = {
-    enable = true;
-    profiles.vanta = {
-      settings = {
-        "layout.css.devPixelsPerPx" = "1.3";
-        "browser.tabs.closeWindowWithLastTab" = false;
-        "toolkit.legacyUserProfileCustomizations.stylesheets" = true; # enable userChrome.css
-      };
-      userChrome = ''
-        // stuff i added
-        #tabbrowser-tabs:first-child {
-          padding-left: 2px !important; // this always bothers me idk why its just slightly closer 
-        }
-        .tab-background {
-           border-radius: 8px !important; // matches tabs border radius to the windows.
-        }
+/* stuff i added */
 
-        // the rest of this is from: https://github.com/mimipile/firefoxCSS
-        /* Navbar size calc stuff */
+#tabbrowser-tabs:first-child {
+  padding-left: 2px !important; /* this always bothers me idk why its just slightly closer */
+}
+.tab-background {
+   border-radius: 8px !important; /* matches tabs border radius to the windows. */
+}
+    
+/* the rest of this is from: https://github.com/mimipile/firefoxCSS */
+        
+/* Navbar size calc stuff */
+
 :root{
 --tab-border-radius: 6px !important; /*  Tab border radius -- Changes the tabs rounding  *//*  Default: 6px  */
 --NavbarWidth: 43; /*  Default values: 36 - 43  */
@@ -140,9 +133,4 @@
 #urlbar:not(:hover):not([breakout][breakout-extend]) > #urlbar-background {
     box-shadow: none !important;
     background: #0000 !important;
-}
-      '';
-    };
-    
-  };
 }

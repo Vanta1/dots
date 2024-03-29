@@ -4,7 +4,7 @@
 
     # window manager / desktop stuff
     ./hyprland
-    ./ironbar
+    ./waybar
 
     # other programs
     ./firefox

@@ -1,0 +1,6 @@
+* { padding: 0; margin: 0; } /* required to set the bar height less than 34 */
+
+window#waybar {
+    background-color: #272e33;
+    color: #d3c6aa;
+}

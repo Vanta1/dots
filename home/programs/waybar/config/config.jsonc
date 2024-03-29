@@ -1,0 +1,23 @@
+{
+    "position": "bottom",
+    "height": 30,
+    "reload-style-on-change": true,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "upower"
+    ],
+    "hyprland/workspaces": {
+        "persistent-workspaces": { "*": 10 }
+    },
+    "upower": {
+        "show-icon": false
+    },
+    "clock": {
+        "format": "{:%A, %b %d | %I:%M %p}"
+    }
+}

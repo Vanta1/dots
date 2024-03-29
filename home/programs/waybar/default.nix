@@ -4,5 +4,5 @@
   home.file."${config.xdg.configHome}/waybar/" = {
     source = ./config;
     recursive = true; # not necessary ATM, just future proofing
-  }
+  };
 }

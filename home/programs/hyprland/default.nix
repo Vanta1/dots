@@ -16,7 +16,11 @@
     plugins = [ inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars ];
     
     settings = {
-      exec-once = "waypaper --restore";
+      # programs on startup
+      exec-once = [ 
+        "waypaper --restore" 
+        "waybar"
+      ];
       monitor = "eDP-1,1920x1200,0x0,1";
       bindm = [
         "$mod, mouse:272, movewindow"

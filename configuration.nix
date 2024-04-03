@@ -56,6 +56,7 @@
     # fonts i like
     fira 
     fira-code
+    monaspace
   ];
 
   users.users.vanta = {

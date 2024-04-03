@@ -5,10 +5,12 @@
 
     # media keybinds (e = hold to repeat, l = available on lockscreen)
     bindel = [
+      # brightnesctl: -e flag means exponential curve, rather than linear when adjusting brightness. works better for me
       ", XF86MonBrightnessUp, exec, brightnessctl -e --min-value=1 set 5%+" 
       ", XF86MonBrightnessDown, exec, brightnessctl -e --min-value=1 set 5%-" 
-      ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_SINK@ 5%+"
-      ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_SINK@ 5%-"  
+      # volume controls
+      ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
+      ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"  
     ];
 
     bindl = [
@@ -18,12 +20,12 @@
 
     bind = [
       # programs
-      "$mod, RETURN, exec, kitty" # terminal emulator
+      "$mod, RETURN, exec, alacritty" # terminal emulator
       "$mod, B, exec, firefox" # b for browser
       "$mod, W, exec, waypaper" # wallpaper setter
-      "$mod SHIFT, P, exec, manage_airpods.sh" # toggles my airpods TODO: move to some custom just-for-me file, so this is redistributable
-      "$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # launcher
-      "$mod SHIFT, C, exec, code"
+      "$mod SHIFT, P, exec, manage_airpods.sh" # toggles my airpods
+      "$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # launcher, o for open, close with $mod+O or ESC
+      "$mod SHIFT, C, exec, code" 
 
       # misc important
       "$mod CTRL, Q, exit,"

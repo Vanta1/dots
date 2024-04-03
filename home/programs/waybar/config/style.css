@@ -3,4 +3,18 @@
 window#waybar {
     background-color: #272e33;
     color: #d3c6aa;
+    font-family: Noto;
+    font-size: 12pt;
+}
+
+#battery {
+    color: #a7c080;
+}
+
+#battery.warning {
+    color: #dbbc7f;
+}
+
+#battery.critical {
+    color: #e67e80;
 }

@@ -10,6 +10,7 @@
     ./firefox
     ./zathura.nix
     ./kitty.nix
+    ./alacritty.nix
   ];
 
   home.packages = with pkgs; [

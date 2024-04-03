@@ -1,7 +1,6 @@
 {
     "position": "bottom",
     "height": 30,
-    "reload-style-on-change": true,
     "modules-left": [
         "hyprland/workspaces"
     ],
@@ -9,15 +8,20 @@
         "clock"
     ],
     "modules-right": [
-        "upower"
+        "battery"
     ],
     "hyprland/workspaces": {
         "persistent-workspaces": { "*": 10 }
     },
-    "upower": {
-        "show-icon": false
-    },
     "clock": {
         "format": "{:%A, %b %d | %I:%M %p}"
+    },
+    "battery": {
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}%"
     }
 }

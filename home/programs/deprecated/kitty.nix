@@ -1,5 +1,4 @@
 { config, pkgs, ... }: {
-  # currently using alacritty instead of kitty because it supports Monaspace easier
   programs.kitty = {
     enable = true;
     theme = "Everforest Dark Hard";

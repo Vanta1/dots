@@ -1,20 +1,29 @@
 {
     "position": "bottom",
-    "height": 30,
+    "height": 30, // matches with hyprbar height, which feels satisfying with fullscreen windows imo
     "modules-left": [
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "clock"
+        "clock#date",
+        "clock#time"
     ],
     "modules-right": [
+        /* TODO:  add seperator module, recolour and format these modules
+        "tray",
+        "wireplumber",
+        "network",
+        */
         "battery"
     ],
     "hyprland/workspaces": {
         "persistent-workspaces": { "*": 10 }
     },
-    "clock": {
-        "format": "{:%A, %b %d | %I:%M %p}"
+    "clock#date": {
+        "format": "{:%A, %B %d | }"
+    },
+    "clock#time": {
+        "format": "{:%I:%M %p}"
     },
     "battery": {
         "interval": 60,

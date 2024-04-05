@@ -9,7 +9,6 @@
     # other programs
     ./firefox
     ./zathura.nix
-    ./kitty.nix
     ./alacritty.nix
   ];
 

@@ -16,16 +16,14 @@
     plugins = [ inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars ];
     
     settings = {
-      # programs on startup
+      # programs run once on startup
       exec-once = [ 
-        "waypaper --restore" 
+        "waypaper --restore"
         "waybar"
       ];
+
       monitor = "eDP-1,1920x1200,0x0,1";
-      bindm = [
-        "$mod, mouse:272, movewindow"
-        "$mod, mouse:273, resizewindow"
-      ];
+
       input = {
         kb_layout = "us";
         follow_mouse = "1";
@@ -34,6 +32,7 @@
         };
         sensitivity = "0";
       };
+
       general = {
         gaps_in = "6";
         gaps_out = "12";
@@ -45,9 +44,11 @@
         layout = "dwindle";
         allow_tearing = "false";
       };
+
       dwindle = {
         no_gaps_when_only = "1";
       };
+
       decoration = {
         rounding = "12";
         drop_shadow = "false";
@@ -55,10 +56,12 @@
           enabled = "false"; 
         };
       };
+
       gestures = {
         workspace_swipe = "true";
         workspace_swipe_invert = "false";
       };
+
       animations.enabled = "no";
       dwindle.preserve_split = "yes";
       master.new_is_master = "true";

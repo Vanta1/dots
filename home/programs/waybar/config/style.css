@@ -1,10 +1,33 @@
-* { padding: 0; margin: 0; } /* required to set the bar height less than 34 */
+/* required to set the bar height less than 34 */
+* { padding: 0; margin: 0; }
+
+/* correct text placement/baseline */
+.modules-left, .modules-center, .modules-right { margin-bottom: -3px; }
+
+/* pad modules from screen border */
+.modules-left  { margin-left:  2px; }
+.modules-right { margin-right: 7px; }  
 
 window#waybar {
     background-color: #272e33;
     color: #d3c6aa;
     font-family: Monaspace Xenon;
     font-size: 12pt;
+}
+
+#workspaces button {
+    color: #d3c6aa;
+    padding: 0 3px;
+    border-radius: 0;
+}
+
+#workspaces button.empty {
+    color: #9da9a0;
+}
+
+#workspaces button.active {
+    background-color: #374145;
+    color: #d3c6aa;
 }
 
 #battery {

@@ -12,7 +12,7 @@
     # my keybinds
     # 'bind' + 'e' = hold to repeat, 'l' = available on lockscreen
 
-    # media keybinds 
+    # media keybinds, don't use mod keys 
     bindel = [
       # brightnesctl: -e flag means exponential curve, rather than linear when adjusting brightness. works better for me
       ", XF86MonBrightnessUp, exec, brightnessctl -e --min-value=1 set 5%+" 
@@ -23,6 +23,7 @@
     ];
 
     bindl = [
+      # mic controls, need to testtt
       ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
       ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
     ];

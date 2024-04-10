@@ -32,12 +32,12 @@
           ./configuration.nix
           home-manager.nixosModules.home-manager {
             # 'extra'? special args sent to home/default.nix
-            home-manager.users.${user} = import ./home;
+	          home-manager.extraSpecialArgs = { inherit inputs user; };
 
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-	          home-manager.extraSpecialArgs = { inherit inputs user; };
+            home-manager.users.${user} = import ./home;
           }
         ];
       };

@@ -67,6 +67,7 @@
       master.new_is_master = "true";
       misc.disable_hyprland_logo = "true";
     };
+    
     # for some reason, home-manager puts '.extraConfig' after plugins are imported, but '.settings' before, which means plugins need to be configured in '.extraConfig'.
     extraConfig = ''
       plugin {

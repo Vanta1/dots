@@ -1,8 +1,8 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, user, ... }: {
   programs.firefox = {
     enable = true;
 
-    profiles.vanta = {
+    profiles.${user} = {
       settings = {
         "layout.css.devPixelsPerPx" = "1.3";
         "browser.tabs.closeWindowWithLastTab" = false;

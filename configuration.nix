@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, user, ... }: {
   imports = [
     ./hardware-configuration.nix
   ];
@@ -59,9 +59,9 @@
     monaspace
   ];
 
-  users.users.vanta = {
+  users.users.${user} = {
     isNormalUser = true;
-    description = "Vanta1";
+    description = "default user, with sudo privileges";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
   };
@@ -69,15 +69,16 @@
   # scripts run after nixos-rebuild 
   system.activationScripts = { 
     # tofi-drun won't detect newly installed applications unless you manually delete the cache, so it has to rebuild it
-    # TODO: fix this using let { user = vanta } in ... (/home/${user}/.cache/tofi-drun)
+    # send all output to /dev/null to suppress "file does not exist" errors, and run it in the background and discard the output because nixos-rebuild will still check the result of the command
     refresh-tofi.text = ''
-      rm /home/vanta/.cache/tofi-drun 
+      echo "refreshing tofi cache..."
+      rm /home/${user}/.cache/tofi-drun &> /dev/null &!
     '';
   };
 
   services.jellyfin = {
     enable = true;
-    user = "vanta";
+    user = "${user}";
   };
 
   hardware.bluetooth.enable = true;
@@ -120,8 +121,10 @@
   
   # Mount, trash, and other usb drive functionalities, i think i might also like to move this to hardware-configuration
   services.gvfs.enable = true; 
-  services.udisks2.enable = true;
-  services.devmon.enable = true;
+
+  # needed for automatically mounting external usb drives with udiskie (enabled with home-manager) 
+  # TODO: review if i should put udiskie in this file
+  services.udisks2.enable = true; 
 
   nixpkgs.config.allowUnfree = true;
 

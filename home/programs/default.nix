@@ -26,7 +26,7 @@
     qbittorrent # torrenting
     wf-recorder
     vlc
-    wireplumber # wpctl - pipewire controls
+    wireplumber # wpctl - pipewire (audio server) controls
     xdg-utils # open links in browser
     chromium # i use firefox, but google earth studio is chrome only
     feh # image viewer
@@ -39,7 +39,7 @@
 
   programs.obs-studio.enable = true;
 
-  services.dunst.enable = true;
+  services.dunst.enable = true; # notification daemon
 
   programs.git = {
     enable = true;

@@ -32,7 +32,7 @@
           ./configuration.nix
           home-manager.nixosModules.home-manager {
             # 'extra'? special args sent to home/default.nix
-	          home-manager.extraSpecialArgs = { inherit inputs user; };
+            home-manager.extraSpecialArgs = { inherit inputs user; };
 
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

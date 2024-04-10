@@ -10,10 +10,10 @@
     ],
     "modules-right": [
         /* TODO:  add seperator module, recolour and format these modules
-        "tray",
         "wireplumber",
         "network",
         */
+        "tray",
         "battery"
     ],
     "hyprland/workspaces": {

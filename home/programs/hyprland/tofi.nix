@@ -15,5 +15,6 @@
     padding-top = 35%
     num-results = 5
     result-spacing = 5
+    outline-width = 0
   '';
 }

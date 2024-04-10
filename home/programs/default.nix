@@ -17,21 +17,24 @@
     which
     tree
     gnupg
-    btop
-    acpi
+    btop # system monitor
+    acpi # power info
     vscode
-    brightnessctl
-    gammastep
-    pcmanfm
-    qbittorrent
+    brightnessctl 
+    gammastep 
+    pcmanfm # file manager
+    qbittorrent # torrenting
     wf-recorder
     vlc
     wireplumber # wpctl - pipewire controls
     xdg-utils # open links in browser
     chromium # i use firefox, but google earth studio is chrome only
-    feh
+    feh # image viewer
     moonlight-qt
-    minecraft
+    minecraft # mining and crafting game
+    grim # screenshot util
+    musescore # sheet music software
+    discord # we all know what discord is
   ];
 
   programs.obs-studio.enable = true;

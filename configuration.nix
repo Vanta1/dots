@@ -66,6 +66,15 @@
     shell = pkgs.zsh;
   };
 
+  # scripts run after nixos-rebuild 
+  system.activationScripts = { 
+    # tofi-drun won't detect newly installed applications unless you manually delete the cache, so it has to rebuild it
+    # TODO: fix this using let { user = vanta } in ... (/home/${user}/.cache/tofi-drun)
+    refresh-tofi.text = ''
+      rm /home/vanta/.cache/tofi-drun 
+    '';
+  };
+
   services.jellyfin = {
     enable = true;
     user = "vanta";

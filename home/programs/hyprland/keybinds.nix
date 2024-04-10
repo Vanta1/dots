@@ -35,8 +35,8 @@
       "$mod, W, exec, waypaper" # wallpaper setter
       "$mod SHIFT, P, exec, manage_airpods.sh" # toggles my airpods
       "$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # launcher, o for open, close with $mod+O or ESC
-      "$mod SHIFT, C, exec, code" # c for vscode
       "$mod SHIFT, R, exec, pkill waybar ; waybar &!" # refresh waybar
+      "$mod SHIFT, S, exec, grim" # screenshot
 
       # window management keybinds
 
@@ -58,29 +58,29 @@
       "$mod, 9, workspace, 9"
       "$mod, 0, workspace, 10"
 
-      # send a window to a workspace w/ shift + workspace number
-      "$mod SHIFT, 1, movetoworkspacesilent, 1"
-      "$mod SHIFT, 2, movetoworkspacesilent, 2"
-      "$mod SHIFT, 3, movetoworkspacesilent, 3"
-      "$mod SHIFT, 4, movetoworkspacesilent, 4"
-      "$mod SHIFT, 5, movetoworkspacesilent, 5"
-      "$mod SHIFT, 6, movetoworkspacesilent, 6"
-      "$mod SHIFT, 7, movetoworkspacesilent, 7"
-      "$mod SHIFT, 8, movetoworkspacesilent, 8"
-      "$mod SHIFT, 9, movetoworkspacesilent, 9"
-      "$mod SHIFT, 0, movetoworkspacesilent, 10"
+      # move window and set current workspace w/ shift + workspace number
+      "$mod SHIFT, 1, movetoworkspace, 1"
+      "$mod SHIFT, 2, movetoworkspace, 2"
+      "$mod SHIFT, 3, movetoworkspace, 3"
+      "$mod SHIFT, 4, movetoworkspace, 4"
+      "$mod SHIFT, 5, movetoworkspace, 5"
+      "$mod SHIFT, 6, movetoworkspace, 6"
+      "$mod SHIFT, 7, movetoworkspace, 7"
+      "$mod SHIFT, 8, movetoworkspace, 8"
+      "$mod SHIFT, 9, movetoworkspace, 9"
+      "$mod SHIFT, 0, movetoworkspace, 10"
 
-      # move window and set current workspace w/ control + workspace number
-      "$mod CTRL, 1, movetoworkspace, 1"
-      "$mod CTRL, 2, movetoworkspace, 2"
-      "$mod CTRL, 3, movetoworkspace, 3"
-      "$mod CTRL, 4, movetoworkspace, 4"
-      "$mod CTRL, 5, movetoworkspace, 5"
-      "$mod CTRL, 6, movetoworkspace, 6"
-      "$mod CTRL, 7, movetoworkspace, 7"
-      "$mod CTRL, 8, movetoworkspace, 8"
-      "$mod CTRL, 9, movetoworkspace, 9"
-      "$mod CTRL, 0, movetoworkspace, 10"
+      # send a window to a workspace w/ control + workspace number
+      "$mod CTRL, 1, movetoworkspacesilent, 1"
+      "$mod CTRL, 2, movetoworkspacesilent, 2"
+      "$mod CTRL, 3, movetoworkspacesilent, 3"
+      "$mod CTRL, 4, movetoworkspacesilent, 4"
+      "$mod CTRL, 5, movetoworkspacesilent, 5"
+      "$mod CTRL, 6, movetoworkspacesilent, 6"
+      "$mod CTRL, 7, movetoworkspacesilent, 7"
+      "$mod CTRL, 8, movetoworkspacesilent, 8"
+      "$mod CTRL, 9, movetoworkspacesilent, 9"
+      "$mod CTRL, 0, movetoworkspacesilent, 10"
     ];
 
     binde = [
@@ -102,7 +102,7 @@
       "$mod CTRL, K, resizeactive, 0 -$resizeStep"
       "$mod CTRL, L, resizeactive, $resizeStep 0"
 
-      ## Uncomment for arrow key navigation + resizing in addition to vim keys (HJKL : ←↓↑→)
+      # Uncomment for arrow key navigation + resizing in addition to vim keys
       #"$mod, left, movefocus, l"
       #"$mod, down, movefocus, d"
       #"$mod, up, movefocus, u"

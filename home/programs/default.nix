@@ -28,9 +28,10 @@
     vlc
     wireplumber # wpctl - pipewire controls
     xdg-utils # open links in browser
-    chromium
+    chromium # i use firefox, but google earth studio is chrome only
     feh
     moonlight-qt
+    minecraft
   ];
 
   programs.obs-studio.enable = true;

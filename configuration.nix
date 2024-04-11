@@ -32,13 +32,16 @@
   time.timeZone = "America/Toronto";
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  # Packages
-  environment.systemPackages = with pkgs; [ # packages available to all users
+  # Packages, available to all users
+  environment.systemPackages = with pkgs; [
+    # basic utilities, expected linux stuff
     git
     vim
     unzip 
     exfat
     ntfs3g
+
+    # jellyfin, this is a systemd service that's run as the default user
     jellyfin
     jellyfin-web
     jellyfin-ffmpeg
@@ -58,6 +61,10 @@
     fira-code
     monaspace
   ];
+
+  programs.nix-ld = {
+    enable = true;
+  };
 
   users.users.${user} = {
     isNormalUser = true;
@@ -102,7 +109,9 @@
     ];
   };
   
-  environment.sessionVariables = { LIBVA_DRIVER_NAME = "iHD"; }; # Force intel-media-driver
+  environment.sessionVariables = { 
+    LIBVA_DRIVER_NAME = "iHD"; # Force intel-media-driver
+  };
 
   services.tlp.enable = true; # saves so much power on my laptop
 

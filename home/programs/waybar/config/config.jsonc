@@ -6,21 +6,26 @@
     ],
     "modules-center": [
         "clock#date",
+        "custom/separator",
         "clock#time"
     ],
     "modules-right": [
-        /* TODO:  add seperator module, recolour and format these modules
+        /* TODO:  add separator module, recolour and format these modules
         "wireplumber",
         "network",
         */
         "tray",
+        "custom/separator",
         "battery"
     ],
+    "custom/separator": {
+        "format": " | "
+    },
     "hyprland/workspaces": {
         "persistent-workspaces": { "*": 10 }
     },
     "clock#date": {
-        "format": "{:%A, %B %d | }"
+        "format": "{:%A, %B %d}"
     },
     "clock#time": {
         "format": "{:%I:%M %p}"

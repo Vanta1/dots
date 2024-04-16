@@ -5,7 +5,7 @@
 .modules-left, .modules-center, .modules-right { margin-bottom: -3px; }
 
 /* pad modules from screen border */
-.modules-left  { margin-left:  2px; }
+.modules-left  { margin-left:  0px; }
 .modules-right { margin-right: 7px; }  
 
 window#waybar {
@@ -27,7 +27,23 @@ window#waybar {
 
 #workspaces button.active {
     background-color: #374145;
-    color: #d3c6aa;
+    color : #d3c6aa;
+}
+
+#wireplumber {
+    color: #a7c080;
+}
+
+#wireplumber.muted {
+    color: #7a8478;
+}
+
+#network.wifi {
+    color: #a7c080;
+}
+
+#network.disconnected {
+    color: #e67e80;
 }
 
 #battery {

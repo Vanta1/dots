@@ -10,11 +10,11 @@
         "clock#time"
     ],
     "modules-right": [
-        /* TODO:  add separator module, recolour and format these modules
-        "wireplumber",
-        "network",
-        */
         "tray",
+        "custom/separator",
+        "wireplumber",
+        "custom/separator",
+        "network",
         "custom/separator",
         "battery"
     ],
@@ -29,6 +29,11 @@
     },
     "clock#time": {
         "format": "{:%I:%M %p}"
+    },
+    "network": {
+        "format-wifi": "{essid}",
+        "format-disconnected": "disconnected",
+        "max-length": 50
     },
     "battery": {
         "interval": 60,

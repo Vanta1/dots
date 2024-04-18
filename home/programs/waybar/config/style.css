@@ -15,6 +15,12 @@ window#waybar {
     font-size: 12pt;
 }
 
+#custom-separator { 
+    margin-bottom: 3px; 
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
 #workspaces button {
     color: #d3c6aa;
     padding: 0 3px;

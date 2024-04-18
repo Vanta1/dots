@@ -1,6 +1,7 @@
 {
     "position": "bottom",
     "height": 30, // matches with hyprbar height, which feels satisfying with fullscreen windows imo
+    "output": "eDP-1",
     "modules-left": [
         "hyprland/workspaces"
     ],
@@ -19,7 +20,7 @@
         "battery"
     ],
     "custom/separator": {
-        "format": " | "
+        "format": "|"
     },
     "hyprland/workspaces": {
         "persistent-workspaces": { "*": 10 }

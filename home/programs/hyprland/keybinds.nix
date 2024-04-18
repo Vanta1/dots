@@ -37,6 +37,7 @@
       "$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # launcher, o for open, close with $mod+O or ESC
       "$mod SHIFT, R, exec, pkill waybar ; waybar &!" # refresh waybar
       "$mod SHIFT, S, exec, grim" # screenshot
+      "$mod SHIFT, BACKSPACE, exec, systemctl suspend" # eepy tiem
 
       # window management keybinds
 

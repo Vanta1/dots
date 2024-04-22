@@ -2,6 +2,7 @@
   description = "the root of all flakes";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    # unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-23.11";
@@ -31,7 +32,7 @@
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager {
-            # 'extra'? special args sent to home/default.nix
+            # 'extra'? special args sent to home/default.nix (atm, extra packages and username)
             home-manager.extraSpecialArgs = { inherit inputs user; };
 
             home-manager.useGlobalPkgs = true;

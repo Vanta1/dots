@@ -11,19 +11,17 @@
         "clock#time"
     ],
     "modules-right": [
-        "tray",
-        "custom/separator",
-        "wireplumber",
-        "custom/separator",
-        "network",
-        "custom/separator",
+        "tray",         "custom/separator",
+        // "taskbar",      "custom/separator", TODO: figure out if this or some kind of manual solution involving workspaces would be better for minimizing windows,,,, i probably want to make my own cause that seems fun
+        "wireplumber",  "custom/separator",
+        "network",      "custom/separator",
         "battery"
     ],
     "custom/separator": {
         "format": "|"
     },
     "hyprland/workspaces": {
-        "persistent-workspaces": { "*": 10 }
+        "persistent-workspaces": { "*": 8 }
     },
     "clock#date": {
         "format": "{:%A, %B %d}"
@@ -31,9 +29,15 @@
     "clock#time": {
         "format": "{:%I:%M %p}"
     },
+    "tray": {
+        "spacing": 9
+    },
+    "wireplumber": {
+        "format": "VOL {volume}"
+    },
     "network": {
-        "format-wifi": "{essid}",
-        "format-disconnected": "disconnected",
+        "format-wifi": "NET {essid}",
+        "format-disconnected": "NET disconnected",
         "max-length": 50
     },
     "battery": {
@@ -42,6 +46,6 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}%"
+        "format": "BAT {capacity}%"
     }
 }

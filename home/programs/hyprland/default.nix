@@ -74,6 +74,7 @@
       dwindle.preserve_split = "yes";
       master.new_is_master = "true";
       misc.disable_hyprland_logo = "true";
+      xwayland.force_zero_scaling = "true";
     };
     
     # for some reason, home-manager puts '.extraConfig' after plugins are imported, but '.settings' before, which means plugins need to be configured in '.extraConfig'.

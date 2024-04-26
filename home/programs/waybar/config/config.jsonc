@@ -18,7 +18,8 @@
         "battery"
     ],
     "custom/separator": {
-        "format": "|"
+        "format": "|",
+        "tooltip": false
     },
     "hyprland/workspaces": {
         "persistent-workspaces": { "*": 8 }
@@ -38,7 +39,8 @@
     "network": {
         "format-wifi": "NET {essid}",
         "format-disconnected": "NET disconnected",
-        "max-length": 50
+        "max-length": 50,
+        "tooltip": false
     },
     "battery": {
         "interval": 60,

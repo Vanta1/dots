@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
   programs.waybar.enable = true;
   
-  home.file."${config.xdg.configHome}/waybar/" = {
+  xdg.configFile."waybar/" = {
     source = ./config;
     recursive = true; # not necessary ATM, just future proofing
   };

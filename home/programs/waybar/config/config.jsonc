@@ -12,7 +12,7 @@
     ],
     "modules-right": [
         "tray",         "custom/separator",
-        // "taskbar",      "custom/separator", TODO: figure out if this or some kind of manual solution involving workspaces would be better for minimizing windows,,,, i probably want to make my own cause that seems fun
+        // "taskbar",      "custom/separator", // TODO: figure out if this or some kind of manual solution involving workspaces would be better for minimizing windows,,,, i probably want to make my own cause that seems fun
         "wireplumber",  "custom/separator",
         "network",      "custom/separator",
         "battery"

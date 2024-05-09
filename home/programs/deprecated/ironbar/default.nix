@@ -1,7 +1,7 @@
 { inputs, config, pkgs, ... }: {
   home.packages = [ pkgs.ironbar ];
   
-  home.file."${config.xdg.configHome}/ironbar/" = { 
+  xdg.configFile."ironbar/" = { 
     source = ./config;
     recursive = true;
   };

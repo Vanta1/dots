@@ -1,5 +1,5 @@
 { config, ... }: {
-  home.file."${config.xdg.configHome}/tofi/config".text = ''    
+  xdg.configFile."tofi/config".text = ''    
     # Text
     font = "Fira Sans"
     text-color = #d3c6aa

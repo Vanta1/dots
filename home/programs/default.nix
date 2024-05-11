@@ -1,40 +1,41 @@
 { inputs, config, pkgs, ... }: {
   imports = [
-    ./zsh.nix
+    ./zsh.nix # shell
 
     # window manager / desktop stuff
-    ./hyprland
-    ./waybar
+    ./hyprland # window manager
+    ./waybar # status bar
 
     # other programs
-    ./firefox
-    ./zathura.nix
-    ./alacritty.nix
+    ./firefox # web browser
+    ./zathura.nix # pdf viewer w/ vim like controls
+    ./alacritty.nix # terminal emulator
   ];
 
   home.packages = with pkgs; [
-    neofetch
+    neofetch # display system info for rice posts
     which
     tree
     gnupg
     btop # system monitor
     acpi # power info
-    vscode
-    brightnessctl 
+    vscode # ide
+    brightnessctl # backlight control
     gammastep 
     pcmanfm # file manager
     qbittorrent # torrenting
     wf-recorder
-    vlc
+    vlc # media player
     wireplumber # wpctl - pipewire (audio server) controls
     xdg-utils # open links in browser
     chromium # i use firefox, but google earth studio is chrome only
     feh # image viewer
-    moonlight-qt
+    moonlight-qt # remote desktop/gaming
     minecraft # mining and crafting game
-    grim # screenshot util
+    grim # screenshot utility
     musescore # sheet music software
     discord # we all know what discord is
+    thunderbird # email, calendar, todo
   ];
 
   programs.obs-studio.enable = true;

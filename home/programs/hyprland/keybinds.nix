@@ -38,6 +38,7 @@
       "$mod SHIFT, R, exec, pkill waybar ; waybar &!" # refresh waybar
       "$mod SHIFT, S, exec, grim" # screenshot
       "$mod SHIFT, BACKSPACE, exec, systemctl suspend" # eepy tiem
+      "$mod, T, exec, thunderbird" # email + calendar + todo list
 
       # window management keybinds
 

@@ -5,7 +5,10 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = [ "i915.enable_guc=3" ]; # should prob move to hardware-configuration.nix, but it's for hardware accel for jellyfin
+  boot.kernelParams = [ 
+    "i915.enable_guc=3" # for jellyfin hardware accelerated encoding
+    "mem_sleep_default=deep"
+  ]; 
 
   networking.hostName = "nixtop"; 
   networking.networkmanager.enable = true;
@@ -92,16 +95,19 @@
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
   
-  services.upower.enable = true; # for ironbar, probably don't need if i update that to use get_battery.sh
+  # for ironbar (deprecated), probably don't need if i update that to use get_battery.sh
+  #services.upower.enable = true; 
 
   services.mullvad-vpn.enable = true;
 
   services.fwupd.enable = true;
 
   hardware.opengl = {
-    enable = true; # need this for Hyprland to work when enabled with home-manager
-    extraPackages = with pkgs; [ # TODO: clean this up, along w kernelParams and the other intel-gpu mess i made
-      intel-media-driver # these are for 1
+    enable = true; # need this for Hyprland to work when enabled with home-manager & steam games
+    driSupport = true;
+    driSupport32Bit = true;
+    extraPackages = with pkgs; [ 
+      intel-media-driver # these are for jellyfin mostly
       intel-compute-runtime 
       intel-vaapi-driver 
       vaapiVdpau
@@ -113,19 +119,27 @@
     LIBVA_DRIVER_NAME = "iHD"; # Force intel-media-driver
   };
 
-  services.tlp.enable = true; # saves so much power on my laptop
+  # saves so much power on my laptop
+  services.tlp.enable = true; 
 
-  programs.zsh.enable = true; # must be enabled in configuration.nix to be set as the default user shell, but I've configured it with home-manager
+  # must be enabled in configuration.nix to be set as the default user shell, but I've configured it with home-manager
+  programs.zsh.enable = true; 
  
   programs.steam = {
     enable = true;
+    gamescopeSession.enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
 
+  programs.gamemode.enable = true;
+
+  services.printing.enable = true;
+
   services.avahi = {
     enable = true;
     nssmdns = true; # enables '.local' addresses 
+    openFirewall = true;
   };
   
   # Mount, trash, and other usb drive functionalities, i think i might also like to move this to hardware-configuration

@@ -15,11 +15,13 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }: 
+  outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, ... }: 
   let 
-    # enter your username here
+    # enter your username here, TODO: i could add some more fields here, but it was mostly just an experiment to get familiar with nix
     user = "vanta";
   in {
     nixosConfigurations = {
@@ -40,6 +42,8 @@
 
             home-manager.users.${user} = import ./home;
           }
+          # not technically my laptop's exact model, but close enough
+          nixos-hardware.nixosModules.dell-xps-13-9300
         ];
       };
     };

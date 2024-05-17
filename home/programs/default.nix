@@ -36,7 +36,14 @@
     musescore # sheet music software
     discord # we all know what discord is
     thunderbird # email, calendar, todo
+    protonup # steam proton installer
   ];
+
+  # from: https://github.com/vimjoyer/nixos-gaming-video
+  home.sessionVariables = {
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS =
+      "\\\${HOME}/.steam/root/compatibilitytools.d";
+  };
 
   programs.obs-studio.enable = true;
 

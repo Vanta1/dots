@@ -5,10 +5,11 @@
   ];
 
   home.packages = with pkgs; [
-    tofi
+    tofi 
     waypaper
     swaybg # backend for waypaper
     xdg-desktop-portal-hyprland # allows for screen sharing
+    xdg-desktop-portal-gtk
     
     # TODO: add these unstable packages, they're not in 23.11 stable
     #hypridle
@@ -21,15 +22,23 @@
     plugins = [ inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars ];
     
     settings = {
+      # environment variables
+      env = [
+        "XDG_CURRENT_DESKTOP,Hyprland"
+        "XDG_SESSION_TYPE,wayland"
+        "XDG_SESSION_DESKTOP,Hyprland"
+      ];
+
       # programs run once on startup
       exec-once = [ 
-        "waypaper --restore"
-        "waybar"
+        "waypaper --restore" # restore previous wallpaper
+        "waybar" # start status bar/system tray
       ];
 
       monitor = [
         "eDP-1,1920x1200,0x0,1"
-        "desc:Acer Technologies ED273 A 0x01010101,1920x1080@59.95,-320x-1440,0.75" # place my desktop monitor above my laptop, and center it (((1920 / 0.75) - 1920) / 2 = 320, 1080 / 0.75 = 1440)
+        # place my desktop monitor above my laptop, and center it (((1920 / 0.75) - 1920) / 2 = 320, 1080 / 0.75 = 1440)
+        "desc:Acer Technologies ED273 A 0x01010101,1920x1080@59.95,-320x-1440,0.75" 
       ];
 
       input = {

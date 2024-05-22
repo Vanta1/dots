@@ -6,6 +6,7 @@
       v = "vim";
       bmount = "bashmount";
       nd = "nix develop -c zsh";
+      snrs = "sudo nixos-rebuild switch";
     };
     initExtra = ''
       PROMPT='%1~ :3 ' 

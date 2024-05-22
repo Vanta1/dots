@@ -45,6 +45,8 @@
       "\\\${HOME}/.steam/root/compatibilitytools.d";
   };
 
+  services.flameshot.enable = true;
+
   programs.obs-studio.enable = true;
 
   services.dunst.enable = true; # notification daemon

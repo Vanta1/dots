@@ -1,6 +1,7 @@
 { inputs, config, pkgs, ... }: {
   imports = [
-    ./zsh.nix # shell
+    # shell
+    ./zsh.nix
 
     # window manager / desktop stuff
     ./hyprland # window manager
@@ -11,6 +12,7 @@
     ./zathura.nix # pdf viewer w/ vim like controls
     ./alacritty.nix # terminal emulator
     ./gtk # gtk theming
+    ./vscode.nix # ide
   ];
 
   home.packages = with pkgs; [
@@ -20,7 +22,6 @@
     gnupg
     btop # system monitor
     acpi # power info
-    vscode # ide
     brightnessctl # backlight control
     gammastep 
     pcmanfm # file manager
@@ -49,10 +50,9 @@
       "\\\${HOME}/.steam/root/compatibilitytools.d";
   };
 
-  services.flameshot.enable = true;
-
   programs.obs-studio.enable = true;
 
+  services.flameshot.enable = true; # broken screenshot tool
   services.dunst.enable = true; # notification daemon
 
   programs.git = {

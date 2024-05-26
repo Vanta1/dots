@@ -20,6 +20,7 @@
     enable = true;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     plugins = [ inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars ];
+    xwayland.enable = true;
     
     settings = {
       # environment variables
@@ -84,6 +85,7 @@
       dwindle.preserve_split = "yes";
       master.new_is_master = "true";
       misc.disable_hyprland_logo = "true";
+      
     };
     
     # for some reason, home-manager puts '.extraConfig' after plugins are imported, but '.settings' before, which means plugins need to be configured in '.extraConfig'.

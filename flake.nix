@@ -43,7 +43,7 @@
             home-manager.users.${user} = import ./home;
           }
           # not technically my laptop's exact model, but close enough
-          nixos-hardware.nixosModules.dell-xps-13-9310
+          #nixos-hardware.nixosModules.dell-xps-13-9310
         ];
       };
     };

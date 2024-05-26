@@ -118,6 +118,7 @@
   
   environment.sessionVariables = { 
     LIBVA_DRIVER_NAME = "iHD"; # Force intel-media-driver
+    NIXOS_OZONE_WL = "1"; # force vscode to run under wayland
   };
 
   # saves so much power on my laptop

@@ -10,6 +10,7 @@
     ./firefox # web browser
     ./zathura.nix # pdf viewer w/ vim like controls
     ./alacritty.nix # terminal emulator
+    ./gtk # gtk theming
   ];
 
   home.packages = with pkgs; [
@@ -37,6 +38,9 @@
     discord # we all know what discord is
     thunderbird # email, calendar, todo
     protonup # steam proton installer
+    gtk-engine-murrine # for everforest theme 
+    obsidian # note taking app
+    blender # 3D modeling
   ];
 
   # from: https://github.com/vimjoyer/nixos-gaming-video

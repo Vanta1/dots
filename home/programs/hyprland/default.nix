@@ -36,9 +36,10 @@
       ];
 
       monitor = [
-        "eDP-1,1920x1200,0x0,1"
-        # place my desktop monitor above my laptop, and center it (((1920 / 0.75) - 1920) / 2 = 320, 1080 / 0.75 = 1440)
-        "desc:Acer Technologies ED273 A 0x01010101,1920x1080@59.95,-320x-1440,0.75" 
+        "eDP-1, 1920x1200, 0x0, 1"
+        # (this turned out to be too annoying to work with as too many apps I use don't support scaling) place my desktop monitor above my laptop, and center it (((1920 / 0.75) - 1920) / 2 = 320, 1080 / 0.75 = 1440) 
+        # place my desktop monitor above my laptop
+        "desc:Acer Technologies ED273 A 0x01010101,1920x1080@59.95, 0x-1080" 
       ];
 
       input = {
@@ -83,10 +84,10 @@
       dwindle.preserve_split = "yes";
       master.new_is_master = "true";
       misc.disable_hyprland_logo = "true";
-      xwayland.force_zero_scaling = "true";
     };
     
     # for some reason, home-manager puts '.extraConfig' after plugins are imported, but '.settings' before, which means plugins need to be configured in '.extraConfig'.
+    # TODO: bar_text_align is currently broken on my system, might need to use a different source than the Hyprland flake
     extraConfig = ''
       plugin {
         hyprbars { 
@@ -94,7 +95,7 @@
           bar_color = rgb(272e33)
           col.text = rgb(d3c6aa)
           bar_text_size = 12
-	        bar_text_font = Monaspace Xenon
+	        bar_text_font = Input Mono
           bar_precedence_over_border = true
           bar_text_align = left
           bar_padding = 10

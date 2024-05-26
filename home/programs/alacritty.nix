@@ -11,7 +11,7 @@
       };
       font = {
         normal = {
-          family = "Monaspace Xenon";
+          family = "Input Mono";
         };
         size = 14;
       };

@@ -61,8 +61,9 @@
     noto-fonts-color-emoji
     # fonts i like
     fira 
-    fira-code
-    monaspace
+    fira-code 
+    monaspace # github's monaspace fonts, i use Xenon mostly
+    input-fonts # monospace and dynamic fonts for programming and anything else. super clean <3
   ];
 
   programs.nix-ld = {
@@ -142,14 +143,20 @@
     openFirewall = true;
   };
   
-  # Mount, trash, and other usb drive functionalities, i think i might also like to move this to hardware-configuration
-  services.gvfs.enable = true; 
+  # Mount, trash, and other usb drive functionalities
+  services.gvfs.enable = true;
 
   # needed for automatically mounting external usb drives with udiskie (enabled with home-manager) 
   # TODO: review if i should put udiskie in this file
   services.udisks2.enable = true; 
 
+  # needed to install obsidian ugh
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-25.9.0"
+  ];
+
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.input-fonts.acceptLicense = true; # license for input-fonts: https://input.djr.com/license/. go support it's creator here!!: http://input.djr.com/buy
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

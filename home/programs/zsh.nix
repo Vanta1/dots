@@ -6,10 +6,10 @@
       v = "vim";
       bmount = "bashmount";
       nd = "nix develop -c zsh";
-      snrs = "sudo nixos-rebuild switch";
+      snerp = "sudo nixos-rebuild switch"; # used to be snrs, but I just started saying 'snerp' in my head and so here we are
     };
     initExtra = ''
-      PROMPT='%1~ :3 ' 
+      PROMPT='%1~  ' 
       export PATH=$PATH:$HOME/bin/vanta1
     '';
     dotDir = ".config/zsh";

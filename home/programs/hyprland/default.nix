@@ -86,6 +86,9 @@
       master.new_is_master = "true";
       misc.disable_hyprland_logo = "true";
       
+      windowrule = [
+        "opacity 0.95 0.85,^(code-url-handler)$"
+      ];
     };
     
     # for some reason, home-manager puts '.extraConfig' after plugins are imported, but '.settings' before, which means plugins need to be configured in '.extraConfig'.

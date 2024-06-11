@@ -13,6 +13,7 @@
     ./alacritty.nix # terminal emulator
     ./gtk # gtk theming
     ./vscode.nix # ide
+    ./discord.nix # we all know what discord is
   ];
 
   home.packages = with pkgs; [
@@ -36,7 +37,6 @@
     minecraft # mining and crafting game
     grim # screenshot utility
     musescore # sheet music software
-    discord # we all know what discord is
     thunderbird # email, calendar, todo
     protonup # steam proton installer
     gtk-engine-murrine # for everforest theme 

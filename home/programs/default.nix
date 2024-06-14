@@ -35,6 +35,7 @@
     feh # image viewer
     moonlight-qt # remote desktop/gaming
     minecraft # mining and crafting game
+    slurp # for selecting parts of the screen
     grim # screenshot utility
     musescore # sheet music software
     thunderbird # email, calendar, todo

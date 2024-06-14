@@ -6,7 +6,7 @@
     # mouse binds for $mod + mouse left / mouse right = drag window / resize window
     bindm = [
       "$mod, mouse:272, movewindow"
-      "$mod, mouse:273, resizewindow"
+      #"$mod, mouse:273, resizewindow" TODO: this is giving me an error, should prob open an issue on github
     ];
 
     # my keybinds
@@ -36,7 +36,7 @@
       "$mod SHIFT, P, exec, manage_airpods.sh" # toggles my airpods
       "$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # launcher, o for open, close with $mod+O or ESC
       "$mod SHIFT, R, exec, pkill waybar ; waybar &!" # refresh waybar
-      "$mod SHIFT, S, exec, grim" # screenshot
+      "$mod SHIFT, S, exec, slurp | xargs grim -g $1" # screenshot
       "$mod SHIFT, BACKSPACE, exec, systemctl suspend" # eepy tiem
       "$mod, T, exec, thunderbird" # email + calendar + todo list
 

@@ -51,6 +51,12 @@
       "\\\${HOME}/.steam/root/compatibilitytools.d";
   };
 
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
+
   programs.obs-studio.enable = true;
 
   services.flameshot.enable = true; # broken screenshot tool

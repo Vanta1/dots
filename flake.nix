@@ -16,6 +16,8 @@
       inputs.hyprland.follows = "hyprland";
     };
 
+    waybar.url = "github:alexays/waybar";
+
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 

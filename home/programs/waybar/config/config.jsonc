@@ -1,4 +1,5 @@
 {
+    // TODO: move this all to nix using home-manager 
     "position": "bottom",
     "height": 30, // matches with hyprbar height, which feels satisfying with fullscreen windows imo
     "output": "eDP-1",

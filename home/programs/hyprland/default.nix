@@ -83,7 +83,6 @@
 
       animations.enabled = "no";
       dwindle.preserve_split = "yes";
-      master.new_is_master = "true";
       misc.disable_hyprland_logo = "true";
       
       windowrule = [

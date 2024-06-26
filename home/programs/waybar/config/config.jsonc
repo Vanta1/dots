@@ -52,3 +52,11 @@
         "format": "BAT {capacity}%"
     }
 }
+/*
+{
+    "output": "DP-3",
+    "position": "bottom",
+    "modules-left": [
+        "hyprland/workspaces"
+    ]
+}*/

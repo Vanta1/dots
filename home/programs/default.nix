@@ -34,7 +34,7 @@
     chromium # i use firefox, but google earth studio is chrome only
     feh # image viewer
     moonlight-qt # remote desktop/gaming
-    minecraft # mining and crafting game
+    # minecraft # mining and crafting game TODO: broken
     slurp # for selecting parts of the screen
     grim # screenshot utility
     musescore # sheet music software
@@ -43,6 +43,7 @@
     gtk-engine-murrine # for everforest theme 
     obsidian # note taking app
     blender # 3D modeling
+    numbat # scientific calculator
   ];
 
   # from: https://github.com/vimjoyer/nixos-gaming-video

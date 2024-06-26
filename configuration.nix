@@ -140,7 +140,7 @@
 
   services.avahi = {
     enable = true;
-    nssmdns = true; # enables '.local' addresses 
+    nssmdns4 = true; # enables '.local' addresses 
     openFirewall = true;
   };
   
@@ -161,5 +161,5 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  system.stateVersion = "23.11"; # ne touche pas
+  system.stateVersion = "24.05"; # ne touche pas
 }

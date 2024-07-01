@@ -147,8 +147,7 @@
   # Mount, trash, and other usb drive functionalities
   services.gvfs.enable = true;
 
-  # needed for automatically mounting external usb drives with udiskie (enabled with home-manager) 
-  # TODO: review if i should put udiskie in this file
+  # needed for automatically mounting external usb drives with udiskie (enabled with home-manager)
   services.udisks2.enable = true; 
 
   # needed to install obsidian ugh

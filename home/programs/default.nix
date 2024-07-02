@@ -5,7 +5,7 @@
 
     # window manager / desktop stuff
     ./hyprland # window manager
-    ./waybar # status bar
+    ./waybar.nix # status bar
 
     # other programs
     ./firefox # web browser
@@ -13,7 +13,6 @@
     ./alacritty.nix # terminal emulator
     ./gtk # gtk theming
     ./vscode.nix # ide
-    ./discord.nix # we all know what discord is
   ];
 
   home.packages = with pkgs; [
@@ -44,6 +43,7 @@
     obsidian # note taking app
     blender # 3D modeling
     numbat # scientific calculator
+    vesktop # discord client that actually works
   ];
 
   # from: https://github.com/vimjoyer/nixos-gaming-video

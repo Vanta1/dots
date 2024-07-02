@@ -34,7 +34,7 @@
       "$mod, B, exec, firefox" # b for browser
       "$mod, W, exec, waypaper" # wallpaper setter
       "$mod SHIFT, P, exec, manage_airpods.sh" # toggles my airpods
-      "$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # launcher, o for open, close with $mod+O or ESC
+      "$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # application launcher, o for open, close with $mod+O or ESC
       "$mod SHIFT, R, exec, pkill waybar ; waybar &!" # refresh waybar
       "$mod SHIFT, S, exec, slurp | xargs grim -g $1" # screenshot
       "$mod SHIFT, BACKSPACE, exec, systemctl suspend" # eepy tiem

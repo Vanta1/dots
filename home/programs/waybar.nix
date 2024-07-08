@@ -16,10 +16,13 @@
           "clock#time"
         ];
         modules-right = [
-          "tray"        "custom/separator"
-          # "taskbar",      "custom/separator", // TODO: figure out if this or some kind of manual solution involving workspaces would be better for minimizing windows,,,, i probably want to make my own cause that seems fun
-          "wireplumber" "custom/separator"
-          "network"     "custom/separator"
+          "tray"
+          "custom/separator"
+          # "taskbar" "custom/separator", // TODO: figure out if this or some kind of manual solution involving workspaces would be better for minimizing windows,,,, i probably want to make my own cause that seems fun
+          "wireplumber" 
+          "custom/separator"
+          "network" 
+          "custom/separator"
           "battery"
         ];
         "custom/separator" = {
@@ -54,8 +57,8 @@
         battery = {
           interval = 60;
           states = {
-              warning = 30;
-              critical = 15;
+            warning = 30;
+            critical = 15;
           };
           format = "BAT {capacity}%";
         };
@@ -89,6 +92,7 @@
           color: #d3c6aa;
           padding: 0 3px;
           border-radius: 0;
+          background-color: #272e33;
       }
 
       #workspaces button.empty {
@@ -97,7 +101,7 @@
 
       #workspaces button.active {
           background-color: #374145;
-          color : #d3c6aa;
+          color: #d3c6aa;
       }
 
       #wireplumber {

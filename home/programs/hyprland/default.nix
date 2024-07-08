@@ -1,6 +1,8 @@
 { inputs, config, pkgs, ... }: {
   imports = [
     ./keybinds.nix
+    ./hypridle.nix
+    ./hyprlock.nix
     ./tofi.nix
   ];
 

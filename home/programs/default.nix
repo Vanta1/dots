@@ -60,7 +60,7 @@
 
   programs.obs-studio.enable = true;
 
-  services.flameshot.enable = true; # broken screenshot tool
+  services.flameshot.enable = true; # broken screenshot tool TODO: either make grim work, or make flameshot work
   services.dunst.enable = true; # notification daemon
 
   programs.git = {

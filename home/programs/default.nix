@@ -44,6 +44,7 @@
 		blender # 3D modeling
 		numbat # scientific calculator
 		vesktop # discord client that actually works
+		zed-editor # code editor (alpha release)
 	];
 
 	# from: https://github.com/vimjoyer/nixos-gaming-video

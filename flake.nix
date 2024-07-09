@@ -7,7 +7,7 @@
       		url = "github:nix-community/home-manager/release-24.05";
       		inputs.nixpkgs.follows = "nixpkgs";
     	};
-    
+
     	hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
 
     	hyprland-plugins = {
@@ -20,10 +20,10 @@
     	nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   	};
 
-	outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, ... }: 
-	let 
+	outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, ... }:
+	let
 		# TODO: i could add some more fields here, but it was mostly just an experiment to get familiar with nix
-		# enter your username here 
+		# enter your username here
 		user = "vanta";
 	in {
 		nixosConfigurations = {

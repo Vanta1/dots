@@ -1,4 +1,4 @@
-{ config, pkgs, user, ... }: {
+{ config, pkgs, user, nixpkgs-unstable, ... }: {
 	imports = [
 		./hardware-configuration.nix
 	];
@@ -66,9 +66,7 @@
 		input-fonts # monospace and dynamic fonts for programming and anything else. super clean <3
 	];
 
-	programs.nix-ld = {
-		enable = true;
-	};
+	programs.nix-ld.enable = true;
 
 	users.users.${user} = {
 		isNormalUser = true;
@@ -150,13 +148,16 @@
 	# needed for automatically mounting external usb drives with udiskie (enabled with home-manager)
 	services.udisks2.enable = true; 
 
-	# needed to install obsidian ugh
-	nixpkgs.config.permittedInsecurePackages = [
-		"electron-25.9.0"
-	];
-
-	nixpkgs.config.allowUnfree = true;
-	nixpkgs.config.input-fonts.acceptLicense = true; # license for input-fonts: https://input.djr.com/license/. go support it's creator here!!: http://input.djr.com/buy
+	nixpkgs = {
+		config = {
+			allowUnfree = true;
+			# needed to install obsidian ugh
+			permittedInsecurePackages = [
+				"electron-25.9.0"
+			];
+			input-fonts.acceptLicense = true; # license for input-fonts: https://input.djr.com/license/. go support it's creator here!!: http://input.djr.com/buy
+		};
+	};
 
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 

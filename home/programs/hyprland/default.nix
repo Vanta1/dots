@@ -7,13 +7,13 @@
 	];
 
 	home.packages = with pkgs; [
-		tofi 
+		tofi
 		waypaper
 		swaybg # backend for waypaper
 		xdg-desktop-portal-hyprland # allows for screen sharing
 		xdg-desktop-portal-gtk
 		hypridle
-		hyprlock 
+		hyprlock
 	];
 
 	wayland.windowManager.hyprland = {
@@ -21,7 +21,7 @@
 		package = inputs.hyprland.packages.${pkgs.system}.hyprland;
 		plugins = [ inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars ];
 		xwayland.enable = true;
-		
+
 		settings = {
 			# environment variables
 			env = [
@@ -31,16 +31,16 @@
 			];
 
 			# programs run once on startup
-			exec-once = [ 
+			exec-once = [
 				"waypaper --restore" # restore previous wallpaper
 				"waybar" # start status bar/system tray
 			];
 
 			monitor = [
 				"eDP-1, 1920x1200, 0x0, 1"
-				# (this turned out to be too annoying to work with as too many apps I use don't support scaling) place my desktop monitor above my laptop, and center it (((1920 / 0.75) - 1920) / 2 = 320, 1080 / 0.75 = 1440) 
+				# (this turned out to be too annoying to work with as too many apps I use don't support scaling) place my desktop monitor above my laptop, and center it (((1920 / 0.75) - 1920) / 2 = 320, 1080 / 0.75 = 1440)
 				# place my desktop monitor above my laptop
-				"desc:Acer Technologies ED273 A 0x01010101,1920x1080@59.95, 0x-1080, 1" 
+				"desc:Acer Technologies ED273 A 0x01010101,1920x1080@59.95, 0x-1080, 1"
 			];
 
 			input = {
@@ -65,7 +65,7 @@
 			};
 
 			plugin = {
-				hyprbars = { 
+				hyprbars = {
 				bar_height = "30";
 				bar_color = "rgb(272e33)";
 				"col.text" = "rgb(d3c6aa)";
@@ -75,7 +75,7 @@
 				bar_text_align = "center";
 				bar_padding = "10";
 				bar_button_padding = "9";
-					hyprbars-button = [ 
+					hyprbars-button = [
 					"rgb(e67e80), 13, , hyprctl dispatch killactive"
 					"rgb(dbbc7f), 13, , hyprctl dispatch togglefloating"
 					"rgb(a7c080), 13, , hyprctl dispatch fullscreen"
@@ -90,8 +90,8 @@
 			decoration = {
 				rounding = "12";
 				drop_shadow = "false";
-				blur = { 
-				enabled = "false"; 
+				blur = {
+				enabled = "false";
 				};
 			};
 
@@ -103,21 +103,23 @@
 			animations.enabled = "no";
 			dwindle.preserve_split = "yes";
 			misc.disable_hyprland_logo = "true";
-			
+
 			windowrule = [
 				# ^(code-url-handler)$ selects VSCode windows
 				# set opacity (active, inactive) for windows
 				"opacity 0.95 0.85,^(code-url-handler)$"
-				
+				"opacity 0.95 0.85,^(zed)$"
+
 				# disable bar for windows with native titlebars
 				"plugin:hyprbars:nobar,^(code-url-handler)$"
+			];
 
+			windowrulev2 = [
 				# prevent screen locking when in fullscreen (e.g. watching a yt video)
-				"windowrulev2 = idleinhibit fullscreen, class:^(*)$"
-				"windowrulev2 = idleinhibit fullscreen, title:^(*)$"
-				"windowrulev2 = idleinhibit fullscreen, fullscreen:1"
+				"idleinhibit fullscreen, class:^(*)$"
+				"idleinhibit fullscreen, title:^(*)$"
+				"idleinhibit fullscreen, fullscreen:1"
 			];
 		};
 	};
 }
-

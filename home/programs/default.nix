@@ -23,7 +23,7 @@
 		btop # system monitor
 		acpi # power info
 		brightnessctl # backlight control
-		gammastep 
+		gammastep
 		pcmanfm # file manager
 		qbittorrent # torrenting
 		wf-recorder
@@ -39,12 +39,12 @@
 		musescore # sheet music software
 		thunderbird # email, calendar, todo
 		protonup # steam proton installer
-		gtk-engine-murrine # for everforest theme 
+		gtk-engine-murrine # for everforest theme
 		obsidian # note taking app
 		blender # 3D modeling
 		numbat # scientific calculator
 		vesktop # discord client that actually works
-		zed-editor # code editor (alpha release)
+		zed-editor # code editor (alpha release) (its seriously pretty rough on NixOS atm)
 	];
 
 	# from: https://github.com/vimjoyer/nixos-gaming-video

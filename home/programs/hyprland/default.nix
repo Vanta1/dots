@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }: {
+    { inputs, config, pkgs, ... }: {
 	imports = [
 		./keybinds.nix
 		./hypridle.nix
@@ -108,10 +108,12 @@
 				# ^(code-url-handler)$ selects VSCode windows
 				# set opacity (active, inactive) for windows
 				"opacity 0.95 0.85,^(code-url-handler)$"
-				"opacity 0.95 0.85,^(zed)$"
+				"opacity 0.95 0.85,^(dev.zed.Zed)$"
+
 
 				# disable bar for windows with native titlebars
 				"plugin:hyprbars:nobar,^(code-url-handler)$"
+				"plugin:hyprbars:nobar,^(dev.zed.Zed)"
 			];
 
 			windowrulev2 = [

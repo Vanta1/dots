@@ -4,7 +4,7 @@
   padding-left: 2px !important; /* this always bothers me idk why its just slightly closer */
 }
 .tab-background {
-   border-radius: 8px !important; /* matches tabs border radius to the windows. */
+   border-radius: 8px !important; /* matches tab's border radius to the windows. */
 }
     
 /* the rest of this is from: https://github.com/mimipile/firefoxCSS */

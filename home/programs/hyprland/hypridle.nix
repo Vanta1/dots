@@ -9,26 +9,26 @@
 			};
 			listener = [
 				{
-					# 2.5 min, dim screen
-					timeout = 150; 
-					on-timeout = "brightnessctl -s set 10";
+					# 1.5 min, dim screen
+					timeout = 90; 
+					on-timeout = "brightnessctl -s set 8";
 					on-resume = "brightnessctl -r";
 				}
 				{
-					# 5 min, lock screen
-					timeout = 300; 
+					# 2.5 min, lock screen
+					timeout = 150; 
 					before_sleep_cmd = "loginctl lock-session";
 					on-timeout = "loginctl lock-session";
 				}
 				{
-					# 10 min, turn monitor off
-					timeout = 600; 
+					# 5 min, turn monitor off
+					timeout = 300; 
 					on-timeout = "hyprctl dispatch dpms off";
 					on-resume = "hyprctl dispatch dpms on";
 				}
 				{
-					# 20 min, eepy time
-					timeout = 1200; 
+					# 10 min, eepy time
+					timeout = 600; 
 					on-timeout = "systemctl suspend";
 				}
 			];

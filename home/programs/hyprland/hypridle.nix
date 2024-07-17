@@ -16,8 +16,7 @@
 				}
 				{
 					# 2.5 min, lock screen
-					timeout = 150; 
-					before_sleep_cmd = "loginctl lock-session";
+					timeout = 150;
 					on-timeout = "loginctl lock-session";
 				}
 				{

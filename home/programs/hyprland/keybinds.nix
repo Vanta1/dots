@@ -39,7 +39,7 @@
 			"$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # application launcher, o for open, close with $mod+O or ESC
 			"$mod SHIFT, R, exec, pkill waybar ; waybar &!" # refresh waybar
 			"$mod SHIFT, S, exec, slurp | xargs grim -g $1" # screenshot
-			"$mod SHIFT, BACKSPACE, exec, systemctl suspend" # eepy tiem
+			"$mod SHIFT, BACKSPACE, exec, loginctl lock-session" # lock the screen
 			"$mod, T, exec, thunderbird" # email + calendar + todo list
 
 			# window management keybinds

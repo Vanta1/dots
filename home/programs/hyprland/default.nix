@@ -20,7 +20,6 @@
 		enable = true;
 		package = inputs.hyprland.packages.${pkgs.system}.hyprland;
 		plugins = [ inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars ];
-		xwayland.enable = true;
 
 		settings = {
 			# environment variables
@@ -28,6 +27,9 @@
 				"XDG_CURRENT_DESKTOP,Hyprland"
 				"XDG_SESSION_TYPE,wayland"
 				"XDG_SESSION_DESKTOP,Hyprland"
+				"QT_QPA_PLATFORM,wayland;xcb"
+				"QT_AUTO_SCREEN_SCALE_FACTOR,1"
+				"QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
 			];
 
 			# programs run once on startup

@@ -36,6 +36,7 @@
 			exec-once = [
 				"waypaper --restore" # restore previous wallpaper
 				"waybar" # start status bar/system tray
+				# "birdtray -platform wayland" # for some reason, QT_QPA_PLATFORM is being ignored, so that has to be passed to birdtray directly
 			];
 
 			monitor = [

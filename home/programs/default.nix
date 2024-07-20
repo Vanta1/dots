@@ -38,6 +38,7 @@
 		grim # screenshot utility
 		musescore # sheet music software
 		thunderbird # email, calendar, todo
+		birdtray # thunderbird taskbar icon
 		protonup # steam proton installer
 		gtk-engine-murrine # for everforest theme
 		obsidian # note taking app

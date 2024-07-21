@@ -22,6 +22,8 @@
 		plugins = [ inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars ];
 
 		settings = {
+			debug.disable_logs = false;
+
 			# environment variables
 			env = [
 				"XDG_CURRENT_DESKTOP,Hyprland"
@@ -36,7 +38,7 @@
 			exec-once = [
 				"waypaper --restore" # restore previous wallpaper
 				"waybar" # start status bar/system tray
-				# "birdtray -platform wayland" # for some reason, QT_QPA_PLATFORM is being ignored, so that has to be passed to birdtray directly
+				"birdtray" # email notifications
 			];
 
 			monitor = [

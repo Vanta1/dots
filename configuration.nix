@@ -134,6 +134,8 @@
 
 	programs.gamemode.enable = true;
 
+	programs.xwayland.enable = true;
+
 	services.printing.enable = true;
 
 	services.avahi = {

@@ -1,9 +1,8 @@
-    { inputs, config, pkgs, ... }: {
+{ inputs, config, pkgs, ... }: {
 	imports = [
 		./keybinds.nix
 		./hypridle.nix
 		./hyprlock.nix
-		./tofi.nix
 	];
 
 	home.packages = with pkgs; [
@@ -18,8 +17,8 @@
 
 	wayland.windowManager.hyprland = {
 		enable = true;
-		package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-		plugins = [ inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars ];
+		package = pkgs.hyprland;
+		plugins = [ pkgs.hyprlandPlugins.hyprbars ];
 
 		settings = {
 			debug.disable_logs = false;
@@ -32,6 +31,7 @@
 				"QT_QPA_PLATFORM,wayland;xcb"
 				"QT_AUTO_SCREEN_SCALE_FACTOR,1"
 				"QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
+				# "AQ_DRM_DEVICES,/dev/dri/card1" for broken hyprland-git
 			];
 
 			# programs run once on startup

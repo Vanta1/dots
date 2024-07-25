@@ -1,4 +1,5 @@
-{ inputs, config, pkgs, ... }: {
+{ inputs, config, pkgs, ... }:
+{
 	imports = [
 		# shell
 		./zsh.nix
@@ -6,6 +7,7 @@
 		# window manager / desktop stuff
 		./hyprland # window manager
 		./waybar.nix # status bar
+		./tofi.nix # app launcher
 
 		# other programs
 		./firefox # web browser
@@ -13,6 +15,7 @@
 		./alacritty.nix # terminal emulator
 		./gtk # gtk theming
 		./vscode.nix # ide
+		./mailspring.nix # email client
 	];
 
 	home.packages = with pkgs; [
@@ -37,8 +40,6 @@
 		slurp # for selecting parts of the screen
 		grim # screenshot utility
 		musescore # sheet music software
-		thunderbird # email, calendar, todo
-		birdtray # thunderbird taskbar icon
 		protonup # steam proton installer
 		gtk-engine-murrine # for everforest theme
 		obsidian # note taking app
@@ -65,6 +66,8 @@
 	services.dunst.enable = true; # notification daemon
 
 	services.udiskie.enable = true;
+
+	services.gnome-keyring.enable = true;
 
 	programs.git = {
 		enable = true;

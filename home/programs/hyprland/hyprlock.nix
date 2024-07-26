@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, user, ... }: {
+{ inputs, config, pkgs, personal, ... }: {
 	programs.hyprlock = {
 		enable = true;
 		settings = {
@@ -8,7 +8,7 @@
 			};
 			background = {
 				monitor = ""; # leave empty for all monitors
-				path = "/home/${user}/wallpapers/mist_forest_2.png";
+				path = "/home/${personal.user}/wallpapers/mist_forest_2.png";
 				blur_passes = 3;
 			};
 			input-field = {

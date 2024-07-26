@@ -1,4 +1,4 @@
-{ config, pkgs, user, ... }: {
+{ config, pkgs, personal, ... }: {
 	imports = [
 		./hardware-configuration.nix
 	];
@@ -14,10 +14,10 @@
 	networking.networkmanager.enable = true;
 	networking.firewall = {
 		allowedUDPPorts = [ 
-			53559 # jellyfin
+			31337 # jellyfin
 		]; 
 		allowedTCPPorts = [
-			53559 # jellyfin
+			31337 # jellyfin
 		];
 	};
 
@@ -32,8 +32,8 @@
 	# for using waydroid: https://nixos.wiki/wiki/WayDroid
 	virtualisation.waydroid.enable = true;
 
-	time.timeZone = "America/Toronto";
-	i18n.defaultLocale = "en_CA.UTF-8";
+	time.timeZone = personal.time-zone;
+	i18n.defaultLocale = personal.default-locale;
 
 	# Packages, available to all users
 	environment.systemPackages = with pkgs; [
@@ -68,7 +68,7 @@
 
 	programs.nix-ld.enable = true;
 
-	users.users.${user} = {
+	users.users.${personal.user} = {
 		isNormalUser = true;
 		description = "default user, with sudo privileges";
 		extraGroups = [ "networkmanager" "wheel" ];
@@ -81,13 +81,13 @@
 		# send all output to /dev/null to suppress "file does not exist" errors, and run it in the background and discard the output because nixos-rebuild will still check the result of the command
 		refresh-tofi.text = ''
 			echo "refreshing tofi cache..."
-			rm /home/${user}/.cache/tofi-drun &> /dev/null &!
+			rm /home/${personal.user}/.cache/tofi-drun &> /dev/null &!
 		'';
 	};
 
 	services.jellyfin = {
 		enable = true;
-		user = "${user}";
+		user = "${personal.user}";
 	};
 
 	hardware.bluetooth.enable = true;

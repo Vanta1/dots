@@ -27,9 +27,10 @@
 		gnupg
 		grim # screenshot utility
 		gtk-engine-murrine # for everforest theme
+		# email client, patched bc enabling gnome.gnome-keyring doesn't work (despite what the mailspring website says)
 		(pkgs.mailspring.overrideAttrs (finalAttrs: previousAttrs: {
 			postFixup = builtins.replaceStrings [ "Exec=$out/bin/mailspring" ] [ "Exec=\"$out/bin/mailspring --password-store=\"gnome-libsecret\"\"" ] previousAttrs.postFixup;
-		})) # email client, patched bc enabling gnome.gnome-keyring doesn't work (despite what the mailspring website says)
+		})) 
 		# minecraft # mining and crafting game TODO: broken
 		musescore # sheet music software
 		moonlight-qt # remote desktop/gaming

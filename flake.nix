@@ -19,8 +19,8 @@
 	let
 		## set these for yourself please!!!
 		personal = {
-			user = "vanta"; # your username
-			hostname = "nixtop"; # your hostname
+			user = "vanta";
+			hostname = "nixtop";
 			time-zone = "America/Toronto";
 			default-locale = "en_CA.UTF-8";
 

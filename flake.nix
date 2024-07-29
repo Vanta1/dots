@@ -6,17 +6,16 @@
       		url = "github:nix-community/home-manager/release-24.05";
       		inputs.nixpkgs.follows = "nixpkgs";
     	};
-    	hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    	hyprland-plugins = {
-      		url = "github:hyprwm/hyprland-plugins";
-      		inputs.hyprland.follows = "hyprland";
-    	};
+    	# hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    	# hyprland-plugins = {
+      	# 	url = "github:hyprwm/hyprland-plugins";
+      	# 	inputs.hyprland.follows = "hyprland";
+    	# };
     	waybar.url = "github:alexays/waybar";
     	nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   	};
 
-	outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, ... }:
-	let
+	outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, ... }: let
 		## set these for yourself please!!!
 		personal = {
 			user = "vanta";

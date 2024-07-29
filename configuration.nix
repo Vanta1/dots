@@ -13,11 +13,12 @@
 	networking.hostName = "nixtop"; 
 	networking.networkmanager.enable = true;
 	networking.firewall = {
+		enable = true;
 		allowedUDPPorts = [ 
-			31337 # jellyfin
+			53559 # jellyfin
 		]; 
 		allowedTCPPorts = [
-			31337 # jellyfin
+			 # jellyfin
 		];
 	};
 
@@ -38,17 +39,20 @@
 	# Packages, available to all users
 	environment.systemPackages = with pkgs; [
 		# basic utilities, expected linux stuff
-		git
-		vim
-		unzip 
 		exfat
+		git
 		ntfs3g
+		unzip 
+		vim
 
-		# jellyfin, this is a systemd service that's run as the default user
+		# jellyfin 
 		jellyfin
 		jellyfin-web
 		jellyfin-ffmpeg
 		intel-gpu-tools
+
+		# needed for gnome-keyring
+		libsecret
 	];
 
 	fonts.packages = with pkgs; [

@@ -99,9 +99,17 @@
 				color: #9da9a0;
 			}
 
+			#workspaces button.visible {
+				background-color: #2e383c;
+			}
+
 			#workspaces button.active {
 				background-color: #374145;
 				color: #d3c6aa;
+			}
+
+			#workspaces button.hover {
+				background-color: #272e33;
 			}
 
 			#wireplumber {

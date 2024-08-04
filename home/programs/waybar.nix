@@ -36,11 +36,13 @@
 				};
 				"clock#date" = {
 					format = "{:%A, %B %d}";
-					tooltip = false;
+					tooltip = true;
+					tooltip-format = "{:%Y-%m-%d}";
 				};
 				"clock#time" = {
 					format = "{:%I:%M %p}";
-					tooltip = false;
+					tooltip = true;
+					tooltip-format = "{:%H:%M:%S}";
 				};
 				tray = {
 					spacing = 9;

@@ -28,8 +28,8 @@
 		grim # screenshot utility
 		gtk-engine-murrine # for everforest theme
 		# email client, patched bc enabling gnome.gnome-keyring doesn't work (despite what the mailspring website says)
-		(pkgs.mailspring.overrideAttrs (finalAttrs: previousAttrs: {
-			postFixup = builtins.replaceStrings [ "Exec=$out/bin/mailspring" ] [ "Exec=\"$out/bin/mailspring --password-store=\"gnome-libsecret\"\"" ] previousAttrs.postFixup;
+		(pkgs.mailspring.overrideAttrs (final: previous: {
+			postFixup = builtins.replaceStrings [ "Exec=$out/bin/mailspring" ] [ "Exec=\"$out/bin/mailspring --password-store=\"gnome-libsecret\"\"" ] previous.postFixup;
 		})) 
 		# minecraft # mining and crafting game TODO: broken
 		musescore # sheet music software
@@ -49,6 +49,8 @@
 		wf-recorder
 		xdg-utils # open links in browser
 		zed-editor # code editor (alpha release) (its seriously pretty rough on NixOS atm)
+		spotify # music streaming service 
+		spicetify-cli # cli for configuring the spotify client
 	];
 
 	# from: https://github.com/vimjoyer/nixos-gaming-video

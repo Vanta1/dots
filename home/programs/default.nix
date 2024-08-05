@@ -51,6 +51,7 @@
 		zed-editor # code editor (alpha release) (its seriously pretty rough on NixOS atm)
 		spotify # music streaming service 
 		spicetify-cli # cli for configuring the spotify client
+		playerctl # useful tui for controlling media
 	];
 
 	# from: https://github.com/vimjoyer/nixos-gaming-video

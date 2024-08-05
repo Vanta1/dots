@@ -28,6 +28,8 @@
 			", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 			# mic controls, need to testtt
 			", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+			# play/pause music
+			", XF86AudioPlay, exec, playerctl play-pause"
 		];
 		
 		bind = [

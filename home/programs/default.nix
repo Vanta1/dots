@@ -10,6 +10,7 @@
 
 		# other programs
 		./alacritty.nix # terminal emulator
+		./dunst.nix # notification daemon
 		./gtk # gtk theming
 		./firefox # web browser
 		./vscode.nix # ide
@@ -75,7 +76,6 @@
 
 	programs.obs-studio.enable = true; 
 
-	services.dunst.enable = true; # notification daemon
 	services.gnome-keyring.enable = true; # keep it secret
 	services.udiskie.enable = true; # disk mount util
 }

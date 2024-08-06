@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }: {
+{ config, pkgs, inputs, personal, ... }: {
 	programs.waybar = {
 		enable = true;
 		package = inputs.waybar.packages.${pkgs.system}.waybar;
@@ -14,11 +14,15 @@
 					"clock#date"
 					"custom/separator"
 					"clock#time"
+					# separator built in to spotify-pause;
+					"custom/spotify-pause"
+					"custom/spotify"
 				];
 				modules-right = [
-					"tray"
-					"custom/separator"
-					# "taskbar" "custom/separator", // TODO: figure out if this or some kind of manual solution involving workspaces would be better for minimizing windows,,,, i probably want to make my own cause that seems fun
+					# TODO: figure out a way to make the tray separator go away when tray is empty
+					"group/tray" 
+					# TODO: figure out if this or some kind of manual solution involving workspaces would be better for minimizing windows,,,, i probably want to make my own cause that seems fun
+					# "taskbar" "custom/separator", 
 					"wireplumber" 
 					"custom/separator"
 					"network" 
@@ -43,6 +47,23 @@
 					format = "{:%I:%M %p}";
 					tooltip = true;
 					tooltip-format = "{:%H:%M:%S}";
+				};
+				"custom/spotify-pause" = {
+					exec = "/home/${personal.user}/bin/vanta1/get_paused.sh";
+					on-click = "playerctl --player=spotify play-pause";
+					tooltip = false;
+				};
+				"custom/spotify" = {
+					exec = "/home/${personal.user}/bin/vanta1/get_playing.sh";
+					on-click = "playerctl --player=spotify play-pause";
+					tooltip = false;
+				};
+				"group/tray" = {
+					orientation = "horizontal";
+					modules = [
+						"tray"
+						"custom/separator"
+					];
 				};
 				tray = {
 					spacing = 9;
@@ -86,6 +107,12 @@
 			}
 
 			#custom-separator { 
+				margin-bottom: 3px; 
+				padding-left: 6px;
+				padding-right: 6px;
+			}
+
+			#custom-spotify-pause {
 				margin-bottom: 3px; 
 				padding-left: 6px;
 				padding-right: 6px;
@@ -163,6 +190,13 @@
 			#battery.dead {
 				color: #e67e80;
 				animation: blinking .6s ease infinite;
+			}
+
+			#tray menu {
+				background-color: #232e33;
+				color: #d3c6aa;
+				font-family: Input Mono;
+				font-size: 12pt;
 			}
 		'';
 	};

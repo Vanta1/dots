@@ -44,6 +44,8 @@
 			"$mod SHIFT, BACKSPACE, exec, loginctl lock-session" # lock the screen
 			"$mod, T, exec, thunderbird" # email + calendar + todo list
 			"$mod, D, exec, dunstctl close-all" # dismiss all notifications
+			"$mod, COMMA, exec, playerctl --player=spotify previous" # seek/track w/ < / >
+			"$mod, PERIOD, exec, playerctl --player=spotify next"
 
 			# window management keybinds
 

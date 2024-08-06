@@ -13,7 +13,7 @@
 				height = 300
 				padding = 12
 				horizontal_padding = 12
-				frame_width = 4
+				frame_width = 3
 				corner_radius = 12
 				origin = bottom-right
 				offset = 12x12

@@ -53,6 +53,7 @@
 		spotify # music streaming service 
 		spicetify-cli # cli for configuring the spotify client
 		playerctl # useful tui for controlling media
+		github-desktop # github native ui
 	];
 
 	# from: https://github.com/vimjoyer/nixos-gaming-video

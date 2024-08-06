@@ -61,6 +61,7 @@
 					states = {
 						warning = 30;
 						critical = 15;
+						dead = 5;
 					};
 					format = "BAT {capacity}%";
 				};
@@ -151,6 +152,17 @@
 
 			#battery.critical {
 				color: #e67e80;
+			}
+
+			@keyframes blinking {
+				50% {
+					opacity: .3;
+				}
+			}
+
+			#battery.dead {
+				color: #e67e80;
+				animation: blinking .6s ease infinite;
 			}
 		'';
 	};

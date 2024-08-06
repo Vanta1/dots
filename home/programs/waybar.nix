@@ -110,7 +110,7 @@
 			}
 
 			#workspaces button.empty {
-				color: #9da9a0;
+				color: #859289;
 			}
 
 			#workspaces button.visible {

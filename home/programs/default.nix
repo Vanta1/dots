@@ -71,6 +71,7 @@
 
 	programs.git = {
 		enable = true;
+		lfs.enable = true; # for github-desktop, lfs = large file storage
 		userName = personal.user-name;
 		userEmail = personal.user-email;
 	};

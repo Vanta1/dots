@@ -115,9 +115,10 @@
 				"opacity 0.95 0.85,^(dev.zed.Zed)$"
 
 
-				# disable bar for windows with native titlebars
+				# disable bar for windows with native titlebars, use 'hyprctl clients' to get the window class 
 				"plugin:hyprbars:nobar,^(code-url-handler)$"
-				"plugin:hyprbars:nobar,^(dev.zed.Zed)"
+				"plugin:hyprbars:nobar,^(dev.zed.Zed)$"
+				"plugin:hyprbars:nobar,^(GitHub Desktop)$"
 			];
 
 			windowrulev2 = [

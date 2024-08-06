@@ -90,6 +90,17 @@
 				padding-right: 6px;
 			}
 
+			tooltip {
+				background-color: #272e33;
+				border: 1px solid #9da9a0;
+			}
+
+			tooltip label {
+				color: #d3c6aa;
+				font-family: Input Mono;
+				font-size: 10pt;
+			}
+
 			#workspaces button {
 				color: #d3c6aa;
 				padding: 0 3px;

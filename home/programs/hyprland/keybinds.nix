@@ -43,6 +43,7 @@
 			"$mod SHIFT, S, exec, slurp | xargs grim -g $1" # screenshot
 			"$mod SHIFT, BACKSPACE, exec, loginctl lock-session" # lock the screen
 			"$mod, T, exec, thunderbird" # email + calendar + todo list
+			"$mod, D, exec, dunstctl close-all" # dismiss all notifications
 
 			# window management keybinds
 

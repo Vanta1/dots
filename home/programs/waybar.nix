@@ -67,6 +67,7 @@
 				};
 				tray = {
 					spacing = 9;
+					show-passive-icons = true;
 				};
 				wireplumber = {
 					format = "VOL {volume}";
@@ -75,7 +76,8 @@
 					format-wifi = "NET {essid}";
 					format-disconnected = "NET disconnected";
 					max-length = 50;
-					tooltip = false;
+					tooltip = true;
+					tooltip-format = "STR {signalStrength}";
 				};
 				battery = {
 					interval = 60;
@@ -149,7 +151,7 @@
 				color: #d3c6aa;
 			}
 
-			#workspaces button.hover {
+			#workspaces button:hover {
 				background-color: #272e33;
 			}
 
@@ -197,6 +199,11 @@
 				color: #d3c6aa;
 				font-family: Input Mono;
 				font-size: 12pt;
+			}
+
+			#tray menu:hover {
+				background-color: #d3c6aa;
+				color: #232e33;
 			}
 		'';
 	};

@@ -24,8 +24,8 @@
 		blender # 3D modeling
 		chromium # i use firefox, but google earth studio is chrome only
 		feh # image viewer
-		gammastep
-		gnupg
+		gammastep # screen temperature/white balance
+		gnupg # encryption
 		grim # screenshot utility
 		gtk-engine-murrine # for everforest theme
 		# email client, patched bc enabling gnome.gnome-keyring doesn't work (despite what the mailspring website says)
@@ -42,12 +42,11 @@
 		protonup # steam proton installer
 		qbittorrent # torrenting
 		slurp # for selecting parts of the screen
-		tree
+		tree # display contents of a directory as a file tree
 		vesktop # discord client that actually works
 		vlc # media player
-		which
-		wireplumber # wpctl - pipewire (audio server) controls
-		wf-recorder
+		which # find locations of executables
+		wf-recorder # for screen sharing (still not working)
 		xdg-utils # open links in browser
 		zed-editor # code editor (alpha release) (its seriously pretty rough on NixOS atm)
 		spotify # music streaming service 

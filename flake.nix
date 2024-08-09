@@ -12,7 +12,7 @@
       	# 	inputs.hyprland.follows = "hyprland";
     	# };
     	waybar.url = "github:alexays/waybar";
-    	nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    	#nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   	};
 
 	outputs = inputs@{ self, nixpkgs, home-manager, nixos-hardware, ... }: let

@@ -17,6 +17,7 @@
 					# separator built in to spotify-pause;
 					"custom/spotify-pause"
 					"custom/spotify"
+					#"image#spotify-art"
 				];
 				modules-right = [
 					# TODO: figure out a way to make the tray separator go away when tray is empty
@@ -26,6 +27,8 @@
 					"wireplumber" 
 					"custom/separator"
 					"network" 
+					"custom/separator"
+					"idle_inhibitor"
 					"custom/separator"
 					"battery"
 				];
@@ -48,6 +51,11 @@
 					tooltip = true;
 					tooltip-format = "{:%H:%M:%S}";
 				};
+				#"image#spotify-art" = {
+				#	path = "/tmp/album_art.jpeg";
+				#	interval = 5;
+				#	size = 30;
+				#};
 				"custom/spotify-pause" = {
 					exec = "/home/${personal.user}/bin/vanta1/get_paused.sh";
 					on-click = "playerctl --player=spotify play-pause";
@@ -78,6 +86,13 @@
 					max-length = 50;
 					tooltip = true;
 					tooltip-format = "STR {signalStrength}";
+				};
+				idle_inhibitor = {
+					format = "IDL {icon}";
+					format-icons = {
+						activated = "";
+						deactivated = "";
+					};
 				};
 				battery = {
 					interval = 60;
@@ -125,6 +140,12 @@
 				border: 1px solid #9da9a0;
 			}
 
+			/*
+			tooltip:hover {
+				background-color: #272e33;
+			}
+			*/
+
 			tooltip label {
 				color: #d3c6aa;
 				font-family: Input Mono;
@@ -152,7 +173,24 @@
 			}
 
 			#workspaces button:hover {
-				background-color: #272e33;
+				box-shadow: none;
+				text-shadow: none;
+				background: #2e383c;
+				border: 0px solid #2e383c;
+				padding: 0 3px;
+				font-size: 12pt;
+			}
+
+			#tray menu {
+				background-color: #232e33;
+				color: #d3c6aa;
+				font-family: Input Mono;
+				font-size: 12pt;
+			}
+
+			#tray menu:hover {
+				background-color: #d3c6aa;
+				color: #232e33;
 			}
 
 			#wireplumber {
@@ -169,6 +207,14 @@
 
 			#network.disconnected {
 				color: #e67e80;
+			}
+
+			#idle_inhibitor.activated {
+				color: #e67e80;
+			}
+
+			#idle_inhibitor.deactivated {
+				color: #a7c080;
 			}
 
 			#battery {
@@ -192,18 +238,6 @@
 			#battery.dead {
 				color: #e67e80;
 				animation: blinking .6s ease infinite;
-			}
-
-			#tray menu {
-				background-color: #232e33;
-				color: #d3c6aa;
-				font-family: Input Mono;
-				font-size: 12pt;
-			}
-
-			#tray menu:hover {
-				background-color: #d3c6aa;
-				color: #232e33;
 			}
 		'';
 	};

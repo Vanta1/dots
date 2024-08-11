@@ -13,6 +13,7 @@
 		./dunst.nix # notification daemon
 		./gtk # gtk theming
 		./firefox # web browser
+		./vesktop.nix # discord retheming
 		./vscode.nix # ide
 		./zathura.nix # pdf viewer w/ vim like controls
 	];
@@ -59,6 +60,18 @@
 	home.sessionVariables = {
 		STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\\\${HOME}/.steam/root/compatibilitytools.d";
 	};
+
+	# i prefer lowercase directory names ¯\_(ツ)_/¯
+	xdg.configFile."users-dirs.dirs".text = ''
+		XDG_DESKTOP_DIR="$HOME/desktop"
+		XDG_DOWNLOAD_DIR="$HOME/downloads"
+		XDG_PUBLICSHARE_DIR="$HOME/public"
+		XDG_DOCUMENTS_DIR="$HOME/documents"
+		XDG_MUSIC_DIR="$HOME/music"
+		XDG_PICTURES_DIR="$HOME/pictures"
+		XDG_VIDEOS_DIR="$HOME/videos"
+		XDG_TEMPLATES_DIR="$HOME/templates"
+	'';
 
 	# automatically enter nix devshells when changing working directory 
 	# (w/ vscode integration using the Nix Environment Selector extension)

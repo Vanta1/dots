@@ -113,6 +113,8 @@
 		'';
 	};
 
+
+
 	services.jellyfin = {
 		enable = true;
 		user = "${personal.user}";
@@ -121,7 +123,8 @@
 	hardware.bluetooth.enable = true;
 	hardware.bluetooth.powerOnBoot = true;
 	services.blueman.enable = true;
-	
+	hardware.steam-hardware.enable = true;
+
 	# for ironbar (deprecated), probably don't need if i update that to use get_battery.sh
 	#services.upower.enable = true; 
 

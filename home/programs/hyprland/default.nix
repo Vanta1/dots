@@ -119,6 +119,7 @@
 				"plugin:hyprbars:nobar,^(code-url-handler)$"
 				"plugin:hyprbars:nobar,^(dev.zed.Zed)$"
 				"plugin:hyprbars:nobar,^(GitHub Desktop)$"
+				"plugin:hyprbars:nobar,^(vesktop)$"
 			];
 
 			windowrulev2 = [

@@ -13,6 +13,7 @@
 		./dunst.nix # notification daemon
 		./gtk # gtk theming
 		./firefox # web browser
+		./spicetify.nix # spotify retheming
 		./vesktop.nix # discord retheming
 		./vscode.nix # ide
 		./zathura.nix # pdf viewer w/ vim like controls
@@ -50,8 +51,6 @@
 		wf-recorder # for screen sharing (still not working)
 		xdg-utils # open links in browser
 		zed-editor # code editor (alpha release) (its seriously pretty rough on NixOS atm)
-		spotify # music streaming service 
-		spicetify-cli # cli for configuring the spotify client
 		playerctl # useful tui for controlling media
 		github-desktop # github native ui
 	];

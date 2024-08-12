@@ -50,14 +50,14 @@
             /* background and dark colors */
             --bg-1: hsl(202, 12%, 9%); /* dark buttons when clicked */
             --bg-2: #1e2326; /* dark buttons */
-            --bg-3: #272e33; /* spacing, secondary elements */
-            --bg-4: #2e383c; /* main background color */
+            --bg-3: #2e383c; /* spacing, secondary elements */
+            --bg-4: #272e33; /* main background color */
             --hover: hsla(230, 20%, 40%, 0.1); /* channels and buttons when hovered */
             --active: hsla(220, 20%, 40%, 0.2); /* channels and buttons when clicked or selected */
             --message-hover: hsla(220, 0%, 0%, 0.1); /* messages when hovered */
 
             /* amount of spacing and padding */
-            --spacing: 12px;
+            --spacing: 0px;
 
             /* animations */
             /* ALL ANIMATIONS CAN BE DISABLED WITH REDUCED MOTION IN DISCORD SETTINGS */
@@ -67,7 +67,7 @@
             --icon-spin-transition: 1s ease; /* round icon button spin (settings, emoji, etc.) */
 
             /* corner roundness (border-radius) */
-            --roundness-xl: 12px; /* roundness of big panel outer corners */
+            --roundness-xl: 0px; /* roundness of big panel outer corners */
             --roundness-l: 10px; /* popout panels */
             --roundness-m: 8px; /* smaller panels, images, embeds */
             --roundness-s: 6px; /* members, settings inputs */

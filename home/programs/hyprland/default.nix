@@ -129,6 +129,9 @@
 				"idleinhibit fullscreen, class:^(*)$"
 				"idleinhibit fullscreen, title:^(*)$"
 				"idleinhibit fullscreen, fullscreen:1"
+
+				# disable bar for windows with native titlebars, spotify for some reason has no window class
+				"plugin:hyprbars:nobar,initialTitle:(Spotify Premium)"
 			];
 		};
 	};

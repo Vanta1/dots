@@ -6,6 +6,7 @@ in {
     
     programs.spicetify = {
         enable = true;
+        
         theme = spicePkgs.themes.comfy;
         colorScheme = "custom";
         customColorScheme = {
@@ -28,6 +29,13 @@ in {
             misc               = "626880";
         };
 
-        enabledExtensions = with spicePkgs.extensions; [ hidePodcasts ];
+        enabledCustomApps = with spicePkgs.apps; [ 
+            lyricsPlus
+            newReleases 
+        ];
+        enabledExtensions = with spicePkgs.extensions; [ 
+            hidePodcasts
+            wikify
+        ];
     };
 }

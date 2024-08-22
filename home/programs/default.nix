@@ -25,8 +25,10 @@
 		btop # system monitor
 		blender # 3D modeling
 		chromium # i use firefox, but google earth studio is chrome only
+		devenv # super easy development environments, esp w/ direnv
 		feh # image viewer
 		gammastep # screen temperature/white balance
+		github-desktop # github native ui
 		gnupg # encryption
 		grim # screenshot utility
 		gtk-engine-murrine # for everforest theme
@@ -41,6 +43,7 @@
 		neofetch # display system info for rice posts
 		obsidian # note taking app
 		pcmanfm # file manager
+		playerctl # useful tui for controlling media
 		protonup # steam proton installer
 		qbittorrent # torrenting
 		slurp # for selecting parts of the screen
@@ -51,8 +54,6 @@
 		wf-recorder # for screen sharing (still not working)
 		xdg-utils # open links in browser
 		zed-editor # code editor (alpha release) (its seriously pretty rough on NixOS atm)
-		playerctl # useful tui for controlling media
-		github-desktop # github native ui
 	];
 
 	# from: https://github.com/vimjoyer/nixos-gaming-video

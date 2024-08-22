@@ -9,6 +9,8 @@
 				output = "eDP-1";
 				modules-left = [
 					"hyprland/workspaces"
+					"custom/separator"
+					"custom/weather"
 				];
 				modules-center = [
 					"clock#date"
@@ -40,6 +42,12 @@
 					"persistent-workspaces" = { 
 						"*" = 8; 
 					};
+				};
+				"custom/weather" = {
+					# TODO: dont give away my location lol, not that i care or its hard to find
+					exec = "curl -s 'wttr.in/Toronto?format=%C,%20%f' || echo 'ERR'";
+					format = "WTR {}";
+					interval = 3600;
 				};
 				"clock#date" = {
 					format = "{:%A, %B %d}";

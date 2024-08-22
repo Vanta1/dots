@@ -193,6 +193,7 @@
 	};
 
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
+	nix.settings.trusted-users = [ "root" "${personal.user}" ];
 
 	system.stateVersion = "24.05"; # ne touche pas
 }

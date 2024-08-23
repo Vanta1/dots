@@ -27,6 +27,7 @@
 			hostname = "nixtop";
 			time-zone = "America/Toronto";
 			default-locale = "en_CA.UTF-8";
+			city = "Toronto";
 
 			# for git stuff
 			user-name = "Vanta_1";

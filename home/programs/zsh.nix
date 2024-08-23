@@ -14,6 +14,7 @@
 		# direnv is a program for automatically enter nix flake devshells based on the current directory.
 		initExtra = ''
 			PROMPT='%1~ :3 ' 
+			export PATH=$PATH:$HOME/bin/
 			export PATH=$PATH:$HOME/bin/vanta1
 			eval "$(direnv hook zsh)" 
 		'';

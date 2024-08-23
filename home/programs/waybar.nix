@@ -46,8 +46,9 @@
 				"custom/weather" = {
 					# TODO: dont give away my location lol, not that i care or its hard to find
 					exec = "curl -s 'wttr.in/Toronto?format=%C,%20%f' || echo 'ERR'";
+					on-click = "notify_weather.sh";
 					format = "WTR {}";
-					interval = 3600;
+					interval = 900;
 				};
 				"clock#date" = {
 					format = "{:%A, %B %d}";

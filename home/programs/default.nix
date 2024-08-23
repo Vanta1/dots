@@ -17,6 +17,9 @@
 		./vesktop.nix # discord retheming
 		./vscode.nix # ide
 		./zathura.nix # pdf viewer w/ vim like controls
+
+		# testing scryterm
+		./deprecated/kitty.nix
 	];
 
 	home.packages = with pkgs; [

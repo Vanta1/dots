@@ -8,6 +8,7 @@
 				foreground = "#d3c6aa"
 
 			[global]
+				monitor = 1
 				width = 400
 				height = 300
 				padding = 12

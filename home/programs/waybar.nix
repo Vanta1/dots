@@ -49,6 +49,7 @@
 					on-click = "notify_weather.sh";
 					format = "WTR {}";
 					interval = 900;
+					tooltip = false;
 				};
 				"clock#date" = {
 					format = "{:%A, %B %d}";

@@ -55,6 +55,7 @@
 		vlc # media player
 		which # find locations of executables
 		wf-recorder # for screen sharing (still not working)
+		wl-clipboard # clipboard utilities (wl-copy & wl-paste)
 		xdg-utils # open links in browser
 		zed-editor # code editor (alpha release) (its seriously pretty rough on NixOS atm)
 	];

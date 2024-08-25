@@ -1,6 +1,8 @@
+# this could be a one liner but I split it out into this script to be more readable/editable
+
 title="Weather in: Toronto, Ontario"
 
-time=$(date +'%A, %B %d | %I:%M %p')
+time=$(date +'%A, %B %d, %I:%M %p')
 
 condition="%C,%20feels%20like%20%f"
 humidity="Humidity%20%h,%20Wind%20%w"

@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }: {
+{ inputs, config, pkgs, personal, ... }: {
 	wayland.windowManager.hyprland.settings = {
 		"$mod" = "SUPER";
 		"$resizeStep" = 10;
@@ -40,7 +40,7 @@
 			"$mod SHIFT, P, exec, manage_airpods.sh" # toggles connection w/ my airpods
 			"$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # application launcher, o for open, close with $mod+O or ESC
 			"$mod SHIFT, R, exec, pkill waybar ; waybar &!" # refresh waybar
-			"$mod SHIFT, S, exec, slurp | xargs grim -g $1" # screenshot
+			"$mod SHIFT, S, exec, grim -g \"$(slurp)\" \"/home/${personal.user}/screenshots/$(date +'%s_grim.png')\"" # screenshot
 			"$mod SHIFT, BACKSPACE, exec, loginctl lock-session" # lock the screen
 			#"$mod, T, exec, thunderbird" # email + calendar + todo list
 			"$mod, D, exec, dunstctl close-all" # dismiss all notifications

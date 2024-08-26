@@ -29,6 +29,7 @@
 		blender # 3D modeling
 		chromium # i use firefox, but google earth studio is chrome only
 		devenv # super easy development environments, esp w/ direnv
+		dolphin # file manager
 		feh # image viewer
 		gammastep # screen temperature/white balance
 		github-desktop # github native ui
@@ -39,6 +40,7 @@
 		(pkgs.mailspring.overrideAttrs (final: previous: {
 			postFixup = builtins.replaceStrings [ "Exec=$out/bin/mailspring" ] [ "Exec=\"$out/bin/mailspring --password-store=\"gnome-libsecret\"\"" ] previous.postFixup;
 		})) 
+		kdePackages.qtsvg # for dolphin
 		# minecraft # mining and crafting game TODO: broken
 		musescore # sheet music software
 		moonlight-qt # remote desktop/gaming

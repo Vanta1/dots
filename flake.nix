@@ -10,6 +10,7 @@
 			url = "github:Gerg-L/spicetify-nix";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		# currently broken, reverted to nixpkgs versions. issue: https://github.com/hyprwm/Hyprland/issues/6967#issuecomment-2297677508
     	# hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     	# hyprland-plugins = {
       	# 	url = "github:hyprwm/hyprland-plugins";

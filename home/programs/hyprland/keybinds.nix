@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, personal, ... }: {
+{ personal, ... }: {
 	wayland.windowManager.hyprland.settings = {
 		"$mod" = "SUPER";
 		"$resizeStep" = 10;

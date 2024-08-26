@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ ... }: {
 	xdg.configFile."tofi/config".text = ''    
 		# Text
 		font = "Fira Sans"

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
 	# dependencies for shell scripts
 	home.packages = with pkgs; [ 
 		jq

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
 	services.dunst.enable = true; 
 	# TODO: translate this to nix syntax w/ services.dunst.settings
 	xdg.configFile."dunst/dunstrc" = {

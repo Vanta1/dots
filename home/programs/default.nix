@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, personal, ... }: {
+{ pkgs, personal, ... }: {
 	imports = [
 		# shell
 		./zsh.nix
@@ -44,6 +44,7 @@
 		# minecraft # mining and crafting game TODO: broken
 		musescore # sheet music software
 		moonlight-qt # remote desktop/gaming
+		nil # nix language server
 		numbat # scientific calculator
 		neofetch # display system info for rice posts
 		obsidian # note taking app
@@ -51,6 +52,7 @@
 		playerctl # useful tui for controlling media
 		protonup # steam proton installer
 		qbittorrent # torrenting
+		ranger # tui file manager
 		slurp # for selecting parts of the screen
 		tree # display contents of a directory as a file tree
 		vesktop # discord client that actually works

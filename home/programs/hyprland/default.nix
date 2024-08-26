@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }: {
+{ pkgs, ... }: {
 	imports = [
 		./keybinds.nix
 		./hypridle.nix

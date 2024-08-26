@@ -1,4 +1,4 @@
-{ config, pkgs, personal, ... }: {
+{ personal, ... }: {
 	programs.firefox = {
 		enable = true;
 		profiles.${personal.user} = {

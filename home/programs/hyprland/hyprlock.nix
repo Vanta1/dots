@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, personal, ... }: {
+{ personal, ... }: {
 	programs.hyprlock = {
 		enable = true;
 		settings = {

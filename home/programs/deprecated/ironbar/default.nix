@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }: {
+{ pkgs, ... }: {
 	home.packages = [ pkgs.ironbar ];
 	
 	xdg.configFile."ironbar/" = { 

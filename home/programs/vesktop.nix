@@ -1,4 +1,4 @@
-{ config, inputs, pkgs, ... }: {
+{ ... }: {
 	xdg.configFile."vesktop/themes/midnight.theme.css".text = ''
 		/**
 		* @name midnight

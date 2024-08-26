@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, personal, ... }: {
+{ pkgs, inputs, personal, ... }: {
 	programs.waybar = {
 		enable = true;
 		package = inputs.waybar.packages.${pkgs.system}.waybar;

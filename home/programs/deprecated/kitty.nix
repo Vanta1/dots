@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ ... }: {
 	programs.kitty = {
 		enable = true;
 		theme = "Everforest Dark Hard";

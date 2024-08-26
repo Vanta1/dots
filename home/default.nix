@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, personal, ... }: {  
+{ personal, ... }: {  
 	imports = [
 		./programs
 		./bin

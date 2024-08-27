@@ -122,7 +122,7 @@
 				"plugin:hyprbars:nobar,^(code-url-handler)$"
 				"plugin:hyprbars:nobar,^(dev.zed.Zed)$"
 				"plugin:hyprbars:nobar,^(GitHub Desktop)$"
-				"plugin:hyprbars:nobar,^(vesktop)$"
+				#"plugin:hyprbars:nobar,^(vesktop)$"
 			];
 
 			windowrulev2 = [
@@ -132,7 +132,7 @@
 				"idleinhibit fullscreen, fullscreen:1"
 
 				# disable bar for windows with native titlebars, spotify for some reason has no window class
-				"plugin:hyprbars:nobar,initialTitle:(Spotify Premium)"
+				#"plugin:hyprbars:nobar,initialTitle:(Spotify Premium)"
 			];
 		};
 	};

@@ -2,11 +2,12 @@
 	programs.zsh = {
 		enable = true;
 		shellAliases = {
-			ls = "ls -a --color=auto";
-			v = "vim";
 			bmount = "bashmount";
-			snerp = "sudo nixos-rebuild switch"; # used to be snrs, but I just started saying 'snerp' in my head and so here we are
+			ls = "ls -a --color=auto";
 			mkdirenv = "echo \"use flake\" >> .envrc && direnv allow"; 		
+			snerp = "sudo nixos-rebuild switch"; # used to be snrs, but I just started saying 'snerp' in my head and so here we are
+			r = "ranger";
+			v = "vim";
 		};
 
 		# in 'PROMPT' the %1~ shows name of the current working directory, or ~ if that's the user's home directory

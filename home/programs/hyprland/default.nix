@@ -47,7 +47,7 @@
 				"eDP-1, 1920x1200, 0x0, 1"
 				# (this turned out to be too annoying to work with as too many apps I use don't support scaling) place my desktop monitor above my laptop, and center it (((1920 / 0.75) - 1920) / 2 = 320, 1080 / 0.75 = 1440)
 				# place my desktop monitor above my laptop
-				"desc:Acer Technologies ED273 A 0x01010101,1920x1080@59.95, 0x-1080, 1"
+				"desc:Acer Technologies ED273 A 0x01010101, 1920x1080@120, 0x-1080, 1"
 			];
 
 			input = {
@@ -122,6 +122,7 @@
 				"plugin:hyprbars:nobar,^(code-url-handler)$"
 				"plugin:hyprbars:nobar,^(dev.zed.Zed)$"
 				"plugin:hyprbars:nobar,^(GitHub Desktop)$"
+				"plugin:hyprbars:nobar,^(steam)$"
 				#"plugin:hyprbars:nobar,^(vesktop)$"
 			];
 

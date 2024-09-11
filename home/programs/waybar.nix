@@ -45,7 +45,8 @@
 				};
 				"custom/weather" = {
 					# TODO: dont give away my location lol, not that i care or its hard to find
-					exec = "curl -s 'wttr.in/Toronto?format=%C,%20%f' || echo 'ERR'";
+					# TODO: stop using wttr.in. It can just go offline sometimes which is annoying
+					exec = "curl -s 'wttr.in/${personal.city}?format=%C,%20%f' || echo 'ERR'";
 					on-click = "notify_weather.sh";
 					format = "WTR {}";
 					interval = 900;

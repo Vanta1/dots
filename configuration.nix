@@ -58,6 +58,9 @@
 
 		# needed for gnome-keyring
 		libsecret
+
+		# other
+		greetd.tuigreet
 	];
 
 	fonts.packages = with pkgs; [
@@ -113,6 +116,17 @@
 	services.mullvad-vpn.enable = true;
 
 	services.fwupd.enable = true;
+
+	services.fprintd.enable = true;
+	services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+        user = "greeter";
+      };
+    };
+  };
 
 	hardware.opengl = {
 		enable = true; # need this for Hyprland to work when enabled with home-manager & steam games

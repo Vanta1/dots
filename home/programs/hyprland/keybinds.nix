@@ -38,7 +38,7 @@
 			"$mod, B, exec, firefox" # b for browser
 			"$mod, W, exec, waypaper" # wallpaper setter
 			"$mod SHIFT, W, exec, waypaper --random" # random wallpaper
-			"$mod SHIFT, P, exec, manage_airpods.sh" # toggles connection w/ my airpods
+			"$mod SHIFT, P, exec, /home/${personal.user}/bin/vanta1/manage_airpods.sh" # toggles connection w/ my airpods
 			"$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # application launcher, o for open, close with $mod+O or ESC
 			"$mod SHIFT, R, exec, pkill waybar ; waybar &!" # refresh waybar
 			"$mod SHIFT, S, exec, grim -g \"$(slurp)\" \"/home/${personal.user}/screenshots/$(date +'%s_grim.png')\"" # screenshot

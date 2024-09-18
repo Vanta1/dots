@@ -28,8 +28,9 @@
 					# "taskbar" "custom/separator", 
 					"wireplumber" 
 					"custom/separator"
-					"network" 
-					"custom/separator"
+					# testing out just using nm-applet
+					#"network" 
+					#"custom/separator"
 					"idle_inhibitor"
 					"custom/separator"
 					"battery"

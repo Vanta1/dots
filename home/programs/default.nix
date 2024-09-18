@@ -44,9 +44,10 @@
 		# minecraft # mining and crafting game TODO: broken
 		musescore # sheet music software
 		moonlight-qt # remote desktop/gaming
+		neofetch # display system info for rice posts
+		networkmanagerapplet # tray icon
 		nil # nix language server
 		numbat # scientific calculator
-		neofetch # display system info for rice posts
 		obsidian # note taking app
 		pcmanfm # file manager
 		playerctl # useful tui for controlling media

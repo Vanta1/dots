@@ -3,7 +3,8 @@
 		enable = true;
 		shellAliases = {
 			bmount = "bashmount";
-			ls = "ls -a --color=auto";
+			ls = "ls --color=auto";
+			la = "ls -a --color=auto";
 			mkdirenv = "echo \"use flake\" >> .envrc && direnv allow"; 		
 			snerp = "sudo nixos-rebuild switch"; # used to be snrs, but I just started saying 'snerp' in my head and so here we are
 			r = "ranger";

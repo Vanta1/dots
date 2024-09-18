@@ -7,8 +7,8 @@
 		enable = true;
 
 		iconTheme = {
-			name = "Papirus-Dark";
-			package = pkgs.catppuccin-papirus-folders;
+			name = "Vimix";
+			package = pkgs.vimix-icon-theme;
 		};
 	};
 

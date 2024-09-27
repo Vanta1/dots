@@ -24,6 +24,7 @@
 
 	home.packages = with pkgs; [
 		acpi # power info
+		alejandra # nix formatter
 		brightnessctl # backlight control
 		btop # system monitor
 		blender # 3D modeling

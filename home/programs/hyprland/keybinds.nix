@@ -47,6 +47,7 @@
       "$mod, D, exec, dunstctl close-all" # dismiss all notifications
       "$mod, COMMA, exec, playerctl --player=spotify previous" # seek/track w/ '<' / '>'
       "$mod, PERIOD, exec, playerctl --player=spotify next"
+      "$mod, SPACE, exec, playerctl play-pause" # pause w spacebar
       "$mod SHIFT, C, exec, code /etc/nixos" # edit this flake in vscode
 
       # window management keybinds

@@ -42,6 +42,8 @@
       "$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # application launcher, o for open, close with $mod+O or ESC
       "$mod SHIFT, R, exec, pkill waybar ; waybar &!" # refresh waybar
       "$mod SHIFT, S, exec, grim -g \"$(slurp)\" \"/home/${personal.user}/screenshots/$(date +'%s_grim.png')\"" # screenshot
+      # screenshots my laptop screen, update for urself
+      "$mod CTRL, S, exec, grim -g \"0,0 1920x1200\" \"/home/${personal.user}/screenshots/$(date +'%s_grim.png')\""
       "$mod SHIFT, BACKSPACE, exec, loginctl lock-session" # lock the screen
       #"$mod, T, exec, thunderbird" # email + calendar + todo list
       "$mod, D, exec, dunstctl close-all" # dismiss all notifications

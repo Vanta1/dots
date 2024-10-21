@@ -90,7 +90,7 @@
   users.users.${personal.user} = {
     isNormalUser = true;
     description = "default user, with sudo privileges";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "uinput"];
     shell = pkgs.zsh;
   };
 
@@ -168,6 +168,27 @@
   programs.xwayland.enable = true;
 
   services.printing.enable = true;
+
+  # hardware.uinput.enable = true;
+  services.kanata = {
+    enable = true;
+    keyboards = {
+      internalKeyboard = {
+        devices = [
+          "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
+        ];
+        extraDefCfg = "process-unmapped-keys yes";
+        config = ''
+          (defsrc
+           caps
+          )
+          (deflayer base
+           (tap-hold 100 100 esc lctl)
+          )
+        '';
+      };
+    };
+  };
 
   services.avahi = {
     enable = true;

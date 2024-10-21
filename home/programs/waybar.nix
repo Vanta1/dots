@@ -14,8 +14,8 @@
         output = "eDP-1";
         modules-left = [
           "hyprland/workspaces"
-          "custom/separator"
-          "custom/weather"
+          # "custom/separator"
+          # "custom/weather" see TODO for the module
         ];
         modules-center = [
           "clock#date"

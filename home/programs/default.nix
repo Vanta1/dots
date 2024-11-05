@@ -57,15 +57,17 @@
     pcmanfm # file manager
     playerctl # useful tui for controlling media
     protonup # steam proton installer
-    qbittorrent # torrenting
+    # qbittorrent # torrenting (insecure atm)
     ranger # tui file manager
     slurp # for selecting parts of the screen
+    thunderbird # email client
     tree # display contents of a directory as a file tree
     vesktop # discord client that actually works
     vlc # media player
     which # find locations of executables
     wf-recorder # for screen sharing (still not working)
     wl-clipboard # clipboard utilities (wl-copy & wl-paste)
+    xdg-user-dirs # manage user directories, see xdg.configFile."user-dirs.dirs"
     xdg-utils # open links in browser
     # zed-editor # code editor (alpha release) (its seriously pretty rough on NixOS atm) (and only available on nixpkgs/unstable)
   ];
@@ -76,7 +78,7 @@
   };
 
   # i prefer lowercase directory names ¯\_(ツ)_/¯
-  xdg.configFile."users-dirs.dirs".text = ''
+  xdg.configFile."user-dirs.dirs".text = ''
     XDG_DESKTOP_DIR="$HOME/desktop"
     XDG_DOWNLOAD_DIR="$HOME/downloads"
     XDG_PUBLICSHARE_DIR="$HOME/public"
@@ -88,7 +90,7 @@
   '';
 
   # automatically enter nix devshells when changing working directory
-  # (w/ vscode integration using the Nix Environment Selector extension)
+  # (w/ vscode integration using the direnv extension)
   programs.direnv = {
     enable = true;
     enableZshIntegration = true;

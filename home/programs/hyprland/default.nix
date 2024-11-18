@@ -111,13 +111,13 @@
       misc.disable_hyprland_logo = "true";
 
       windowrule = [
-        # ^(code-url-handler)$ selects VSCode windows
+        # ^(code)$ selects VSCode windows
         # set opacity (active, inactive) for windows
-        "opacity 0.95 0.85,^(code-url-handler)$"
+        "opacity 0.95 0.85,^(code)$"
         "opacity 0.95 0.85,^(dev.zed.Zed)$"
 
         # disable bar for windows with native titlebars, use 'hyprctl clients' to get the window class
-        "plugin:hyprbars:nobar,^(code-url-handler)$"
+        "plugin:hyprbars:nobar,^(code)$"
         "plugin:hyprbars:nobar,^(dev.zed.Zed)$"
         "plugin:hyprbars:nobar,^(GitHub Desktop)$"
         "plugin:hyprbars:nobar,^(steam)$"

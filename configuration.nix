@@ -181,9 +181,13 @@
         config = ''
           (defsrc
            caps
+           tab
+           \
           )
           (deflayer base
            (tap-hold 100 100 esc lctl)
+           (tap-hold 100 100 tab lalt)
+           (tap-hold 100 100 \ lmet)
           )
         '';
       };

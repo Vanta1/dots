@@ -55,7 +55,7 @@
       # window management keybinds
 
       # misc important
-      "$mod SHIFT, Q, exit," # exit Hyprland
+      "$mod SHIFT, E, exit," # exit Hyprland
       "$mod CTRL, Q, killactive," # kill current window
       "$mod, F, fullscreen, 0" # regular fullscreen
       "$mod, M, fullscreen, 1" # 'monocle'/maximize - doesn't remove titlebar or bars

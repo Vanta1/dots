@@ -69,6 +69,7 @@
     wl-clipboard # clipboard utilities (wl-copy & wl-paste)
     xdg-user-dirs # manage user directories, see xdg.configFile."user-dirs.dirs"
     xdg-utils # open links in browser
+    yazi # tui file explorer
     # zed-editor # code editor (alpha release) (its seriously pretty rough on NixOS atm) (and only available on nixpkgs/unstable)
   ];
 

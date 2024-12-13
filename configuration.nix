@@ -132,10 +132,9 @@
     };
   };
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true; # need this for Hyprland to work when enabled with home-manager & steam games
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
     extraPackages = with pkgs; [
       intel-media-driver # these are for jellyfin mostly
       intel-compute-runtime

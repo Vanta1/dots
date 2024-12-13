@@ -58,6 +58,10 @@
         };
       };
 
+      cursor = {
+        enable_hyprcursor = "false";
+      };
+
       general = {
         gaps_in = "6";
         gaps_out = "12";
@@ -89,16 +93,12 @@
         };
       };
 
-      dwindle = {
-        no_gaps_when_only = "1";
-      };
-
       decoration = {
         rounding = "12";
-        drop_shadow = "false";
         blur = {
           enabled = "false";
         };
+        "shadow:enabled" = "false";
       };
 
       gestures = {
@@ -131,7 +131,19 @@
         "idleinhibit fullscreen, fullscreen:1"
 
         # disable bar for windows with native titlebars, spotify for some reason has no window class
-        #"plugin:hyprbars:nobar,initialTitle:(Spotify Premium)"
+        #"plugin:hyprbars:nobar,initialTitle:(Spotify Premium)""
+
+        # replicate "no_gaps_when_only"
+        "bordersize 0, floating:0, onworkspace:w[tv1]"
+        "rounding 0, floating:0, onworkspace:w[tv1]"
+        "bordersize 0, floating:0, onworkspace:f[1]"
+        "rounding 0, floating:0, onworkspace:f[1]"
+      ];
+
+      workspace = [
+        # replicate "no_gaps_when_only"
+        "w[tv1], gapsout:0, gapsin:0"
+        "f[1], gapsout:0, gapsin:0"
       ];
     };
   };

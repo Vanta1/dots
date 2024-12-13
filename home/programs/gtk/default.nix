@@ -10,7 +10,7 @@
       package = pkgs.vimix-icon-theme;
     };
     cursorTheme = {
-      name = "capitain-cursors";
+      name = "capitaine-cursors";
       package = pkgs.capitaine-cursors;
       size = 24;
     };

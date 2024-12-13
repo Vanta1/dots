@@ -9,6 +9,11 @@
       name = "Vimix";
       package = pkgs.vimix-icon-theme;
     };
+    cursorTheme = {
+      name = "capitain-cursors";
+      package = pkgs.capitaine-cursors;
+      size = 24;
+    };
   };
 
   xdg.configFile."gtk-4.0/" = {

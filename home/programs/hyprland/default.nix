@@ -13,6 +13,7 @@
     xdg-desktop-portal-gtk
     hypridle
     hyprlock
+    nwg-look # for setting cursor theme
   ];
 
   wayland.windowManager.hyprland = {
@@ -26,15 +27,16 @@
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
+        "XCURSOR_SIZE, 24"
         "QT_QPA_PLATFORM,wayland"
         "QT_QPA_PLATFORMTHEME,qt5ct"
         "QT_AUTO_SCREEN_SCALE_FACTOR,1"
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
-        # "AQ_DRM_DEVICES,/dev/dri/card1" for broken hyprland-git
       ];
 
       # programs run once on startup
       exec-once = [
+        "hyprctl setcursor capitaine-cursors 24"
         "waypaper --restore" # restore previous wallpaper
         "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.2" # set volume to 20 (nice default on my laptop)
         "wpctl set-mute @DEFAULT_AUDIO_SINK@ 1" # muted sound by default
@@ -59,7 +61,7 @@
       };
 
       cursor = {
-        enable_hyprcursor = "false";
+        enable_hyprcursor = "true";
       };
 
       general = {

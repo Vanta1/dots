@@ -23,7 +23,7 @@
     ./zathura.nix # pdf viewer w/ vim like controls
 
     # testing scryterm
-    ./deprecated/kitty.nix
+    # ./deprecated/kitty.nix
   ];
 
   home.packages = with pkgs; [
@@ -32,6 +32,7 @@
     brightnessctl # backlight control
     btop # system monitor
     blender # 3D modeling
+    capitaine-cursors # cursor theme
     chromium # i use firefox, but google earth studio is chrome only
     devenv # super easy development environments, esp w/ direnv
     dolphin # file manager

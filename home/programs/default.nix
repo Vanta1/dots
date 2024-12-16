@@ -29,6 +29,7 @@
   home.packages = with pkgs; [
     acpi # power info
     alejandra # nix formatter
+    audacity # audio editor
     brightnessctl # backlight control
     btop # system monitor
     blender # 3D modeling
@@ -46,7 +47,9 @@
     # (pkgs.mailspring.overrideAttrs (final: previous: {
     #   postFixup = builtins.replaceStrings ["Exec=$out/bin/mailspring"] ["Exec=\"$out/bin/mailspring --password-store=\"gnome-libsecret\"\""] previous.postFixup;
     # }))
+    jmtpfs # media transfer protocol implementation
     kdePackages.qtsvg # for dolphin
+    kid3 # audio file tagger
     # minecraft # mining and crafting game TODO: broken
     musescore # sheet music software
     moonlight-qt # remote desktop/gaming

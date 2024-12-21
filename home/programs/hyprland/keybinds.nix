@@ -36,6 +36,7 @@
       # programs
       "$mod, RETURN, exec, alacritty" # terminal emulator
       "$mod, B, exec, firefox" # b for browser
+      "$mod SHIFT, B, exec, /home/${personal.user}/bin/vanta1/sync_brightness.sh" # B for sync Brightness
       "$mod, W, exec, waypaper" # wallpaper setter
       "$mod SHIFT, W, exec, waypaper --random" # random wallpaper
       "$mod SHIFT, P, exec, /home/${personal.user}/bin/vanta1/manage_airpods.sh" # toggles connection w/ my airpods

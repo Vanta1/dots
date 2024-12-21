@@ -114,6 +114,8 @@
   services.blueman.enable = true;
   hardware.steam-hardware.enable = true;
 
+  hardware.i2c.enable = true;
+
   # for ironbar (deprecated), probably don't need if i update that to use get_battery.sh
   #services.upower.enable = true;
 

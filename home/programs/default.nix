@@ -35,6 +35,7 @@
     blender # 3D modeling
     capitaine-cursors # cursor theme
     chromium # i use firefox, but google earth studio is chrome only
+    ddcutil # control external monitors
     devenv # super easy development environments, esp w/ direnv
     dolphin # file manager
     feh # image viewer

@@ -114,6 +114,7 @@
   services.blueman.enable = true;
   hardware.steam-hardware.enable = true;
 
+  # for controlling external monitors
   hardware.i2c.enable = true;
 
   # for ironbar (deprecated), probably don't need if i update that to use get_battery.sh

@@ -8,7 +8,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Everforest";
+      name = "Everforest-Dark-BL";
       package = pkgs.everforest-gtk-theme;
     };
     iconTheme = {
@@ -20,10 +20,5 @@
       package = pkgs.capitaine-cursors;
       size = 24;
     };
-  };
-
-  xdg.configFile."gtk-4.0/" = {
-    source = ./gtk-4.0;
-    recursive = true;
   };
 }

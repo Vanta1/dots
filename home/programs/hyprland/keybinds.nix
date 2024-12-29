@@ -36,6 +36,7 @@
       # programs
       "$mod, RETURN, exec, alacritty" # terminal emulator
       "$mod, B, exec, firefox" # b for browser
+      "$mod, N, exec, nemo" # file manager
       "$mod SHIFT, B, exec, /home/${personal.user}/bin/vanta1/sync_brightness.sh" # B for sync Brightness
       "$mod, W, exec, waypaper" # wallpaper setter
       "$mod SHIFT, W, exec, waypaper --random" # random wallpaper
@@ -47,7 +48,8 @@
       "$mod CTRL, S, exec, grim -g \"0,0 1920x1200\" \"/home/${personal.user}/screenshots/$(date +'%s_grim.png')\""
       "$mod SHIFT, BACKSPACE, exec, loginctl lock-session" # lock the screen
       #"$mod, T, exec, thunderbird" # email + calendar + todo list
-      "$mod, D, exec, dunstctl close-all" # dismiss all notifications
+      "$mod, D, exec, dunstctl history-pop" # show old notifications
+      "$mod SHIFT, D, exec, dunstctl close-all" # dismiss all notifications
       "$mod, COMMA, exec, playerctl --player=spotify previous" # seek/track w/ '<' / '>'
       "$mod, PERIOD, exec, playerctl --player=spotify next"
       "$mod, SPACE, exec, playerctl play-pause" # pause w spacebar

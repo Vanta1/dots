@@ -36,7 +36,6 @@
     chromium # i use firefox, but google earth studio is chrome only
     ddcutil # control external monitors
     devenv # super easy development environments, esp w/ direnv
-    dolphin # file manager
     feh # image viewer
     gammastep # screen temperature/white balance
     github-desktop # github native ui
@@ -58,7 +57,6 @@
     nil # nix language server
     numbat # scientific calculator
     obsidian # note taking app
-    pcmanfm # file manager
     playerctl # useful tui for controlling media
     protonup # steam proton installer
     qbittorrent # torrenting
@@ -73,7 +71,6 @@
     wl-clipboard # clipboard utilities (wl-copy & wl-paste)
     xdg-user-dirs # manage user directories, see xdg.configFile."user-dirs.dirs"
     xdg-utils # open links in browser
-    yazi # tui file explorer
     # zed-editor # code editor (alpha release) (its seriously pretty rough on NixOS atm) (and only available on nixpkgs/unstable)
   ];
 
@@ -116,4 +113,11 @@
 
   services.gnome-keyring.enable = true; # keep it secret
   services.udiskie.enable = true; # disk mount util
+
+  # "Nemo" doesn't show up in tofi for some reason, even after refreshing cache
+  xdg.desktopEntries.nemo = {
+    name = "Nemo";
+    exec = "nemo";
+    terminal = false;
+  };
 }

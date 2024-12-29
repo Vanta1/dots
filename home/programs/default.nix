@@ -33,7 +33,6 @@
     brightnessctl # backlight control
     btop # system monitor
     blender # 3D modeling
-    capitaine-cursors # cursor theme
     chromium # i use firefox, but google earth studio is chrome only
     ddcutil # control external monitors
     devenv # super easy development environments, esp w/ direnv
@@ -43,7 +42,6 @@
     github-desktop # github native ui
     gnupg # encryption
     grim # screenshot utility
-    gtk-engine-murrine # for everforest theme
     # email client, patched bc enabling gnome.gnome-keyring doesn't work (despite what the mailspring website says)
     # (pkgs.mailspring.overrideAttrs (final: previous: {
     #   postFixup = builtins.replaceStrings ["Exec=$out/bin/mailspring"] ["Exec=\"$out/bin/mailspring --password-store=\"gnome-libsecret\"\""] previous.postFixup;
@@ -54,6 +52,7 @@
     # minecraft # mining and crafting game TODO: broken
     musescore # sheet music software
     moonlight-qt # remote desktop/gaming
+    nemo # file manager
     neofetch # display system info for rice posts
     networkmanagerapplet # tray icon
     nil # nix language server
@@ -62,7 +61,7 @@
     pcmanfm # file manager
     playerctl # useful tui for controlling media
     protonup # steam proton installer
-    # qbittorrent # torrenting (insecure atm)
+    qbittorrent # torrenting
     ranger # tui file manager
     slurp # for selecting parts of the screen
     thunderbird # email client

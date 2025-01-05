@@ -51,7 +51,7 @@
     # minecraft # mining and crafting game TODO: broken
     musescore # sheet music software
     moonlight-qt # remote desktop/gaming
-    nemo # file manager
+    nemo-with-extensions # file manager
     neofetch # display system info for rice posts
     networkmanagerapplet # tray icon
     nil # nix language server

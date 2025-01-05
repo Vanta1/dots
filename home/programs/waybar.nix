@@ -14,7 +14,8 @@
         output = "eDP-1";
         modules-left = [
           "hyprland/workspaces"
-          "custom/separator"
+          # workspace module already has padding, so here i use a separator without padding-left to make the space on either side equal
+          "custom/workspace-separator"
           "custom/weather" # see TODO for the module
         ];
         modules-center = [
@@ -41,6 +42,10 @@
           "battery"
         ];
         "custom/separator" = {
+          format = "|";
+          tooltip = false;
+        };
+        "custom/workspace-separator" = {
           format = "|";
           tooltip = false;
         };
@@ -138,11 +143,18 @@
       	color: #d3c6aa;
       	font-family: Input Mono;
       	font-size: 12pt;
+        font-weight: normal;
       }
 
       #custom-separator {
       	margin-bottom: 3px;
       	padding-left: 6px;
+      	padding-right: 6px;
+      }
+
+      #custom-workspace-separator {
+      	margin-bottom: 3px;
+      	padding-left: 0px;
       	padding-right: 6px;
       }
 

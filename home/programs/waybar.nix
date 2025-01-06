@@ -29,15 +29,12 @@
         ];
         modules-right = [
           # TODO: figure out a way to make the tray separator go away when tray is empty
-          "group/tray"
+          "tray"
+          "idle_inhibitor"
+          "custom/separator"
           # TODO: figure out if this or some kind of manual solution involving workspaces would be better for minimizing windows,,,, i probably want to make my own cause that seems fun
           # "taskbar" "custom/separator",
           "wireplumber"
-          "custom/separator"
-          # testing out just using nm-applet
-          #"network"
-          #"custom/separator"
-          "idle_inhibitor"
           "custom/separator"
           "battery"
         ];
@@ -88,13 +85,14 @@
           on-click = "playerctl --player=spotify play-pause";
           tooltip = false;
         };
-        "group/tray" = {
-          orientation = "horizontal";
-          modules = [
-            "tray"
-            "custom/separator"
-          ];
-        };
+        # removed in favor of haivng idle_inhibitor disguised as part of the tray >:3
+        #"group/tray" = {
+        #  orientation = "horizontal";
+        #  modules = [
+        #    "tray"
+        #    "custom/separator"
+        #  ];
+        #};
         tray = {
           spacing = 9;
           show-passive-icons = true;
@@ -110,7 +108,7 @@
           tooltip-format = "STR {signalStrength}";
         };
         idle_inhibitor = {
-          format = "IDL {icon}";
+          format = "{icon}";
           format-icons = {
             activated = "";
             deactivated = "";
@@ -238,12 +236,17 @@
       	color: #e67e80;
       }
 
+      #idle_inhibitor {
+        padding-left: 9px;
+        margin-bottom: 2px;
+      }
+
       #idle_inhibitor.activated {
       	color: #e67e80;
       }
 
       #idle_inhibitor.deactivated {
-      	color: #a7c080;
+      	color: #9da9a0;
       }
 
       #battery {

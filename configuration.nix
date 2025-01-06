@@ -25,7 +25,7 @@
       53559 # jellyfin
     ];
     allowedTCPPorts = [
-      # jellyfin
+      53559 # jellyfin
     ];
   };
 
@@ -44,7 +44,7 @@
   time.timeZone = personal.time-zone;
   i18n.defaultLocale = personal.default-locale;
 
-  # Packages, available to all users
+  # packages available to all users
   environment.systemPackages = with pkgs; [
     # basic utilities, expected linux stuff
     exfat

@@ -8,8 +8,10 @@
       };
       background = {
         monitor = ""; # leave empty for all monitors
-        path = "/home/${personal.user}/wallpapers/mist_forest_2.png";
+        path = "/home/${personal.user}/wallpapers/pxl_everforest_blender.png";
         blur_passes = 3;
+        blur_size = 5;
+        contrast = 0.95;
       };
       input-field = {
         monitor = "eDP-1"; # dont want this being doubled on my bigger monitor

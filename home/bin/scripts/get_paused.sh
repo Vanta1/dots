@@ -2,9 +2,9 @@ playerctl --player=spotify status --follow | while read -r line
 do
     state=$(playerctl --player=spotify status)
     if [ "$state" = "Playing" ]; then
-        echo "|·⏸"
+        echo "| ⏸"
     elif [ "$state" = "Paused" ]; then 
-        echo "|·⏵"
+        echo "| ⏵"
     else
         echo ""
     fi

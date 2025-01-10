@@ -99,6 +99,7 @@
         };
         wireplumber = {
           format = "VOL {volume}";
+          on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
         };
         network = {
           format-wifi = "NET {essid}";

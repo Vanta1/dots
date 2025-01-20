@@ -117,12 +117,14 @@
         # set opacity (active, inactive) for windows
         "opacity 0.95 0.85,^(code)$"
         "opacity 0.95 0.85,^(dev.zed.Zed)$"
+        "opacity 0.95 0.85,^(obsidian)$"
 
         # disable bar for windows with native titlebars, use 'hyprctl clients' to get the window class
         "plugin:hyprbars:nobar,^(code)$"
         "plugin:hyprbars:nobar,^(dev.zed.Zed)$"
         "plugin:hyprbars:nobar,^(GitHub Desktop)$"
         "plugin:hyprbars:nobar,^(steam)$"
+        "plugin:hyprbars:nobar,^(obsidian)$"
         #"plugin:hyprbars:nobar,^(vesktop)$"
       ];
 

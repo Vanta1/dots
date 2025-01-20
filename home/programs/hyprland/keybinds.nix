@@ -37,6 +37,7 @@
       "$mod, RETURN, exec, alacritty" # terminal emulator
       "$mod, B, exec, firefox" # b for browser
       "$mod, N, exec, nemo" # file manager
+      "$mod SHIFT, N, exec, obsidian"
       "$mod SHIFT, B, exec, /home/${personal.user}/bin/vanta1/sync_brightness.sh" # B for sync Brightness
       "$mod, W, exec, waypaper" # wallpaper setter
       "$mod SHIFT, W, exec, waypaper --random" # random wallpaper

@@ -10,7 +10,7 @@
         url = "https://update.code.visualstudio.com/${version}/linux-x64/stable";
         # when the version number is changed the sha256 hash will be out of date.
         # just copy the "got" key from the error message and replace this field.
-        sha256 = "12606f4b6drp9gnb2y6q8b9zd1q7pjqg4ikjsfz47wgsi4009096";
+        sha256 = "0grp4295kdamdc7w7bf06dzp4fcx41ry2jif9yx983dd0wgcgbrn";
       };
     });
   };

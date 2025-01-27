@@ -4,7 +4,7 @@
     package = pkgs.vscode.overrideAttrs (oldAttrs: rec {
       # update this whenever vscode bugs you about an update. this way i can keep ahead of nixpkgs
       # you can find the latest version number here: https://code.visualstudio.com/updates
-      version = "1.96.2";
+      version = "1.96.4";
       src = builtins.fetchurl {
         name = "VSCode_${version}_linux-x64.tar.gz";
         url = "https://update.code.visualstudio.com/${version}/linux-x64/stable";

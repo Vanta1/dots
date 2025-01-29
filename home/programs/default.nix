@@ -48,6 +48,7 @@
     jmtpfs # media transfer protocol implementation
     kdePackages.qtsvg # for dolphin
     kid3 # audio file tagger
+    kondo # file cleaner upper for my massive cargo projects
     # minecraft # mining and crafting game TODO: broken
     musescore # sheet music software
     moonlight-qt # remote desktop/gaming
@@ -57,6 +58,7 @@
     nil # nix language server
     numbat # scientific calculator
     obsidian # note taking app
+    parallel-disk-usage # visual disk usage analyzer
     playerctl # useful tui for controlling media
     protonup # steam proton installer
     qbittorrent # torrenting

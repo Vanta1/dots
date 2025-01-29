@@ -186,8 +186,8 @@
            \
           )
           (deflayer base
-           (tap-hold 100 200 esc lctl)
-           (tap-hold 100 200 \ lmet)
+           (tap-hold 150 150 esc lctl)
+           (tap-hold 150 150 \ lmet)
           )
         '';
       };

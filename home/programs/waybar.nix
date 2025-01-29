@@ -15,8 +15,8 @@
         modules-left = [
           "hyprland/workspaces"
           # workspace module already has padding, so here i use a separator without padding-left to make the space on either side equal
-          "custom/workspace-separator"
-          "custom/weather" # see TODO for the module
+          #"custom/workspace-separator"
+          #"custom/weather" # see TODO for the module
         ];
         modules-center = [
           "clock#date"

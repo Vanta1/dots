@@ -62,7 +62,7 @@
     playerctl # useful tui for controlling media
     protonup # steam proton installer
     qbittorrent # torrenting
-    quodlibet # audio player
+    quodlibet-full # audio player
     ranger # tui file manager
     slurp # for selecting parts of the screen
     thunderbird # email client

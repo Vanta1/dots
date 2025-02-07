@@ -82,7 +82,7 @@
           bar_color = "rgb(272e33)";
           "col.text" = "rgb(d3c6aa)";
           bar_text_size = "12";
-          bar_text_font = "Input Mono";
+          bar_text_font = "Monaspace Xenon";
           bar_precedence_over_border = "true";
           bar_text_align = "center";
           bar_padding = "10";

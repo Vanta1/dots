@@ -140,7 +140,7 @@
       window#waybar {
       	background-color: #272e33;
       	color: #d3c6aa;
-      	font-family: Input Mono;
+      	font-family: Monaspace Xenon;
       	font-size: 12pt;
         font-weight: normal;
       }
@@ -176,7 +176,7 @@
 
       tooltip label {
       	color: #d3c6aa;
-      	font-family: Input Mono;
+      	font-family: Monaspace Xenon;
       	font-size: 10pt;
       }
 
@@ -212,7 +212,7 @@
       #tray menu {
       	background-color: #232e33;
       	color: #d3c6aa;
-      	font-family: Input Mono;
+      	font-family: Monaspace Xenon;
       	font-size: 12pt;
       }
 

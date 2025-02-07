@@ -1,7 +1,8 @@
-{...}: {
+{personal, ...}: {
   programs.zathura = {
     enable = true;
     options = {
+      font = "Monaspace Xenon 9";
       default-bg = "#272e33";
       default-fg = "#d3c6aa";
       statusbar-fg = "#d3c6aa";
@@ -27,10 +28,19 @@
     };
   };
 
-  # This turned out to be unnecessary, but I'm leaving it here for now as a good example of how to add custom .desktop files
-  #xdg.desktopEntries.zathura = {
-  #  name = "Zathura";
-  #  exec = "zathura";
-  #  terminal = false;
+  # Obsidian freezes when opening files w/ Zathura, and waits for the it to exit until it unfreezes. Disowning the process solves this.
+  xdg.desktopEntries.zathura-detached = {
+    type = "Application";
+    name = "Zathura Detached";
+    exec = "/home/${personal.user}/bin/Vanta1/detach-zathura.sh %U";
+    terminal = false;
+  };
+
+  # TODO: not working, messing with obsidian workflow
+  #xdg.mimeApps = {
+  #  enable = true;
+  #  defaultApplications = {
+  #    "application/pdf" = "zathura-detached.desktop";
+  #  };
   #};
 }

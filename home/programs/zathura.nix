@@ -1,8 +1,11 @@
-{personal, ...}: {
+{...}: {
   programs.zathura = {
     enable = true;
+    mappings = {
+      "=" = "zoom in";
+    };
     options = {
-      font = "Monaspace Xenon 9";
+      font = "Monaspace Xenon";
       default-bg = "#272e33";
       default-fg = "#d3c6aa";
       statusbar-fg = "#d3c6aa";
@@ -23,7 +26,7 @@
       completion-highlight-bg = "#272e33";
       recolor-lightcolor = "#272e33";
       recolor-darkcolor = "#d3c6aa";
-      recolor = "true";
+      recolor = "false"; # toggle this with Ctrl+R
       recolor-keephue = "false";
     };
   };
@@ -32,15 +35,8 @@
   xdg.desktopEntries.zathura-detached = {
     type = "Application";
     name = "Zathura Detached";
-    exec = "/home/${personal.user}/bin/Vanta1/detach-zathura.sh %U";
+    exec = "detach-zathura.sh %U";
+    mimeType = ["application/pdf"];
     terminal = false;
   };
-
-  # TODO: not working, messing with obsidian workflow
-  #xdg.mimeApps = {
-  #  enable = true;
-  #  defaultApplications = {
-  #    "application/pdf" = "zathura-detached.desktop";
-  #  };
-  #};
 }

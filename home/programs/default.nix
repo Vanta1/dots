@@ -33,7 +33,7 @@
     brightnessctl # backlight control
     btop # system monitor
     blender # 3D modeling
-    chromium # i use firefox, but google earth studio is chrome only
+    chromium # i use firefox, but google earth studio is chrome only, and it fucking breaks everything
     ddcutil # control external monitors
     devenv # super easy development environments, esp w/ direnv
     feh # image viewer

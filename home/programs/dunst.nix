@@ -20,7 +20,7 @@
       	offset = 12x12
       	gap_size = 12
       	min_icon_size = 600
-      	font = Input Sans 12
+      	font = Monaspace Xenon 12
       	format = "<b>%a</b>\n%s\n%b"
       	browser = ${pkgs.firefox}/bin/firefox
     '';

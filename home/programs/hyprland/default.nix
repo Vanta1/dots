@@ -21,7 +21,9 @@
     package = pkgs.hyprland; # inputs.hyprland.packages.${pkgs.system}.hyprland;
     plugins = [pkgs.hyprlandPlugins.hyprbars];
 
-    settings = {
+    settings = let
+      font_family = "Monaspace Xenon";
+    in {
       # environment variables
       env = [
         "XDG_CURRENT_DESKTOP,Hyprland"
@@ -76,13 +78,27 @@
         allow_tearing = "false";
       };
 
+      group = {
+        "col.border_active" = "rgb(374145)";
+        "col.border_inactive" = "rgb(272e33)";
+        groupbar = {
+          font_family = "${font_family}";
+          height = "30";
+          font_size = "12";
+          # TODO: update hyprland to at 0.47.0
+          # rounding = "12";
+          "col.active" = "rgb(9da9a0)";
+          "col.inactive" = "rgb(7a8478)";
+        };
+      };
+
       plugin = {
         hyprbars = {
           bar_height = "30";
           bar_color = "rgb(272e33)";
           "col.text" = "rgb(d3c6aa)";
           bar_text_size = "12";
-          bar_text_font = "Monaspace Xenon";
+          bar_text_font = "${font_family}";
           bar_precedence_over_border = "true";
           bar_text_align = "center";
           bar_padding = "10";
@@ -110,7 +126,10 @@
 
       animations.enabled = "no";
       dwindle.preserve_split = "yes";
-      misc.disable_hyprland_logo = "true";
+      misc = {
+        font_family = "${font_family}";
+        disable_hyprland_logo = "true";
+      };
 
       windowrule = [
         # ^(code)$ selects VSCode windows

@@ -77,12 +77,12 @@
         #};
         "custom/spotify-pause" = {
           exec = "/home/${personal.user}/bin/vanta1/get_paused.sh";
-          on-click = "playerctl --player=spotify play-pause";
+          on-click = "playerctl play-pause";
           tooltip = false;
         };
         "custom/spotify" = {
           exec = "/home/${personal.user}/bin/vanta1/get_playing.sh";
-          on-click = "playerctl --player=spotify play-pause";
+          on-click = "playerctl play-pause";
           tooltip = false;
         };
         # removed in favor of haivng idle_inhibitor disguised as part of the tray >:3

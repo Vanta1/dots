@@ -64,6 +64,11 @@
       "$mod, F, fullscreen, 0" # regular fullscreen
       "$mod, M, fullscreen, 1" # 'monocle'/maximize - doesn't remove titlebar or bars
 
+      # grouping windows
+      "$mod, G, togglegroup" # make a window into a group
+      "$mod, TAB, changegroupactive, f" # cycle through group
+      "$mod CTRL, TAB, changegroupactive, b" # cycle through group the other way
+
       # workspace navigation w/ workspace numbers. I like having numbered workspaces, but I'd like to try having dynamic labeled workspaces
       "$mod, 1, workspace, 1"
       "$mod, 2, workspace, 2"
@@ -102,11 +107,11 @@
       "$mod, K, movefocus, u"
       "$mod, L, movefocus, r"
 
-      # moving windows w/ shift + vim keys
-      "$mod SHIFT, H, movewindow, l"
-      "$mod SHIFT, J, movewindow, d"
-      "$mod SHIFT, K, movewindow, u"
-      "$mod SHIFT, L, movewindow, r"
+      # moving windows w/ shift + vim keys, also moves the window in or out of a group
+      "$mod SHIFT, H, movewindoworgroup, l"
+      "$mod SHIFT, J, movewindoworgroup, d"
+      "$mod SHIFT, K, movewindoworgroup, u"
+      "$mod SHIFT, L, movewindoworgroup, r"
 
       # resizing windows w/ control + vim keys
       "$mod CTRL, H, resizeactive, -$resizeStep 0"

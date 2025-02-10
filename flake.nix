@@ -1,5 +1,6 @@
 {
   description = "the root of all flakes";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     home-manager = {
@@ -10,14 +11,7 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # currently broken, reverted to nixpkgs versions. issue: https://github.com/hyprwm/Hyprland/issues/6967#issuecomment-2297677508
-    # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    # hyprland-plugins = {
-    # 	url = "github:hyprwm/hyprland-plugins";
-    # 	inputs.hyprland.follows = "hyprland";
-    # };
     waybar.url = "github:alexays/waybar";
-    #nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs = {

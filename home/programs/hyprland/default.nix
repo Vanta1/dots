@@ -18,7 +18,6 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = pkgs.hyprland; # inputs.hyprland.packages.${pkgs.system}.hyprland;
     plugins = [pkgs.hyprlandPlugins.hyprbars];
 
     settings = let
@@ -34,6 +33,7 @@
         "QT_QPA_PLATFORMTHEME,qt5ct"
         "QT_AUTO_SCREEN_SCALE_FACTOR,1"
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
+        "NIXOS_OZONE_WL,1"
       ];
 
       # programs run once on startup
@@ -85,8 +85,6 @@
           font_family = "${font_family}";
           height = "30";
           font_size = "12";
-          # TODO: update hyprland to at 0.47.0
-          # rounding = "12";
           "col.active" = "rgb(9da9a0)";
           "col.inactive" = "rgb(7a8478)";
         };

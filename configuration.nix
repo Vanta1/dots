@@ -87,6 +87,14 @@
 
   programs.nix-ld.enable = true;
 
+  # hyprland's settings are controlled with home-manager, in file:///etc/nixos/home/programs/hyprland/default.nix
+  # but the portal is set here.
+  programs.hyprland = {
+    enable = true;
+    package = pkgs.hyprland;
+    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+  };
+
   users.users.${personal.user} = {
     isNormalUser = true;
     description = "default user, with sudo privileges";
@@ -216,8 +224,6 @@
   };
 
   nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
     experimental-features = ["nix-command" "flakes"];
     trusted-users = ["root" "${personal.user}"];
   };

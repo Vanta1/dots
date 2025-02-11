@@ -5,7 +5,7 @@
       "=" = "zoom in";
     };
     options = {
-      font = "Monaspace Xenon";
+      font = "Monaspace Xenon 12";
       default-bg = "#272e33";
       default-fg = "#d3c6aa";
       statusbar-fg = "#d3c6aa";
@@ -28,6 +28,7 @@
       recolor-darkcolor = "#d3c6aa";
       recolor = "false"; # toggle this with Ctrl+R
       recolor-keephue = "false";
+      selection-clipboard = "clipboard"; # use Ctrl+C and Ctrl+V for copy & paste
     };
   };
 

@@ -6,7 +6,7 @@
       ls = "ls --color=auto";
       la = "ls -a --color=auto";
       mkdirenv = "echo \"use flake\" >> .envrc && direnv allow";
-      snerp = "sudo nixos-rebuild switch"; # used to be snrs, but I just started saying 'snerp' in my head and so here we are
+      snerp = "sudo nixos-rebuild switch"; # used to be snrs, but I just started saying 'snerp' in my head and so here we are. meep merp :3 xD
       r = "ranger";
       v = "vim";
     };

@@ -37,7 +37,8 @@
       "$mod, RETURN, exec, alacritty" # terminal emulator
       "$mod, B, exec, firefox" # b for browser
       "$mod, N, exec, nemo" # file manager
-      "$mod SHIFT, N, exec, obsidian"
+      ## not
+      "$mod SHIFT, N, exec, OBSIDIAN_USE_WAYLAND=1 obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland"
       "$mod SHIFT, B, exec, /home/${personal.user}/bin/vanta1/sync_brightness.sh" # B for sync Brightness
       "$mod, W, exec, waypaper" # wallpaper setter
       "$mod SHIFT, W, exec, waypaper --random" # random wallpaper
@@ -45,7 +46,7 @@
       "$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # application launcher, o for open, close with $mod+O or ESC
       "$mod SHIFT, R, exec, pkill waybar ; waybar &!" # refresh waybar
       "$mod SHIFT, S, exec, grim -g \"$(slurp)\" \"/home/${personal.user}/screenshots/$(date +'%s_grim.png')\"" # screenshot
-      # screenshots my laptop screen, update for urself
+      ## screenshots my laptop screen, update for urself
       "$mod CTRL, S, exec, grim -g \"0,0 1920x1200\" \"/home/${personal.user}/screenshots/$(date +'%s_grim.png')\""
       "$mod SHIFT, BACKSPACE, exec, loginctl lock-session" # lock the screen
       #"$mod, T, exec, thunderbird" # email + calendar + todo list
@@ -58,18 +59,18 @@
 
       # window management keybinds
 
-      # misc important
+      ## misc important
       "$mod SHIFT, E, exit," # exit Hyprland
       "$mod CTRL, Q, killactive," # kill current window
       "$mod, F, fullscreen, 0" # regular fullscreen
       "$mod, M, fullscreen, 1" # 'monocle'/maximize - doesn't remove titlebar or bars
 
-      # grouping windows
+      ## grouping windows
       "$mod, G, togglegroup" # make a window into a group
       "$mod, TAB, changegroupactive, f" # cycle through group
       "$mod CTRL, TAB, changegroupactive, b" # cycle through group the other way
 
-      # workspace navigation w/ workspace numbers. I like having numbered workspaces, but I'd like to try having dynamic labeled workspaces
+      ## workspace navigation w/ workspace numbers. I like having numbered workspaces, but I'd like to try having dynamic labeled workspaces
       "$mod, 1, workspace, 1"
       "$mod, 2, workspace, 2"
       "$mod, 3, workspace, 3"
@@ -79,7 +80,7 @@
       "$mod, 7, workspace, 7"
       "$mod, 8, workspace, 8"
 
-      # move window and set current workspace w/ shift + workspace number
+      ## move window and set current workspace w/ shift + workspace number
       "$mod SHIFT, 1, movetoworkspace, 1"
       "$mod SHIFT, 2, movetoworkspace, 2"
       "$mod SHIFT, 3, movetoworkspace, 3"
@@ -89,7 +90,7 @@
       "$mod SHIFT, 7, movetoworkspace, 7"
       "$mod SHIFT, 8, movetoworkspace, 8"
 
-      # send a window to a workspace w/ control + workspace number
+      ## send a window to a workspace w/ control + workspace number
       "$mod CTRL, 1, movetoworkspacesilent, 1"
       "$mod CTRL, 2, movetoworkspacesilent, 2"
       "$mod CTRL, 3, movetoworkspacesilent, 3"
@@ -101,19 +102,19 @@
     ];
 
     binde = [
-      # window navigation w/ vim keys (HJKL : ←↓↑→)
+      ## window navigation w/ vim keys (HJKL : ←↓↑→)
       "$mod, H, movefocus, l"
       "$mod, J, movefocus, d"
       "$mod, K, movefocus, u"
       "$mod, L, movefocus, r"
 
-      # moving windows w/ shift + vim keys, also moves the window in or out of a group
+      ## moving windows w/ shift + vim keys, also moves the window in or out of a group
       "$mod SHIFT, H, movewindoworgroup, l"
       "$mod SHIFT, J, movewindoworgroup, d"
       "$mod SHIFT, K, movewindoworgroup, u"
       "$mod SHIFT, L, movewindoworgroup, r"
 
-      # resizing windows w/ control + vim keys
+      ## resizing windows w/ control + vim keys
       "$mod CTRL, H, resizeactive, -$resizeStep 0"
       "$mod CTRL, J, resizeactive, 0 $resizeStep"
       "$mod CTRL, K, resizeactive, 0 -$resizeStep"

@@ -34,6 +34,7 @@
         "QT_AUTO_SCREEN_SCALE_FACTOR,1"
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
         "NIXOS_OZONE_WL,1"
+        "ELECTRON_OZONE_PLATFORM_HINT,auto"
       ];
 
       # programs run once on startup
@@ -136,12 +137,13 @@
         "opacity 0.95 0.85,^(dev.zed.Zed)$"
         "opacity 0.95 0.85,^(obsidian)$"
 
-        # disable bar for windows with native titlebars, use 'hyprctl clients' to get the window class
-        "plugin:hyprbars:nobar,^(code)$"
-        "plugin:hyprbars:nobar,^(dev.zed.Zed)$"
+        # disable bar, just my preference for these apps, use 'hyprctl clients' to get the window class
+        "plugin:hyprbars:nobar,^(code)$" # VSCode, has built in titlebar that's more fully featured.
+        "plugin:hyprbars:nobar,^(dev.zed.Zed)$" # Zed IDE
         "plugin:hyprbars:nobar,^(GitHub Desktop)$"
-        "plugin:hyprbars:nobar,^(steam)$"
-        "plugin:hyprbars:nobar,^(obsidian)$"
+        "plugin:hyprbars:nobar,^(steam)$" # Has native titlebar I can't toggle off.
+        "plugin:hyprbars:nobar,^(obsidian)$" # Again, has a native titlebar.
+        "plugin:hyprbars:nobar,^(org.pwmt.zathura)$" # Shows the document you're in at the bottom, making title redundant.
         #"plugin:hyprbars:nobar,^(vesktop)$"
       ];
 

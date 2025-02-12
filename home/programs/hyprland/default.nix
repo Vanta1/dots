@@ -136,6 +136,7 @@
         "opacity 0.95 0.85,^(code)$"
         "opacity 0.95 0.85,^(dev.zed.Zed)$"
         "opacity 0.95 0.85,^(obsidian)$"
+        "opacity 0.95 0.85,^(org.pwmt.zathura)$"
 
         # disable bar, just my preference for these apps, use 'hyprctl clients' to get the window class
         "plugin:hyprbars:nobar,^(code)$" # VSCode, has built in titlebar that's more fully featured.

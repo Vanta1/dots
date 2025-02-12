@@ -38,7 +38,7 @@
       "$mod, B, exec, firefox" # b for browser
       "$mod, N, exec, nemo" # file manager
       ## not
-      "$mod SHIFT, N, exec, OBSIDIAN_USE_WAYLAND=1 obsidian --enable-features=UseOzonePlatform --ozone-platform=wayland"
+      "$mod SHIFT, N, exec, OBSIDIAN_USE_WAYLAND=1 obsidian -enable-features=UseOzonePlatform -ozone-platform=wayland"
       "$mod SHIFT, B, exec, /home/${personal.user}/bin/vanta1/sync_brightness.sh" # B for sync Brightness
       "$mod, W, exec, waypaper" # wallpaper setter
       "$mod SHIFT, W, exec, waypaper --random" # random wallpaper

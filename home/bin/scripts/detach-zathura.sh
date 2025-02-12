@@ -1,1 +1,1 @@
-zathura "$1" & disown
+zathura "$1" &!

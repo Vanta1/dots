@@ -26,7 +26,7 @@
       completion-highlight-bg = "#272e33";
       recolor-lightcolor = "#272e33";
       recolor-darkcolor = "#d3c6aa";
-      recolor = "false"; # toggle this with Ctrl+R
+      recolor = "true"; # toggle this with Ctrl+R
       recolor-keephue = "false";
       selection-clipboard = "clipboard"; # use Ctrl+C and Ctrl+V for copy & paste
     };

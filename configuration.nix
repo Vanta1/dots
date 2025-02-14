@@ -78,9 +78,10 @@
     # fonts i like
     departure-mono # pixel font
     input-fonts # monospace and dynamic fonts for programming and anything else. super clean <3
-    fira
+    fira # very common nerd multipurpose code/nerd font.
     fira-code
     monaspace # github's monaspace fonts, i use Xenon mostly
+    cardo # i've heard claims online that this is font used for Patrick Rothfuss' "Name of the Wind"
     # fonts i need
     font-awesome
   ];

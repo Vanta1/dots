@@ -18,8 +18,8 @@
       notification-error-fg = "#d3c6aa";
       notification-warning-bg = "#272e33";
       notification-warning-fg = "#d3c6aa";
-      highlight-color = "#4b565c";
-      highlight-active-color = "#e67e80";
+      highlight-color = "rgba(75, 86, 92, 0.5)";
+      highlight-active-color = "rgba(230, 126, 128, 0.5)";
       completion-bg = "#272e33";
       completion-fg = "#d3c6aa";
       completion-highlight-fg = "#4b565c";

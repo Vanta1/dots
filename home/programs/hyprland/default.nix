@@ -39,7 +39,7 @@
 
       # programs run once on startup
       exec-once = [
-        "hyprctl setcursor capitaine-cursors 24"
+        "hyprctl setcursor capitaine-cursors 28"
         "waypaper --restore" # restore previous wallpaper
         "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.2" # set volume to 20 (nice default on my laptop)
         "wpctl set-mute @DEFAULT_AUDIO_SINK@ 1" # muted sound by default
@@ -165,7 +165,7 @@
       ];
 
       workspace = [
-        # replicate "no_gaps_when_only"
+        # replicate "no_gaps_when_only" functionality
         "w[tv1], gapsout:0, gapsin:0"
         "f[1], gapsout:0, gapsin:0"
       ];

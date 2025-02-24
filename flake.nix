@@ -20,6 +20,7 @@
     ...
   } @ inputs: let
     ## set these for yourself please!!!
+    system = "x86_64-linux";
     personal = {
       user = "vanta";
       hostname = "nixtop";
@@ -34,7 +35,7 @@
   in {
     nixosConfigurations = {
       nixtop = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        system = "${system}";
 
         # special args sent to configuration.nix
         specialArgs = {inherit inputs personal;};

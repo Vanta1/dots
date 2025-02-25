@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  personal,
+  ...
+}: {
   home.packages = with pkgs; [
     dconf # home-manager.service fails when it can't find 'ca.desrt.dconf', https://github.com/nix-community/home-manager/issues/3113
     gnome-tweaks
@@ -18,7 +22,7 @@
     cursorTheme = {
       name = "capitaine-cursors";
       package = pkgs.capitaine-cursors;
-      size = 24;
+      size = personal.cursor-size;
     };
   };
 }

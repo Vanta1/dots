@@ -27,6 +27,7 @@
       time-zone = "America/Toronto";
       default-locale = "en_CA.UTF-8";
       city = "Toronto";
+      cursor-size = 26;
 
       # for git stuff
       user-name = "Vanta_1";

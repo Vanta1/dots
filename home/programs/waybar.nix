@@ -126,7 +126,9 @@
         };
       };
     };
-    style = ''
+    style = let
+      font-family = "Monaspace Xenon, Font Awesome 6 Free";
+    in ''
       /* required to set the bar height less than 34 */
       * { padding: 0; margin: 0; }
 
@@ -140,7 +142,7 @@
       window#waybar {
       	background-color: #272e33;
       	color: #d3c6aa;
-      	font-family: "Monaspace Xenon", "Font Awesome 6 Free";
+      	font-family: ${font-family};
       	font-size: 12pt;
         font-weight: normal;
       }
@@ -166,6 +168,7 @@
       tooltip {
       	background-color: #272e33;
       	border: 1px solid #9da9a0;
+        font-family: ${font-family};
       }
 
       /*

@@ -10,7 +10,6 @@
   ];
 
   home.packages = with pkgs; [
-    tofi
     waypaper
     swaybg # backend for waypaper
     xdg-desktop-portal-hyprland # allows for screen sharing

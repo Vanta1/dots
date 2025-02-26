@@ -1,4 +1,5 @@
-{...}: {
+{pkgs, ...}: {
+  home.packages = [pkgs.tofi];
   xdg.configFile."tofi/config".text = ''
     # Text
     font = "Fira Sans"

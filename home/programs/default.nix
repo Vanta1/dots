@@ -64,7 +64,6 @@
     qbittorrent # torrenting
     quodlibet-full # audio player
     ranger # tui file manager
-    rink # calculator
     slurp # for selecting parts of the screen
     thunderbird # email client
     tree # display contents of a directory as a file tree

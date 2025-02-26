@@ -4,9 +4,9 @@ playerctl --player=$PLAYERS status --follow | while read -r line
 do
     state=$(playerctl --player=$PLAYERS status)
     if [ "$state" = "Playing" ]; then
-        echo "| "
+        echo "| ⏸"
     elif [ "$state" = "Paused" ]; then 
-        echo "| "
+        echo "| ⏵"
     else
         echo ""
     fi

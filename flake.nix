@@ -45,7 +45,7 @@
           ./configuration.nix
           home-manager.nixosModules.home-manager
           {
-            # 'extra'? special args sent to home/default.nix (atm, extra packages and username)
+            # 'extra'? special args sent to home/default.nix (and all modules it includes)
             home-manager.extraSpecialArgs = {inherit inputs personal;};
 
             home-manager.useGlobalPkgs = true;

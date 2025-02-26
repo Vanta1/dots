@@ -75,13 +75,17 @@
     liberation_ttf
     noto-fonts-color-emoji
     unifont
+
     # fonts i like
+    cardo # i've heard claims online that this is font used for Patrick Rothfuss' "Name of the Wind"
     departure-mono # pixel font
     input-fonts # monospace and dynamic fonts for programming and anything else. super clean <3
-    fira # very common nerd multipurpose code/nerd font.
-    fira-code
     monaspace # github's monaspace fonts, i use Xenon mostly
-    cardo # i've heard claims online that this is font used for Patrick Rothfuss' "Name of the Wind"
+
+    ## very common nerd multipurpose code/nerd font.
+    fira
+    fira-code
+
     # fonts i need
     font-awesome
   ];

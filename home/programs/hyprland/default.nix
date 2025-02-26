@@ -43,7 +43,7 @@
 
       # programs run once on startup
       exec-once = [
-        "hyprctl setcursor capitaine-cursors ${builtins.toString personal.cursor-size}"
+        "hyprctl setcursor 'Simp1e-Dark' ${builtins.toString personal.cursor-size}"
         "waypaper --restore" # restore previous wallpaper
         "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.2" # set volume to 20 (nice default on my laptop)
         "wpctl set-mute @DEFAULT_AUDIO_SINK@ 1" # muted sound by default

@@ -20,8 +20,8 @@
       package = pkgs.vimix-icon-theme;
     };
     cursorTheme = {
-      name = "capitaine-cursors";
-      package = pkgs.capitaine-cursors;
+      name = "Simp1e-Dark";
+      package = pkgs.simp1e-cursors;
       size = personal.cursor-size;
     };
   };

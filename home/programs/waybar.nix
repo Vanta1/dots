@@ -127,7 +127,7 @@
       };
     };
     style = let
-      font-family = "Monaspace Xenon, Font Awesome 6 Free";
+      font-family = "'Monaspace Xenon'";
     in ''
       /* required to set the bar height less than 34 */
       * { padding: 0; margin: 0; }
@@ -160,9 +160,11 @@
       }
 
       #custom-spotify-pause {
-      	margin-bottom: 3px;
-      	padding-left: 6px;
-      	padding-right: 6px;
+      	margin-top: 0px;
+        margin-bottom: 2px;
+        margin-left: 6px;
+        margin-right: 8px;
+        padding: 0px;
       }
 
       tooltip {
@@ -239,6 +241,7 @@
       }
 
       #idle_inhibitor {
+        font-family: ${font-family}, 'Font Awesome 6 Free';
         padding-left: 9px;
         margin-bottom: 2px;
       }

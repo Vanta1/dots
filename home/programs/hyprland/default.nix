@@ -25,7 +25,7 @@
     plugins = [pkgs.hyprlandPlugins.hyprbars];
 
     settings = let
-      font_family = "Monaspace Xenon";
+      font-family = "Monaspace Xenon";
     in {
       # environment variables
       env = [
@@ -87,7 +87,7 @@
         "col.border_active" = "rgb(374145)";
         "col.border_inactive" = "rgb(272e33)";
         groupbar = {
-          font_family = "${font_family}";
+          font_family = "${font-family}";
           height = "30";
           font_size = "12";
           "col.active" = "rgb(9da9a0)";
@@ -101,7 +101,7 @@
           bar_color = "rgb(272e33)";
           "col.text" = "rgb(d3c6aa)";
           bar_text_size = "12";
-          bar_text_font = "${font_family}";
+          bar_text_font = "${font-family}";
           bar_precedence_over_border = "true";
           bar_text_align = "center";
           bar_padding = "10";
@@ -130,7 +130,7 @@
       animations.enabled = "no";
       dwindle.preserve_split = "yes";
       misc = {
-        font_family = "${font_family}";
+        font_family = "${font-family}";
         disable_hyprland_logo = "true";
       };
 

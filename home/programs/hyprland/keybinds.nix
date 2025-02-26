@@ -1,5 +1,7 @@
 {personal, ...}: {
-  wayland.windowManager.hyprland.settings = {
+  wayland.windowManager.hyprland.settings = let
+    script-dir = "/home/${personal.user}/bin/vanta1";
+  in {
     "$mod" = "SUPER";
     "$resizeStep" = 10;
 
@@ -39,11 +41,12 @@
       "$mod, N, exec, nemo" # file manager
       ## not
       "$mod SHIFT, N, exec, OBSIDIAN_USE_WAYLAND=1 obsidian -enable-features=UseOzonePlatform -ozone-platform=wayland"
-      "$mod SHIFT, B, exec, /home/${personal.user}/bin/vanta1/sync_brightness.sh" # B for sync Brightness
+      "$mod SHIFT, B, exec, ${script-dir}/sync_brightness.sh" # B for sync Brightness
       "$mod, W, exec, waypaper" # wallpaper setter
       "$mod SHIFT, W, exec, waypaper --random" # random wallpaper
-      "$mod SHIFT, P, exec, /home/${personal.user}/bin/vanta1/manage_airpods.sh" # toggles connection w/ my airpods
+      "$mod SHIFT, P, exec, ${script-dir}/manage_airpods.sh" # toggles connection w/ my airpods
       "$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # application launcher, o for open, close with $mod+O or ESC
+      "$mod CTRL, N, exec, ${script-dir}/tofi_numbat.sh" # use tofi as a bad calculator
       "$mod SHIFT, R, exec, pkill waybar ; waybar &!" # refresh waybar
       "$mod SHIFT, S, exec, grim -g \"$(slurp)\" \"/home/${personal.user}/screenshots/$(date +'%s_grim.png')\"" # screenshot
       ## screenshots my laptop screen, update for urself

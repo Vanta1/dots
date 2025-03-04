@@ -20,6 +20,7 @@
     ./spicetify.nix # spotify retheming
     ./vesktop.nix # discord retheming
     ./vscode.nix # ide
+    ./wob.nix # volume/brightness indicator
     ./zathura.nix # pdf viewer w/ vim like controls
 
     # testing scryterm
@@ -67,6 +68,7 @@
     slurp # for selecting parts of the screen
     thunderbird # email client
     tree # display contents of a directory as a file tree
+    typst # L_aT_eX like formatter, with rust-y stuff i like
     vesktop # discord client that actually works
     vlc # media player
     which # find locations of executables

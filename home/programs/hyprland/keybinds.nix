@@ -45,7 +45,8 @@
       "$mod, W, exec, waypaper" # wallpaper setter
       "$mod SHIFT, W, exec, waypaper --random" # random wallpaper
       "$mod SHIFT, P, exec, ${script-dir}/manage_airpods.sh" # toggles connection w/ my airpods
-      "$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # application launcher, o for open, close with $mod+O or ESC
+      #"$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # application launcher, o for open, close with $mod+O or ESC
+      "$mod, O, exec, pkill onagre || onagre"
       "$mod CTRL, N, exec, ${script-dir}/tofi_numbat.sh" # use tofi as a bad calculator
       "$mod SHIFT, R, exec, pkill waybar ; waybar &!" # refresh waybar
       "$mod SHIFT, S, exec, grim -g \"$(slurp)\" \"/home/${personal.user}/screenshots/$(date +'%s_grim.png')\"" # screenshot
@@ -55,8 +56,8 @@
       #"$mod, T, exec, thunderbird" # email + calendar + todo list
       "$mod, D, exec, dunstctl history-pop" # show old notifications
       "$mod SHIFT, D, exec, dunstctl close-all" # dismiss all notifications
-      "$mod, COMMA, exec, playerctl --player=spotify previous" # seek/track w/ '<' / '>'
-      "$mod, PERIOD, exec, playerctl --player=spotify next"
+      "$mod, COMMA, exec, playerctl previous" # seek/track w/ '<' / '>'
+      "$mod, PERIOD, exec, playerctl next"
       "$mod, SPACE, exec, playerctl play-pause" # pause w spacebar
       "$mod SHIFT, C, exec, code" # edit this flake in vscode
 

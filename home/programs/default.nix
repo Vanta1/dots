@@ -9,6 +9,7 @@
 
     # window manager / desktop stuff
     ./hyprland # window manager
+    ./onagre # app launcher (testing)
     ./tofi.nix # app launcher
     ./waybar.nix # status bar
 

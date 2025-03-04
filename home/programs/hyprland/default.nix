@@ -147,6 +147,7 @@
         "plugin:hyprbars:nobar,^(GitHub Desktop)$"
         "plugin:hyprbars:nobar,^(steam)$" # Has native titlebar I can't toggle off.
         "plugin:hyprbars:nobar,^(obsidian)$" # Again, has a native titlebar.
+        "plugin:hyprbars:nobar,^(onagre)$" # app launcher, don't know why this has a titlebar by default
         "plugin:hyprbars:nobar,^(org.pwmt.zathura)$" # Shows the document you're in at the bottom, making title redundant.
         #"plugin:hyprbars:nobar,^(vesktop)$"
       ];
@@ -165,6 +166,9 @@
         "rounding 0, floating:0, onworkspace:w[tv1]"
         "bordersize 0, floating:0, onworkspace:f[1]"
         "rounding 0, floating:0, onworkspace:f[1]"
+
+        # disable borders for onagre app launcher
+        "bordersize 0, class:^(onagre)$"
       ];
 
       workspace = [

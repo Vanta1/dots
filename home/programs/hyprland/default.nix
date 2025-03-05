@@ -134,6 +134,9 @@
       };
 
       windowrule = [
+        # onagre app launcher, disable borders
+        "bordersize 0,^(onagre)$"
+
         # ^(code)$ selects VSCode windows
         # set opacity (active, inactive) for windows
         "opacity 0.95 0.85,^(code)$"
@@ -166,9 +169,6 @@
         "rounding 0, floating:0, onworkspace:w[tv1]"
         "bordersize 0, floating:0, onworkspace:f[1]"
         "rounding 0, floating:0, onworkspace:f[1]"
-
-        # disable borders for onagre app launcher
-        "bordersize 0, class:^(onagre)$"
       ];
 
       workspace = [

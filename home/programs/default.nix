@@ -10,7 +10,6 @@
     # window manager / desktop stuff
     ./hyprland # window manager
     ./onagre # app launcher (testing)
-    ./tofi.nix # app launcher
     ./waybar.nix # status bar
 
     # other programs
@@ -23,9 +22,6 @@
     ./vscode.nix # ide
     ./wob.nix # volume/brightness indicator
     ./zathura.nix # pdf viewer w/ vim like controls
-
-    # testing scryterm
-    # ./deprecated/kitty.nix
   ];
 
   home.packages = with pkgs; [

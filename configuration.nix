@@ -107,16 +107,6 @@
     shell = pkgs.zsh;
   };
 
-  # scripts run after nixos-rebuild
-  system.activationScripts = {
-    # tofi-drun won't detect newly installed applications unless you manually delete the cache, so that it has to rebuild it
-    # send all output to /dev/null to suppress "file does not exist" errors, and run it in the background and discard the output because nixos-rebuild will still check the result of the command
-    refresh-tofi.text = ''
-      echo "refreshing tofi cache..."
-      rm /home/${personal.user}/.cache/tofi-drun &> /dev/null &!
-    '';
-  };
-
   services.jellyfin = {
     enable = true;
     user = "${personal.user}";

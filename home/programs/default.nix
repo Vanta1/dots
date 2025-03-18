@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgs-unstable,
   personal,
   ...
 }: {
@@ -60,7 +61,7 @@
     playerctl # useful tui for controlling media
     protonup # steam proton installer
     qbittorrent # torrenting
-    quodlibet-full # audio player
+    quodlibet-full # audio player, w/ extensions
     ranger # tui file manager
     slurp # for selecting parts of the screen
     thunderbird # email client
@@ -73,7 +74,7 @@
     wl-clipboard # clipboard utilities (wl-copy & wl-paste)
     xdg-user-dirs # manage user directories, see xdg.configFile."user-dirs.dirs"
     xdg-utils # open links in browser
-    # zed-editor # code editor (alpha release) (its seriously pretty rough on NixOS atm) (and only available on nixpkgs/unstable)
+    pkgs-unstable.zed-editor # code editor (alpha release) (its seriously pretty rough on NixOS atm) (and only available on nixpkgs/unstable)
   ];
 
   # from: https://github.com/vimjoyer/nixos-gaming-video

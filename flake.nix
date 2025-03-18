@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,6 +22,7 @@
   } @ inputs: let
     ## set these for yourself please!!!
     system = "x86_64-linux";
+    pkgs-unstable = inputs.unstable.legacyPackages.${system};
     personal = {
       user = "vanta";
       hostname = "nixtop";
@@ -33,20 +35,21 @@
       user-name = "Vanta_1";
       user-email = "mcoopersandys@gmail.com";
     };
+    args = {inherit inputs personal pkgs-unstable;};
   in {
     nixosConfigurations = {
       nixtop = nixpkgs.lib.nixosSystem {
         system = "${system}";
 
         # special args sent to configuration.nix
-        specialArgs = {inherit inputs personal;};
+        specialArgs = args;
 
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
           {
             # 'extra'? special args sent to home/default.nix (and all modules it includes)
-            home-manager.extraSpecialArgs = {inherit inputs personal;};
+            home-manager.extraSpecialArgs = args;
 
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

@@ -30,10 +30,6 @@
       default-locale = "en_CA.UTF-8";
       city = "Toronto";
       cursor-size = 26;
-
-      # for git stuff
-      user-name = "Vanta_1";
-      user-email = "mcoopersandys@gmail.com";
     };
     args = {inherit inputs personal pkgs-unstable;};
   in {

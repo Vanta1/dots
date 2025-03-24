@@ -1,7 +1,6 @@
 {
   pkgs,
   pkgs-unstable,
-  personal,
   ...
 }: {
   imports = [
@@ -101,13 +100,6 @@
     enable = true;
     enableZshIntegration = true;
     nix-direnv.enable = true;
-  };
-
-  programs.git = {
-    enable = true;
-    lfs.enable = true; # for github-desktop, lfs = large file storage
-    userName = personal.user-name;
-    userEmail = personal.user-email;
   };
 
   programs.obs-studio = {

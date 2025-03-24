@@ -37,6 +37,7 @@
     devenv # super easy development environments, esp w/ direnv
     feh # image viewer
     gammastep # screen temperature/white balance
+    gh # github cli
     github-desktop # github native ui
     gnupg # encryption
     grim # screenshot utility

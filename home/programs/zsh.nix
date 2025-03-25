@@ -9,6 +9,7 @@
       snerp = "sudo nixos-rebuild switch"; # used to be snrs, but I just started saying 'snerp' in my head and so here we are. meep merp :3 xD
       r = "ranger";
       v = "vim";
+      zed = "zeditor";
     };
 
     # in 'PROMPT' the %1~ shows name of the current working directory, or ~ if that's the user's home directory

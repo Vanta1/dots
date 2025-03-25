@@ -16,6 +16,7 @@
         .search {
             background: #1e2326;
             padding: 6px;
+            border-radius: 12;
 
             .input {
                 padding-left: 6px;
@@ -34,6 +35,17 @@
                 .title {
                     font-size: 18px;
                 }
+            }
+        }
+        .scrollable {
+            border-radius: 12;
+            background: #1e2326;
+            width: 3px;
+
+            .scroller {
+                border-radius: 12;
+                color: #2e383c;
+                width: 3px;
             }
         }
     }

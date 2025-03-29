@@ -1,6 +1,7 @@
 {
   pkgs,
   pkgs-unstable,
+  inputs,
   ...
 }: {
   imports = [
@@ -25,6 +26,7 @@
   ];
 
   home.packages = with pkgs; [
+    inputs.sherlock.packages.${system}.default
     acpi # power info
     alejandra # nix formatter
     audacity # audio editor
@@ -35,6 +37,7 @@
     ddcutil # control external monitors
     devenv # super easy development environments, esp w/ direnv
     feh # image viewer
+    filezilla # graphical ftp client
     gammastep # screen temperature/white balance
     gh # github cli
     github-desktop # github native ui

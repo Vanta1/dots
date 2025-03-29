@@ -13,6 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     waybar.url = "github:alexays/waybar";
+    sherlock.url = "github:Vanta1/sherlock";
   };
 
   outputs = {

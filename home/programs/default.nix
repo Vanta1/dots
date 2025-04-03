@@ -1,7 +1,6 @@
 {
   pkgs,
   pkgs-unstable,
-  inputs,
   ...
 }: {
   imports = [
@@ -18,7 +17,8 @@
     ./dunst.nix # notification daemon
     ./gtk # gtk theming
     ./firefox # web browser
-    ./spicetify.nix # spotify retheming
+    #./spicetify.nix # spotify retheming
+    ./sherlock.nix
     ./vesktop.nix # discord retheming
     ./vscode.nix # ide
     ./wob.nix # volume/brightness indicator
@@ -26,7 +26,6 @@
   ];
 
   home.packages = with pkgs; [
-    inputs.sherlock.packages.${system}.default
     acpi # power info
     alejandra # nix formatter
     audacity # audio editor

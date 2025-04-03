@@ -8,12 +8,12 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    spicetify-nix = {
-      url = "github:Gerg-L/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #spicetify-nix = {
+    #  url = "github:Gerg-L/spicetify-nix";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     waybar.url = "github:alexays/waybar";
-    sherlock.url = "github:Vanta1/sherlock";
+    sherlock.url = "git+file:///home/vanta/code/git/sherlock";
   };
 
   outputs = {
@@ -30,7 +30,7 @@
       time-zone = "America/Toronto";
       default-locale = "en_CA.UTF-8";
       city = "Toronto";
-      cursor-size = 26;
+      cursor-size = 24;
     };
     args = {inherit inputs personal pkgs-unstable;};
   in {

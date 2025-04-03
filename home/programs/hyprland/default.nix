@@ -17,6 +17,7 @@
     hypridle
     hyprlock
     nwg-look # for setting cursor theme
+    hyprsunset
   ];
 
   wayland.windowManager.hyprland = {
@@ -47,6 +48,7 @@
         "wpctl set-mute @DEFAULT_AUDIO_SINK@ 1" # muted sound by default
         "waybar" # start status bar/system tray
         "nm-applet --indicator"
+        "hyprsunset"
       ];
 
       monitor = [

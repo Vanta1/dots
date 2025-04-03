@@ -20,6 +20,9 @@
       # brightnesctl: -e flag means exponential curve, rather than linear when adjusting brightness. works better for me
       ", XF86MonBrightnessUp, exec, brightnessctl -e --min-value=1 set 5%+"
       ", XF86MonBrightnessDown, exec, brightnessctl -e --min-value=1 set 5%-"
+      # redshift controls
+      "CTRL, XF86MonBrightnessUp, exec, hyprctl hyprsunset temperature +10"
+      "CTRL, XF86MonBrightnessDown, exec, hyprctl hyprsunset temperatures -10"
       # volume controls
       ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
       ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
@@ -39,7 +42,6 @@
       "$mod, RETURN, exec, alacritty" # terminal emulator
       "$mod, B, exec, firefox" # b for browser
       "$mod, N, exec, nemo" # file manager
-      ## not
       "$mod SHIFT, N, exec, OBSIDIAN_USE_WAYLAND=1 obsidian -enable-features=UseOzonePlatform -ozone-platform=wayland"
       "$mod SHIFT, B, exec, ${script-dir}/sync_brightness.sh" # B for sync Brightness
       "$mod, W, exec, waypaper" # wallpaper setter

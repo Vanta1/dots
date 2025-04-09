@@ -11,6 +11,11 @@
           name = "Discord";
         };
       };
+      config = {
+        debug = {
+          try_suppress_warnings = true;
+        };
+      };
       ignore = ''
         Avahi*
       '';

@@ -10,7 +10,7 @@ in {
   programs.spicetify = {
     enable = true;
 
-    theme = spicePkgs.themes.comfy;
+    theme = spicePkgs.themes.default;
     colorScheme = "everforest";
     #customColorScheme = {
     #	text               = "D3C6AA";
@@ -31,15 +31,5 @@ in {
     #	equalizer          = "F2D5CF";
     #	misc               = "626880";
     #};
-
-    enabledCustomApps = with spicePkgs.apps; [
-      lyricsPlus
-      newReleases
-      marketplace
-    ];
-    enabledExtensions = with spicePkgs.extensions; [
-      hidePodcasts
-      wikify
-    ];
   };
 }

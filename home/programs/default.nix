@@ -17,7 +17,7 @@
     ./dunst.nix # notification daemon
     ./gtk # gtk theming
     ./firefox # web browser
-    #./spicetify.nix # spotify retheming
+    ./spicetify.nix # spotify retheming
     ./sherlock.nix
     ./vesktop.nix # discord retheming
     ./vscode.nix # ide

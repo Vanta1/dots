@@ -17,7 +17,7 @@
     ./dunst.nix # notification daemon
     ./gtk # gtk theming
     ./firefox # web browser
-    ./spicetify.nix # spotify retheming
+    #./spicetify.nix # spotify retheming, currently broken
     ./sherlock.nix
     ./vesktop.nix # discord retheming
     ./vscode.nix # ide
@@ -32,6 +32,7 @@
     brightnessctl # backlight control
     btop # system monitor
     blender # 3D modeling
+    cachix # nix flake cache
     chromium # i use firefox, but google earth studio is chrome only, and it fucking breaks everything
     ddcutil # control external monitors
     devenv # super easy development environments, esp w/ direnv
@@ -66,6 +67,7 @@
     quodlibet-full # audio player, w/ extensions
     ranger # tui file manager
     slurp # for selecting parts of the screen
+    spotify # remove this if using spicetify!!
     thunderbird # email client
     tree # display contents of a directory as a file tree
     typst # L_aT_eX like formatter, with rust-y stuff i like

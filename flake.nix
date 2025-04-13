@@ -8,12 +8,14 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    spicetify-nix = {
-      url = "github:Gerg-L/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprsunset.url = "github:hyprwm/hyprsunset";
+    #spicetify-nix = {
+    #  url = "github:Gerg-L/spicetify-nix";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     waybar.url = "github:alexays/waybar";
-    sherlock.url = "git+file:///home/vanta/code/git/sherlock";
+    sherlock.url = "github:Skxxtz/sherlock";
   };
 
   outputs = {
@@ -23,7 +25,6 @@
   } @ inputs: let
     ## set these for yourself please!!!
     system = "x86_64-linux";
-    pkgs-unstable = inputs.unstable.legacyPackages.${system};
     personal = {
       user = "vanta";
       hostname = "nixtop";
@@ -32,6 +33,8 @@
       city = "Toronto";
       cursor-size = 24;
     };
+    ## other
+    pkgs-unstable = inputs.unstable.legacyPackages.${system};
     args = {inherit inputs personal pkgs-unstable;};
   in {
     nixosConfigurations = {

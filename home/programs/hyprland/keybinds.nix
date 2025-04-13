@@ -20,9 +20,8 @@
       # brightnesctl: -e flag means exponential curve, rather than linear when adjusting brightness. works better for me
       ", XF86MonBrightnessUp, exec, brightnessctl -e --min-value=1 set 5%+"
       ", XF86MonBrightnessDown, exec, brightnessctl -e --min-value=1 set 5%-"
-      # redshift controls
-      "CTRL, XF86MonBrightnessUp, exec, hyprctl hyprsunset temperature +10"
-      "CTRL, XF86MonBrightnessDown, exec, hyprctl hyprsunset temperatures -10"
+      # blue light filter toggle
+      "CTRL, XF86MonBrightnessDown, exec, pkill hyprsunset || hyprsunset -t 4500"
       # volume controls
       ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
       ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"

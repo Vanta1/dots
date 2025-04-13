@@ -8,12 +8,7 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
     hyprsunset.url = "github:hyprwm/hyprsunset";
-    #spicetify-nix = {
-    #  url = "github:Gerg-L/spicetify-nix";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
     waybar.url = "github:alexays/waybar";
     sherlock.url = "github:Skxxtz/sherlock";
   };

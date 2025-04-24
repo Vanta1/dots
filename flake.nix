@@ -9,8 +9,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprsunset.url = "github:hyprwm/hyprsunset";
-    waybar.url = "github:alexays/waybar";
     sherlock.url = "github:Skxxtz/sherlock";
+    waybar.url = "github:alexays/waybar";
   };
 
   outputs = {

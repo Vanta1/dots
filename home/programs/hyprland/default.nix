@@ -13,9 +13,9 @@
   home.packages = with pkgs; [
     waypaper
     swaybg # backend for waypaper
-    xdg-desktop-portal-hyprland # allows for screen sharing
-    xdg-desktop-portal-gtk
-    hypridle
+    #xdg-desktop-portal-hyprland # allows for screen sharing
+    #xdg-desktop-portal-gtk
+    #hypridle
     hyprlock
     nwg-look # for setting cursor theme
     inputs.hyprsunset.packages.${system}.hyprsunset

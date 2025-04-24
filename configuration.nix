@@ -100,6 +100,20 @@
     portalPackage = pkgs.xdg-desktop-portal-hyprland;
   };
 
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    config = {
+      common.default = ["gtk"];
+      hyprland.default = [
+        "gtk"
+        "hyprland"
+      ];
+    };
+
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
+  };
+
   users.users.${personal.user} = {
     isNormalUser = true;
     description = "default user, with sudo privileges";
@@ -221,6 +235,8 @@
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
     trusted-users = ["root" "${personal.user}"];
+    substituters = ["https://hyprland.cachix.org"];
+    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 
   system.stateVersion = "23.11"; # ne touche pas

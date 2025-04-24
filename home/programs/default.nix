@@ -107,7 +107,9 @@
 
   programs.obs-studio = {
     enable = true;
-    plugins = [pkgs.obs-studio-plugins.wlrobs];
+    plugins = [
+      #pkgs.obs-studio-plugins.wlrobs
+    ];
   };
 
   services.gnome-keyring.enable = true; # keep it secret

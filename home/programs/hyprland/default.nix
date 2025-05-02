@@ -63,7 +63,7 @@
         sensitivity = "0";
         kb_layout = "us";
         touchpad = {
-          natural_scroll = "no";
+          natural_scroll = false;
         };
       };
 

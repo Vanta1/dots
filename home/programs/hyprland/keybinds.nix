@@ -47,7 +47,7 @@
       "$mod SHIFT, W, exec, waypaper --random" # random wallpaper
       "$mod SHIFT, P, exec, ${script-dir}/manage_airpods.sh" # toggles connection w/ my airpods
       #"$mod, O, exec, pkill tofi-drun || tofi-drun --drun-launch=true" # application launcher, o for open, close with $mod+O or ESC
-      "$mod, O, exec, pkill onagre || onagre"
+      "$mod, O, exec, pkill sherlock || sherlock"
       "$mod CTRL, N, exec, ${script-dir}/tofi_numbat.sh" # use tofi as a bad calculator
       "$mod SHIFT, R, exec, pkill waybar ; waybar &!" # refresh waybar
       "$mod SHIFT, S, exec, grim -g \"$(slurp)\" \"/home/${personal.user}/screenshots/$(date +'%s_grim.png')\"" # screenshot

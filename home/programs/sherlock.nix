@@ -1,15 +1,10 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     inputs.sherlock.homeManagerModules.default
   ];
 
   programs.sherlock = {
     enable = true;
-    package = inputs.sherlock.packages.${pkgs.system}.default;
     settings = {
       aliases = {
         vesktop = {
@@ -33,6 +28,7 @@
           home = true;
         }
       ];
+      style = null;
     };
   };
 }

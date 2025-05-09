@@ -38,9 +38,6 @@
     wireplumber.enable = true;
   };
 
-  # for using waydroid: https://nixos.wiki/wiki/WayDroid
-  virtualisation.waydroid.enable = true;
-
   time.timeZone = personal.time-zone;
   i18n.defaultLocale = personal.default-locale;
 
@@ -223,20 +220,9 @@
   # needed for automatically mounting external usb drives with udiskie (enabled with home-manager)
   services.udisks2.enable = true;
 
-  nixpkgs.config = {
-    allowUnfree = true;
-    # needed to install obsidian ugh
-    permittedInsecurePackages = [
-      "electron-25.9.0"
-    ];
-    input-fonts.acceptLicense = true; # license for input-fonts: https://input.djr.com/license/. go support it's creator here!!: http://input.djr.com/buy
-  };
-
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
     trusted-users = ["root" "${personal.user}"];
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
 
   system.stateVersion = "23.11"; # ne touche pas

@@ -1,10 +1,15 @@
-{inputs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
     inputs.sherlock.homeManagerModules.default
   ];
 
   programs.sherlock = {
     enable = true;
+    package = pkgs.unstable.sherlock-launcher;
     settings = {
       aliases = {
         vesktop = {
@@ -21,11 +26,36 @@
       '';
       launchers = [
         {
+          name = "Clipboard";
+          type = "clipboard-execution";
+          args = {
+            capabilities = [
+              "url"
+              "colors.all"
+              "calc.units"
+            ];
+          };
+          priority = 1;
+          home = true;
+        }
+        {
           name = "App Launcher";
           type = "app_launcher";
           args = {};
-          priority = 1;
+          priority = 2;
           home = true;
+        }
+        {
+          name = "Calculator";
+          type = "calculation";
+          args = {
+            capabilities = [
+              "calc.math"
+              "calc.units"
+            ];
+          };
+          alias = "=";
+          priority = 3;
         }
       ];
       style = null;

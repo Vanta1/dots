@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-    unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,8 +29,28 @@
       cursor-size = 24;
     };
     ## other
-    pkgs-unstable = inputs.unstable.legacyPackages.${system};
-    args = {inherit inputs personal pkgs-unstable;};
+    unstable-overlay = final: prev: {
+      unstable = import inputs.nixpkgs-unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    };
+
+    pkgs = import nixpkgs {
+      inherit system;
+      config = {
+        allowUnfree = true;
+        # needed to install obsidian ugh
+        permittedInsecurePackages = [
+          "electron-25.9.0"
+        ];
+        input-fonts.acceptLicense = true; # license for input-fonts: https://input.djr.com/license/. go support it's creator here!!: http://input.djr.com/buy
+      };
+      overlays = [
+        unstable-overlay
+      ];
+    };
+    args = {inherit inputs personal pkgs;};
   in {
     nixosConfigurations = {
       nixtop = nixpkgs.lib.nixosSystem {

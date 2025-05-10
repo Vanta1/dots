@@ -1,4 +1,20 @@
 @-moz-document url("about:newtab") {
+    body {
+        background-color: #272e33 !important;
+    }
+    .card-outer {
+        background-color: #374145 !important;
+        .context-menu-button,
+        .card-context {
+            background-color: #414b50 !important;
+        }
+        .card-context-icon.icon-bookmark-added {
+            fill: #7fbbb3 !important;
+        }
+    }
+    .card-outer:is(:hover, :focus, .active):not(.placeholder) .card-title {
+        color: #7fbbb3 !important;
+    }
     .title {
         .title-label {
             overflow: clip !important;
@@ -9,5 +25,20 @@
         .icon {
             display: none !important;
         }
+    }
+    .tile {
+        border-radius: 6px !important;
+        background-color: #374145 !important;
+        box-shadow: none !important;
+    }
+    .top-site-icon {
+        background-color: #374145 !important;
+    }
+    .top-sites-list:not(.dnd-active)
+        .top-site-outer:is(.active, :focus, :hover) {
+        background-color: #414b50 !important;
+    }
+    .top-site-inner > a:is(.active, :focus) .tile {
+        outline-color: #7fbbb3 !important;
     }
 }

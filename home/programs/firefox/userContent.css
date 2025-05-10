@@ -42,3 +42,16 @@
         outline-color: #7fbbb3 !important;
     }
 }
+
+@-moz-document url-prefix("https://en.wikipedia.org")
+{
+    :root {
+        --background-color-base: #272e33 !important;
+        --background-color-interactive-subtle: #1e2326 !important;
+        --color-base: #d3c6aa !important;
+        --color-destructive: #e67e80 !important;
+        --color-emphasized: #a7c080 !important;
+        --color-progressive: #7fbbb3 !important;
+        --color-visited: #d699b6 !important;
+    }
+}

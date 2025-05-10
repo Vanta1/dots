@@ -1,0 +1,13 @@
+@-moz-document url("about:newtab") {
+    .title {
+        .title-label {
+            overflow: clip !important;
+            -webkit-line-clamp: 1 !important;
+            white-space: nowrap !important;
+        }
+
+        .icon {
+            display: none !important;
+        }
+    }
+}

@@ -10,8 +10,14 @@
         # remove firefox logo from new tabs
         "browser.newtabpage.activity-stream.newtabLayouts.variant-a" = false;
         "browser.newtabpage.activity-stream.newtabLayouts.variant-b" = false;
+
+        # enable tab groups
+        "browser.tabs.group.enabled" = true;
       };
-      userChrome = builtins.readFile ./userChrome.css; # custom css styles
+
+      # custom css styles
+      userChrome = builtins.readFile ./userChrome.css;
+      userContent = builtins.readFile ./userContent.css;
     };
   };
 }

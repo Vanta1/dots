@@ -52,9 +52,8 @@
           };
         };
         "custom/weather" = {
-          # TODO: dont give away my location lol, not that i care or its hard to find
-          # TODO: stop using wttr.in. It can just go offline sometimes which is annoying
-          exec = "timeout 1000 curl -s 'wttr.in/${personal.city}?format=%C,%20%f' || echo 'ERR'";
+          # this will be broken on your first install, get ur own damn api key!
+          exec = "/home/${personal.user}/bin/vanta1/get_weather.sh";
           on-click = "/home/${personal.user}/bin/vanta1/notify_weather.sh";
           format = "WTR {}";
           interval = 900;

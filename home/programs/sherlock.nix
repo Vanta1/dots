@@ -9,7 +9,7 @@
 
   programs.sherlock = {
     enable = true;
-    package = pkgs.unstable.sherlock-launcher;
+    package = pkgs.sherlock-launcher;
     settings = {
       aliases = {
         vesktop = {

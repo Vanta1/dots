@@ -135,29 +135,23 @@
       };
 
       windowrule = [
-        # onagre app launcher, disable borders
-        "bordersize 0,^(onagre)$"
-
         # ^(code)$ selects VSCode windows
         # set opacity (active, inactive) for windows
-        "opacity 0.95 0.85,^(code)$"
-        "opacity 0.95 0.85,^(dev.zed.Zed)$"
-        "opacity 0.95 0.85,^(obsidian)$"
-        "opacity 0.95 0.85,^(org.pwmt.zathura)$"
-        "opacity 0.95 0.85,^(waybar)$"
+        "opacity 0.95 0.85,class:^(code)$"
+        "opacity 0.95 0.85,class:^(dev.zed.Zed)$"
+        "opacity 0.95 0.85,class:^(obsidian)$"
+        "opacity 0.95 0.85,class:^(org.pwmt.zathura)$"
+        "opacity 0.95 0.85,class:^(waybar)$"
 
         # disable bar, just my preference for these apps, use 'hyprctl clients' to get the window class
-        "plugin:hyprbars:nobar,^(code)$" # VSCode, has built in titlebar that's more fully featured.
-        "plugin:hyprbars:nobar,^(dev.zed.Zed)$" # Zed IDE
-        "plugin:hyprbars:nobar,^(GitHub Desktop)$"
-        "plugin:hyprbars:nobar,^(steam)$" # Has native titlebar I can't toggle off.
-        "plugin:hyprbars:nobar,^(obsidian)$" # Again, has a native titlebar.
-        "plugin:hyprbars:nobar,^(onagre)$" # app launcher, don't know why this has a titlebar by default
-        "plugin:hyprbars:nobar,^(org.pwmt.zathura)$" # Shows the document you're in at the bottom, making title redundant.
+        "plugin:hyprbars:nobar,class:^(code)$" # VSCode, has built in titlebar that's more fully featured.
+        "plugin:hyprbars:nobar,class:^(dev.zed.Zed)$" # Zed IDE
+        "plugin:hyprbars:nobar,class:^(GitHub Desktop)$"
+        "plugin:hyprbars:nobar,class:^(steam)$" # Has native titlebar I can't toggle off.
+        "plugin:hyprbars:nobar,class:^(obsidian)$" # Again, has a native titlebar.
+        "plugin:hyprbars:nobar,class:^(org.pwmt.zathura)$" # Shows the document you're in at the bottom, making title redundant.
         #"plugin:hyprbars:nobar,^(vesktop)$"
-      ];
 
-      windowrulev2 = [
         # prevent screen locking when in fullscreen (e.g. watching a yt video)
         "idleinhibit fullscreen, class:^(*)$"
         "idleinhibit fullscreen, title:^(*)$"

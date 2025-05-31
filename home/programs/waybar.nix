@@ -28,7 +28,6 @@
           #"image#spotify-art"
         ];
         modules-right = [
-          # TODO: figure out a way to make the tray separator go away when tray is empty
           "tray"
           "idle_inhibitor"
           "custom/separator"
@@ -240,9 +239,8 @@
       }
 
       #idle_inhibitor {
-        font-family: ${font-family}, 'Font Awesome 6 Free';
+        font-family: 'Font Awesome 6 Free';
         padding-left: 9px;
-        margin-bottom: 2px;
       }
 
       #idle_inhibitor.activated {

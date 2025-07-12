@@ -2,6 +2,7 @@
   description = "the root of all flakes";
 
   inputs = {
+    devenv.url = "github:cachix/devenv";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     home-manager = {
@@ -54,13 +55,14 @@
   in {
     nixosConfigurations = {
       nixtop = nixpkgs.lib.nixosSystem {
-        system = "${system}";
+        inherit pkgs;
 
         # special args sent to configuration.nix
         specialArgs = args;
 
         modules = [
           ./configuration.nix
+          nixpkgs.nixosModules.readOnlyPkgs
           home-manager.nixosModules.home-manager
           {
             # 'extra'? special args sent to home/default.nix (and all modules it includes)

@@ -21,18 +21,19 @@
             -webkit-line-clamp: 1 !important;
             white-space: nowrap !important;
         }
+    }
+    .tile {
+        border-radius: 8px !important;
+        background-color: #374145 !important;
+        box-shadow: none !important;
 
-        .icon {
+        .icon-pin-small {
             display: none !important;
         }
     }
-    .tile {
-        border-radius: 6px !important;
-        background-color: #374145 !important;
-        box-shadow: none !important;
-    }
     .top-site-icon {
         background-color: #374145 !important;
+        border-radius: 8px !important;
     }
     .top-sites-list:not(.dnd-active)
         .top-site-outer:is(.active, :focus, :hover) {
@@ -40,6 +41,9 @@
     }
     .top-site-inner > a:is(.active, :focus) .tile {
         outline-color: #7fbbb3 !important;
+    }
+    .top-site-outer {
+        border-radius: 8px !important;
     }
 }
 

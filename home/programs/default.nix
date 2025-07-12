@@ -14,7 +14,7 @@
     ./gtk # gtk theming
     ./firefox # web browser
     #./spicetify.nix # spotify retheming, currently broken
-    ./sherlock.nix
+    ./tofi.nix
     ./vesktop.nix # discord retheming
     ./vscode.nix # ide
     ./wob.nix # volume/brightness indicator
@@ -31,7 +31,6 @@
     blender # 3D modeling
     chromium # i use firefox, but google earth studio is chrome only, and it fucking breaks everything
     ddcutil # control external monitors
-    devenv # super easy development environments, esp w/ direnv
     feh # image viewer
     filezilla # graphical ftp client
     gammastep # screen temperature/white balance
@@ -58,10 +57,12 @@
     obsidian # note taking app
     parallel-disk-usage # visual disk usage analyzer
     playerctl # useful tui for controlling media
+    prismlauncher # minecraft launcher
     protonup # steam proton installer
     qbittorrent # torrenting
     quodlibet-full # audio player, w/ extensions
     ranger # tui file manager
+    reaper # daw
     slurp # for selecting parts of the screen
     spotify # remove this if using spicetify!!
     thunderbird # email client

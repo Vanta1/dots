@@ -36,6 +36,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     wireplumber.enable = true;
+    jack.enable = true;
   };
 
   time.timeZone = personal.time-zone;
@@ -85,6 +86,7 @@
 
     # fonts i need
     font-awesome
+    roboto
   ];
 
   programs.nix-ld.enable = true;

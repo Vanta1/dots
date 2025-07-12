@@ -21,7 +21,6 @@
 
 :root {
     --newtab-background-color: #272e33 !important;
-    --tab-border-radius: 6px !important;
     /*  Tab border radius -- Changes the tabs rounding  */
     /*  Default: 6px  */
     --NavbarWidth: 43;

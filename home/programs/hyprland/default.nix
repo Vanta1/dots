@@ -142,6 +142,7 @@
         "opacity 0.95 0.85,class:^(obsidian)$"
         "opacity 0.95 0.85,class:^(org.pwmt.zathura)$"
         "opacity 0.95 0.85,class:^(waybar)$"
+        "opacity 0.95 0.85,class:^(pigcast)$"
 
         # disable bar, just my preference for these apps, use 'hyprctl clients' to get the window class
         "plugin:hyprbars:nobar,class:^(code)$" # VSCode, has built in titlebar that's more fully featured.
@@ -150,6 +151,7 @@
         "plugin:hyprbars:nobar,class:^(steam)$" # Has native titlebar I can't toggle off.
         "plugin:hyprbars:nobar,class:^(obsidian)$" # Again, has a native titlebar.
         "plugin:hyprbars:nobar,class:^(org.pwmt.zathura)$" # Shows the document you're in at the bottom, making title redundant.
+        "plugin:hyprbars:nobar,class:^(pigcast)$"
         #"plugin:hyprbars:nobar,^(vesktop)$"
 
         # prevent screen locking when in fullscreen (e.g. watching a yt video)

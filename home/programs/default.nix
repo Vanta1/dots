@@ -5,7 +5,6 @@
 
     # window manager / desktop stuff
     ./hyprland # window manager
-    ./onagre # app launcher (testing)
     ./waybar.nix # status bar
 
     # other programs
@@ -29,6 +28,7 @@
     btop # system monitor
     blanket # background noise
     blender # 3D modeling
+    cardinal # open source vcv rack
     chromium # i use firefox, but google earth studio is chrome only, and it fucking breaks everything
     ddcutil # control external monitors
     feh # image viewer

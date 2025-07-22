@@ -51,18 +51,16 @@
         unstable-overlay
       ];
     };
-    args = {inherit inputs personal pkgs;};
+    args = {inherit inputs personal;};
   in {
     nixosConfigurations = {
       nixtop = nixpkgs.lib.nixosSystem {
-        inherit pkgs;
-
         # special args sent to configuration.nix
         specialArgs = args;
 
         modules = [
+          {nixpkgs.pkgs = pkgs;}
           ./configuration.nix
-          nixpkgs.nixosModules.readOnlyPkgs
           home-manager.nixosModules.home-manager
           {
             # 'extra'? special args sent to home/default.nix (and all modules it includes)

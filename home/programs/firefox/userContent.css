@@ -2,6 +2,9 @@
     body {
         background-color: #272e33 !important;
     }
+    .logo-and-wordmark-wrapper {
+        display: none;
+    }
     .card-outer {
         background-color: #374145 !important;
         .context-menu-button,

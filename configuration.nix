@@ -105,8 +105,8 @@
     config = {
       common.default = ["gtk"];
       hyprland.default = [
-        "gtk"
         "hyprland"
+        "gtk"
       ];
     };
 
@@ -121,7 +121,8 @@
   };
 
   services.jellyfin = {
-    enable = true;
+    # haven't used this in awhile
+    enable = false;
     user = "${personal.user}";
   };
 

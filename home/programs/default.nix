@@ -30,6 +30,7 @@
     blender # 3D modeling
     cardinal # open source vcv rack
     chromium # i use firefox, but google earth studio is chrome only, and it fucking breaks everything
+    darktable # RAW photo editor
     ddcutil # control external monitors
     feh # image viewer
     filezilla # graphical ftp client
@@ -42,6 +43,7 @@
     # (pkgs.mailspring.overrideAttrs (final: previous: {
     #   postFixup = builtins.replaceStrings ["Exec=$out/bin/mailspring"] ["Exec=\"$out/bin/mailspring --password-store=\"gnome-libsecret\"\""] previous.postFixup;
     # }))
+    inkscape # svg editor (works well for a lot of img editing tho)
     jmtpfs # media transfer protocol implementation
     kdePackages.qtsvg # for dolphin
     kid3 # audio file tagger

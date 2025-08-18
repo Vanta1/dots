@@ -31,8 +31,8 @@
           "tray"
           "idle_inhibitor"
           "custom/separator"
-          # TODO: figure out if this or some kind of manual solution involving workspaces would be better for minimizing windows,,,, i probably want to make my own cause that seems fun
-          # "taskbar" "custom/separator",
+          "cpu"
+          "custom/separator"
           "wireplumber"
           "custom/separator"
           "battery"
@@ -94,6 +94,10 @@
         tray = {
           spacing = 9;
           show-passive-icons = true;
+        };
+        cpu = {
+          interval = 10;
+          format = "CPU {avg_frequency}";
         };
         wireplumber = {
           format = "VOL {volume}";

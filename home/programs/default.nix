@@ -30,6 +30,7 @@
     blender # 3D modeling
     cardinal # open source vcv rack
     chromium # i use firefox, but google earth studio is chrome only, and it fucking breaks everything
+    copyparty # simple file server
     darktable # RAW photo editor
     ddcutil # control external monitors
     feh # image viewer

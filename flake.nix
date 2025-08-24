@@ -2,6 +2,7 @@
   description = "the root of all flakes";
 
   inputs = {
+    copyparty.url = "github:9001/copyparty";
     devenv.url = "github:cachix/devenv";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -49,6 +50,7 @@
       };
       overlays = [
         unstable-overlay
+        inputs.copyparty.overlays.default
       ];
     };
     args = {inherit inputs personal;};

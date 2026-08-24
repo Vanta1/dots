@@ -1,0 +1,48 @@
+(include "./widgets/shared_widgets.yuck")
+(include "./widgets/workspaces.yuck")
+(include "./widgets/clock.yuck")
+(include "./widgets/internet.yuck")
+(include "./widgets/volume.yuck")
+(include "./widgets/battery.yuck")
+
+(defwindow bar
+  :monitor 0
+  :geometry 
+    (geometry 
+      :x "0"
+      :y "0"
+      :width "100%"
+      :height "35px"
+      :anchor "bottom center"
+    )
+  :stacking "fg"
+  :reserve 
+    (struts 
+      :distance "34px"
+      :side "bottom"
+    )
+  :windowtype "dock"
+  :wm-ignore false
+  (box 
+    :class "main"
+    :orientation "h"
+    :spacing 0
+    :space-evenly true
+    (box :class "main-left" :halign "start"
+      (workspaces)
+    )
+    (box :class "main-centre" :halign "center"
+      (clock)
+    )
+    (box :class "main-right" :halign "end"
+      :spacing 10
+      :space-evenly false
+      (volume)
+      (separator)
+      (internet)
+      (separator)
+      (battery)
+      (box) ;; box for padding
+    )
+  )
+)

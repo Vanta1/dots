@@ -1,0 +1,13 @@
+position = "bottom"
+height = 30
+
+[[start]]
+type = "workspaces"
+favorites = [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ]
+
+[[center]]
+type = "clock"
+format = "%A, %b %d | %I:%M %p"
+
+[[end]]
+type = "upower"

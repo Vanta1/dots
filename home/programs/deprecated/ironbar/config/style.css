@@ -1,0 +1,23 @@
+.background {
+    background-color: #272e33;
+}
+
+.widget {
+    background-color: #272e33;
+}
+
+.workspaces {
+    background-color: #272e33;
+}
+
+.workspaces .item {
+    background-color: #272e33;
+    color: #d3c6aa;
+    border-radius: 0;
+    border: none;
+    padding: 4px;
+}
+
+.workspaces .item.focused {
+    border-bottom: 4px solid #a7c080;
+}

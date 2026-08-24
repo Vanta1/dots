@@ -1,0 +1,78 @@
+(deflisten tag :initial "1" `herbsttag.sh`)
+
+(defvar workspace-labels "[1, 2, 3, 4, 5, 6, 7, 8, 9]")
+
+(defvar workspace1_has_client "")
+(defvar workspace2_has_client "")
+(defvar workspace3_has_client "")
+(defvar workspace4_has_client "")
+(defvar workspace5_has_client "")
+(defvar workspace6_has_client "")
+(defvar workspace7_has_client "")
+(defvar workspace8_has_client "")
+(defvar workspace9_has_client "")
+
+(defwidget workspaces []
+    (box
+        ;;(transform 
+        ;;    :rotate "25"
+        ;;    :translate-x "0px"
+        ;;    :translate-y "-40px"
+        ;;    (box :class "braille" "⠹")
+        ;;)
+        (button
+            :class "workspace-button ${ tag == 1 ? 'active' : 'inactive'} ${ workspace1_has_client != "" ? 'occupied' : 'unoccupied' }"
+            :onclick "herbstclient use_index 0" ; not quite sure why you need the '- 1' but sure
+            :width 0
+            1
+        )
+        (button
+            :class "workspace-button ${ tag == 2 ? 'active' : 'inactive'} ${ workspace2_has_client != "" ? 'occupied' : 'unoccupied' }"
+            :onclick "herbstclient use_index 1" ; not quite sure why you need the '- 1' but sure
+            :width 0
+            2
+        )
+        (button
+            :class "workspace-button ${ tag == 3 ? 'active' : 'inactive'} ${ workspace3_has_client != "" ? 'occupied' : 'unoccupied' }"
+            :onclick "herbstclient use_index 2" ; not quite sure why you need the '- 1' but sure
+            :width 0
+            3
+        )
+        (button
+            :class "workspace-button ${ tag == 4 ? 'active' : 'inactive'} ${ workspace4_has_client != "" ? 'occupied' : 'unoccupied' }"
+            :onclick "herbstclient use_index 3" ; not quite sure why you need the '- 1' but sure
+            :width 0
+            4
+        )
+        (button
+            :class "workspace-button ${ tag == 5 ? 'active' : 'inactive'} ${ workspace5_has_client != "" ? 'occupied' : 'unoccupied' }"
+            :onclick "herbstclient use_index 4" ; not quite sure why you need the '- 1' but sure
+            :width 0
+            5
+        )
+        (button
+            :class "workspace-button ${ tag == 6 ? 'active' : 'inactive'} ${ workspace6_has_client != "" ? 'occupied' : 'unoccupied' }"
+            :onclick "herbstclient use_index 5" ; not quite sure why you need the '- 1' but sure
+            :width 0
+            6
+        )
+        (button
+            :class "workspace-button ${ tag == 7 ? 'active' : 'inactive'} ${ workspace7_has_client != "" ? 'occupied' : 'unoccupied' }"
+            :onclick "herbstclient use_index 6" ; not quite sure why you need the '- 1' but sure
+            :width 0
+            7
+        )
+        (button
+            :class "workspace-button ${ tag == 8 ? 'active' : 'inactive'} ${ workspace8_has_client != "" ? 'occupied' : 'unoccupied' }"
+            :onclick "herbstclient use_index 7" ; not quite sure why you need the '- 1' but sure
+            :width 0
+            8
+        )
+        (button
+            :class "workspace-button ${ tag == 9 ? 'active' : 'inactive'} ${ workspace9_has_client != "" ? 'occupied' : 'unoccupied' }"
+            :onclick "herbstclient use_index 8" ; not quite sure why you need the '- 1' but sure
+            :width 0
+            9
+        )
+    )
+)

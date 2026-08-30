@@ -1,6 +1,7 @@
-{personal, ...}: {
+{ personal, config, ... }: {
   programs.firefox = {
     enable = true;
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     profiles.${personal.user} = {
       settings = {
         "layout.css.devPixelsPerPx" = "1.3"; # rescale the ui to be a little larger, feels better on a small laptop
@@ -9,7 +10,7 @@
 
         # remove firefox logo from new tabs
         "browser.newtabpage.activity-stream.newtabLayouts.variant-a" = false;
-        "browser.newtabpage.activity-stream.newtabLayouts.variant-b" = false;
+        "browser.newtabpage.baractivity-stream.newtabLayouts.variant-b" = false;
 
         # enable tab groups
         "browser.tabs.group.enabled" = true;

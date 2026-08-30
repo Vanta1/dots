@@ -137,8 +137,7 @@
   # for controlling external monitors
   hardware.i2c.enable = true;
 
-  # for ironbar (deprecated), probably don't need if i update that to use get_battery.sh
-  #services.upower.enable = true;
+  services.upower.enable = true;
 
   services.mullvad-vpn.enable = true;
 

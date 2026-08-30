@@ -1,23 +1,64 @@
-.background {
-    background-color: #272e33;
+:root {
+    --bg0: #272e33;
+    --fg: #d3c6aa;
+
+    --red: #e67e80;
+    --green: #a7c080;
+    --yellow: #dbbc7f;
 }
 
-.widget {
-    background-color: #272e33;
+@keyframes blinking {
+    50% {
+        opacity: 0.3;
+    }
 }
 
-.workspaces {
-    background-color: #272e33;
-}
-
-.workspaces .item {
-    background-color: #272e33;
-    color: #d3c6aa;
+* {
     border-radius: 0;
     border: none;
-    padding: 4px;
+    box-shadow: none;
+    background-image: none;
+    font-family: Monaspace Xenon;
+    font-size: 12pt;
+    color: var(--fg);
 }
 
-.workspaces .item.focused {
-    border-bottom: 4px solid #a7c080;
+popover,
+popover contents {
+    border-radius: 12px;
+    padding: 0;
+}
+
+window,
+#bar,
+popover,
+popover contents,
+popopover contents popover {
+    background-color: var(--bg0);
+}
+
+.volume {
+    color: var(--green);
+}
+
+.volume .source {
+    display: none;
+}
+
+/* battery */
+.battery .label {
+    color: var(--green);
+}
+
+.battery.profile-warning .label {
+    color: var(--yellow);
+}
+
+.battery.profile-critical .label {
+    color: var(--red);
+}
+
+.battery.profile-dead .label {
+    color: var(--red);
+    animation: blinking 0.6s ease infinite;
 }

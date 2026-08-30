@@ -3,10 +3,11 @@
   inputs,
   personal,
   ...
-}: {
+}:
+{
   programs.waybar = {
     enable = true;
-    package = inputs.waybar.packages.${pkgs.system}.waybar;
+    package = inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar;
     settings = {
       bar = {
         position = "bottom";
@@ -50,7 +51,7 @@
         };
         "custom/weather" = {
           # this will be broken on your first install, get ur own damn api key!
-          exec = "/home/${personal.user}/bin/vanta1/get_weather.sh";
+          exec = "/home/${personal.user}/bin/vanta1/get_weather.sh ${personal.city}";
           on-click = "/home/${personal.user}/bin/vanta1/notify_weather.sh";
           format = "WTR {}";
           interval = 900;
@@ -126,155 +127,157 @@
         };
       };
     };
-    style = let
-      font-family = "'Monaspace Xenon'";
-    in ''
-      /* required to set the bar height less than 34 */
-      * { padding: 0; margin: 0; }
+    style =
+      let
+        font-family = "'Monaspace Xenon'";
+      in
+      ''
+        /* required to set the bar height less than 34 */
+        * { padding: 0; margin: 0; }
 
-      /* correct text placement/baseline */
-      .modules-left, .modules-center, .modules-right { margin-bottom: -3px; }
+        /* correct text placement/baseline */
+        .modules-left, .modules-center, .modules-right { margin-bottom: -3px; }
 
-      /* pad modules from screen border */
-      .modules-left  { margin-left:  0px; }
-      .modules-right { margin-right: 7px; }
+        /* pad modules from screen border */
+        .modules-left  { margin-left:  0px; }
+        .modules-right { margin-right: 7px; }
 
-      window#waybar {
-      	background-color: #272e33;
-      	color: #d3c6aa;
-      	font-family: ${font-family};
-      	font-size: 12pt;
-        font-weight: normal;
-      }
+        window#waybar {
+        	background-color: #272e33;
+        	color: #d3c6aa;
+        	font-family: ${font-family};
+        	font-size: 12pt;
+          font-weight: normal;
+        }
 
-      #custom-separator {
-      	margin-bottom: 3px;
-      	padding-left: 6px;
-      	padding-right: 6px;
-      }
+        #custom-separator {
+        	margin-bottom: 3px;
+        	padding-left: 6px;
+        	padding-right: 6px;
+        }
 
-      #custom-workspace-separator {
-      	margin-bottom: 3px;
-      	padding-left: 0px;
-      	padding-right: 6px;
-      }
+        #custom-workspace-separator {
+        	margin-bottom: 3px;
+        	padding-left: 0px;
+        	padding-right: 6px;
+        }
 
-      #custom-spotify-pause {
-      	margin-top: 0px;
-        margin-bottom: 2px;
-        margin-left: 6px;
-        margin-right: 8px;
-        padding: 0px;
-      }
+        #custom-spotify-pause {
+        	margin-top: 0px;
+          margin-bottom: 2px;
+          margin-left: 6px;
+          margin-right: 8px;
+          padding: 0px;
+        }
 
-      tooltip {
-      	background-color: #272e33;
-      	border: 1px solid #9da9a0;
-        font-family: ${font-family};
-      }
+        tooltip {
+        	background-color: #272e33;
+        	border: 1px solid #9da9a0;
+          font-family: ${font-family};
+        }
 
-      /*
-      tooltip:hover {
-      	background-color: #272e33;
-      }
-      */
+        /*
+        tooltip:hover {
+        	background-color: #272e33;
+        }
+        */
 
-      tooltip label {
-      	color: #d3c6aa;
-      	font-size: 10pt;
-      }
+        tooltip label {
+        	color: #d3c6aa;
+        	font-size: 10pt;
+        }
 
-      #workspaces button {
-        margin: 0;
-        padding: 0;
-        min-width: 30px;
-        border-radius: 0;
-      	font-size: 12pt;
-      	color: #d3c6aa;
-      	background-color: #272e33;
-      }
+        #workspaces button {
+          margin: 0;
+          padding: 0;
+          min-width: 30px;
+          border-radius: 0;
+        	font-size: 12pt;
+        	color: #d3c6aa;
+        	background-color: #272e33;
+        }
 
-      #workspaces button.empty {
-      	color: #859289;
-      }
+        #workspaces button.empty {
+        	color: #859289;
+        }
 
-      #workspaces button.visible {
-      	background-color: #2e383c;
-      }
+        #workspaces button.visible {
+        	background-color: #2e383c;
+        }
 
-      #workspaces button:hover {
-      	box-shadow: none;
-      	text-shadow: none;
-      	background: #2e383c;
-      }
+        #workspaces button:hover {
+        	box-shadow: none;
+        	text-shadow: none;
+        	background: #2e383c;
+        }
 
-      #workspaces button.active {
-      	background-color: #374145;
-      	color: #d3c6aa;
-      }
+        #workspaces button.active {
+        	background-color: #374145;
+        	color: #d3c6aa;
+        }
 
-      #tray menu {
-      	background-color: #232e33;
-      	color: #d3c6aa;
-      	font-size: 12pt;
-      }
+        #tray menu {
+        	background-color: #232e33;
+        	color: #d3c6aa;
+        	font-size: 12pt;
+        }
 
-      #tray menu:hover {
-      	background-color: #d3c6aa;
-      	color: #232e33;
-      }
+        #tray menu:hover {
+        	background-color: #d3c6aa;
+        	color: #232e33;
+        }
 
-      #wireplumber {
-      	color: #a7c080;
-      }
+        #wireplumber {
+        	color: #a7c080;
+        }
 
-      #wireplumber.muted {
-      	color: #7a8478;
-      }
+        #wireplumber.muted {
+        	color: #7a8478;
+        }
 
-      #network.wifi {
-      	color: #a7c080;
-      }
+        #network.wifi {
+        	color: #a7c080;
+        }
 
-      #network.disconnected {
-      	color: #e67e80;
-      }
+        #network.disconnected {
+        	color: #e67e80;
+        }
 
-      #idle_inhibitor {
-        font-family: 'Font Awesome 6 Free';
-        padding-left: 9px;
-      }
+        #idle_inhibitor {
+          font-family: 'Font Awesome 6 Free';
+          padding-left: 9px;
+        }
 
-      #idle_inhibitor.activated {
-      	color: #e67e80;
-      }
+        #idle_inhibitor.activated {
+        	color: #e67e80;
+        }
 
-      #idle_inhibitor.deactivated {
-      	color: #9da9a0;
-      }
+        #idle_inhibitor.deactivated {
+        	color: #9da9a0;
+        }
 
-      #battery {
-      	color: #a7c080;
-      }
+        #battery {
+        	color: #a7c080;
+        }
 
-      #battery.warning {
-      	color: #dbbc7f;
-      }
+        #battery.warning {
+        	color: #dbbc7f;
+        }
 
-      #battery.critical {
-      	color: #e67e80;
-      }
+        #battery.critical {
+        	color: #e67e80;
+        }
 
-      @keyframes blinking {
-      	50% {
-      		opacity: .3;
-      	}
-      }
+        @keyframes blinking {
+        	50% {
+        		opacity: .3;
+        	}
+        }
 
-      #battery.dead {
-      	color: #e67e80;
-      	animation: blinking .6s ease infinite;
-      }
-    '';
+        #battery.dead {
+        	color: #e67e80;
+        	animation: blinking .6s ease infinite;
+        }
+      '';
   };
 }

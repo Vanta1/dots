@@ -3,11 +3,78 @@ height = 30
 
 [[start]]
 type = "workspaces"
-favorites = [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ]
+
+[[start]]
+type = "launcher"
+icon_size = 24
+
+[start.truncate]
+mode = "end"
+max_length = 30
+
+[[center]]
+type = "music"
+player_type = "mpd"
 
 [[center]]
 type = "clock"
-format = "%A, %b %d | %I:%M %p"
 
 [[end]]
-type = "upower"
+type = "tray"
+
+[[end]]
+type = "volume"
+format = "VOL {percentage}%"
+use_default_profiles = false
+
+[end.profiles]
+
+[[end]]
+type = "battery"
+show_icon = false
+format = "BAT {percentage}%"
+
+[end.profiles.dead]
+when = { percent = 5, charging = false }
+
+[end.profiles.critical]
+percent = 15
+
+[end.profiles.warning]
+percent = 30
+
+[[end]]
+type = "custom"
+name = "power-menu"
+class = "power-menu"
+
+[[end.bar]]
+type = "button"
+name = "power-btn"
+label = ""
+on_click = "popup:toggle"
+
+[[end.popup]]
+type = "box"
+orientation = "vertical"
+
+[[end.popup.widgets]]
+type = "label"
+name = "header"
+label = "Power menu"
+
+[[end.popup.widgets]]
+type = "box"
+name = "buttons"
+
+[[end.popup.widgets.widgets]]
+type = "button"
+class = "power-btn"
+label = "<span>󰐥</span>"
+on_click = "!shutdown now"
+
+[[end.popup.widgets.widgets]]
+type = "button"
+class = "power-btn"
+label = "<span>󰜉</span>"
+on_click = "!reboot"

@@ -10,8 +10,8 @@
     # other programs
     ./alacritty.nix # terminal emulator
     ./dunst.nix # notification daemon
-    ./gtk # gtk theming
     ./firefox # web browser
+    ./gtk # gtk theming
     #./spicetify.nix # spotify retheming, currently broken
     ./tofi.nix # app launcher
     ./vesktop.nix # discord retheming

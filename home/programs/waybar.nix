@@ -37,6 +37,8 @@
           "wireplumber"
           "custom/separator"
           "battery"
+          "custom/separator"
+          "custom/power"
         ];
         "custom/separator" = {
           format = "|";
@@ -102,13 +104,13 @@
           format = "VOL {volume}";
           on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
         };
-        network = {
-          format-wifi = "NET {essid}";
-          format-disconnected = "NET disconnected";
-          max-length = 50;
-          tooltip = true;
-          tooltip-format = "STR {signalStrength}";
-        };
+        # network = {
+        #   format-wifi = "NET {essid}";
+        #   format-disconnected = "NET disconnected";
+        #   max-length = 50;
+        #   tooltip = true;
+        #   tooltip-format = "STR {signalStrength}";
+        # };
         idle_inhibitor = {
           format = "{icon}";
           format-icons = {
@@ -125,6 +127,19 @@
           };
           format = "BAT {capacity}%";
         };
+        "custom/power" = {
+          format = "⏻";
+          tooltip = false;
+          menu = "on-click";
+          # file is defined below (scroll way down)
+          menu-file = "/home/${personal.user}/.config/waybar/power_menu.xml";
+          menu-actions = {
+            shutdown = "shutdown";
+            reboot = "reboot";
+            suspend = "systemctl suspend";
+            hibernate = "systemctl hibernate";
+          };
+        };
       };
     };
     style =
@@ -140,7 +155,7 @@
 
         /* pad modules from screen border */
         .modules-left  { margin-left:  0px; }
-        .modules-right { margin-right: 7px; }
+        .modules-right { margin-right: 9px; }
 
         window#waybar {
         	background-color: #272e33;
@@ -192,9 +207,9 @@
           padding: 0;
           min-width: 30px;
           border-radius: 0;
-        	font-size: 12pt;
-        	color: #d3c6aa;
-        	background-color: #272e33;
+          font-size: 12pt;
+          color: #d3c6aa;
+          background-color: #272e33;
         }
 
         #workspaces button.empty {
@@ -245,6 +260,7 @@
 
         #idle_inhibitor {
           font-family: 'Font Awesome 6 Free';
+          font-size: 11pt;
           padding-left: 9px;
         }
 
@@ -278,6 +294,56 @@
         	color: #e67e80;
         	animation: blinking .6s ease infinite;
         }
+
+        #custom-power {
+          margin-bottom: -1px;
+        }
+
+        menu {
+          background-color: #272e33;
+          border: 1px solid #9da9a0;
+          font-family: ${font-family};
+          color: #d3c6aa;
+          font-size: 12pt;
+          padding: 1px;
+        }
+
+        menu menuitem:hover {
+          background-color: #2e383c;
+          color: #d3c6aa;
+        }
       '';
   };
+
+  # from https://github.com/Alexays/Waybar/wiki/Module:-Custom:-Menu
+  xdg.configFile."waybar/power_menu.xml".text = ''
+    <?xml version="1.0" encoding="UTF-8"?>
+    <interface>
+        <object class="GtkMenu" id="menu">
+            <child>
+                <object class="GtkMenuItem" id="suspend">
+                    <property name="label">Suspend</property>
+                </object>
+            </child>
+            <child>
+                <object class="GtkMenuItem" id="hibernate">
+                    <property name="label">Hibernate</property>
+                </object>
+            </child>
+            <child>
+                <object class="GtkMenuItem" id="shutdown">
+                    <property name="label">Shutdown</property>
+                </object>
+            </child>
+            <child>
+                <object class="GtkSeparatorMenuItem" id="delimiter1" />
+            </child>
+            <child>
+                <object class="GtkMenuItem" id="reboot">
+                    <property name="label">Reboot</property>
+                </object>
+            </child>
+        </object>
+    </interface>
+  '';
 }

@@ -25,6 +25,13 @@
         focus-follows-mouse max-scroll-amount="0%"
       }
 
+      // hot corners are just kinda annoying most of the times
+      gestures {
+        hot-corners {
+          off
+        }
+      }
+
       cursor {
         xcursor-theme "Simp1e-Dark"
         xcursor-size ${builtins.toString personal.cursor-size}
@@ -178,6 +185,7 @@
         Mod+Comma     hotkey-overlay-title="playerctl: seek"            { spawn "playerctl" "previous"; }
         Mod+Period    hotkey-overlay-title="playerctl: track"           { spawn "playerctl" "next"; }
         Mod+Space     hotkey-overlay-title="playerctl: pause"           { spawn "playerctl" "play-pause"; }
+        Mod+Shift+R   hotkey-overlay-title="restart waybar"             { spawn "systemctl" "--user" "restart" "niri-waybar.service"; }
 
         Mod+Shift+P   hotkey-overlay-title=null                         { spawn "${script-dir}/manage_airpods.sh"; }
         Mod+Ctrl+B    hotkey-overlay-title=null allow-when-locked=true  { spawn "${script-dir}/sync_brightness.sh"; }
@@ -249,15 +257,15 @@
         Mod+8 { focus-workspace 8; }
         Mod+9 { focus-workspace 9; }
 
-        Mod+Ctrl+1 { move-column-to-workspace 1; }
-        Mod+Ctrl+2 { move-column-to-workspace 2; }
-        Mod+Ctrl+3 { move-column-to-workspace 3; }
-        Mod+Ctrl+4 { move-column-to-workspace 4; }
-        Mod+Ctrl+5 { move-column-to-workspace 5; }
-        Mod+Ctrl+6 { move-column-to-workspace 6; }
-        Mod+Ctrl+7 { move-column-to-workspace 7; }
-        Mod+Ctrl+8 { move-column-to-workspace 8; }
-        Mod+Ctrl+9 { move-column-to-workspace 9; }
+        Mod+Shift+1 { move-column-to-workspace 1; }
+        Mod+Shift+2 { move-column-to-workspace 2; }
+        Mod+Shift+3 { move-column-to-workspace 3; }
+        Mod+Shift+4 { move-column-to-workspace 4; }
+        Mod+Shift+5 { move-column-to-workspace 5; }
+        Mod+Shift+6 { move-column-to-workspace 6; }
+        Mod+Shift+7 { move-column-to-workspace 7; }
+        Mod+Shift+8 { move-column-to-workspace 8; }
+        Mod+Shift+9 { move-column-to-workspace 9; }
 
         // The following binds move the focused window in and out of a column.
         Mod+BracketLeft  { consume-or-expel-window-left; }

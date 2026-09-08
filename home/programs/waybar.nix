@@ -32,8 +32,8 @@
           "tray"
           "idle_inhibitor"
           "custom/separator"
-          "cpu"
-          "custom/separator"
+          #"cpu"
+          #"custom/separator"
           "wireplumber"
           "custom/separator"
           "battery"
@@ -134,7 +134,7 @@
           # file is defined below (scroll way down)
           menu-file = "/home/${personal.user}/.config/waybar/power_menu.xml";
           menu-actions = {
-            shutdown = "shutdown";
+            shutdown = "shutdown now";
             reboot = "reboot";
             suspend = "systemctl suspend";
             hibernate = "systemctl hibernate";
@@ -305,7 +305,7 @@
           font-family: ${font-family};
           color: #d3c6aa;
           font-size: 12pt;
-          padding: 1px;
+          padding: 2px;
         }
 
         menu menuitem:hover {

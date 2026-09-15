@@ -8,72 +8,73 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprsunset.url = "github:hyprwm/hyprsunset";
-    waybar.url = "github:alexays/waybar";
   };
 
-  outputs = {
-    nixpkgs,
-    home-manager,
-    ...
-  } @ inputs: let
-    ## set these for yourself please!!!
-    system = "x86_64-linux";
-    personal = {
-      user = "vanta";
-      hostname = "nixtop";
-      time-zone = "America/Toronto";
-      default-locale = "en_CA.UTF-8";
-      city = "Toronto";
-      cursor-size = 24;
-      wallpaper = "/home/${personal.user}/wallpapers/pxl_everforest_blender.png";
-    };
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
+    let
+      ## set these for yourself please!!!
+      system = "x86_64-linux";
+      personal = {
+        user = "vanta";
+        hostname = "nixtop";
+        time-zone = "America/Toronto";
+        default-locale = "en_CA.UTF-8";
+        city = "Toronto";
+        cursor-size = 24;
+        wallpaper = "/home/${personal.user}/wallpapers/to1.png";
+      };
 
-    unstable-overlay = final: prev: {
-      unstable = import inputs.nixpkgs-unstable {
+      unstable-overlay = final: prev: {
+        unstable = import inputs.nixpkgs-unstable {
+          inherit system;
+          config.allowUnfree = true;
+        };
+      };
+
+      pkgs = import nixpkgs {
         inherit system;
-        config.allowUnfree = true;
-      };
-    };
-
-    pkgs = import nixpkgs {
-      inherit system;
-      config = {
-        allowUnfree = true;
-        # needed to install obsidian ugh
-        permittedInsecurePackages = [
-          "electron-25.9.0"
-        ];
-        input-fonts.acceptLicense = true; # license for input-fonts: https://input.djr.com/license/. go support it's creator here!!: http://input.djr.com/buy
-      };
-      overlays = [
-        unstable-overlay
-      ];
-    };
-    args = {inherit inputs personal;};
-  in {
-    nixosConfigurations = {
-      nixtop = nixpkgs.lib.nixosSystem {
-        # special args sent to configuration.nix
-        specialArgs = args;
-
-        modules = [
-          {nixpkgs.pkgs = pkgs;}
-          ./configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            # 'extra'? special args sent to home/default.nix (and all modules it includes)
-            home-manager.extraSpecialArgs = args;
-
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.users.${personal.user} = import ./home;
-          }
-          # not technically my laptop's exact model, but close enough
-          #nixos-hardware.nixosModules.dell-xps-13-9310
+        config = {
+          allowUnfree = true;
+          # needed to install obsidian ugh
+          permittedInsecurePackages = [
+            "electron-25.9.0"
+          ];
+          input-fonts.acceptLicense = true; # license for input-fonts: https://input.djr.com/license/. go support it's creator here!!: http://input.djr.com/buy
+        };
+        overlays = [
+          unstable-overlay
         ];
       };
+      args = { inherit inputs personal; };
+    in
+    {
+      nixosConfigurations = {
+        nixtop = nixpkgs.lib.nixosSystem {
+          # special args sent to configuration.nix
+          specialArgs = args;
+
+          modules = [
+            { nixpkgs.pkgs = pkgs; }
+            ./configuration.nix
+            home-manager.nixosModules.home-manager
+            {
+              # 'extra'? special args sent to home/default.nix (and all modules it includes)
+              home-manager.extraSpecialArgs = args;
+
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              home-manager.users.${personal.user} = import ./home;
+            }
+            # not technically my laptop's exact model, but close enough
+            #nixos-hardware.nixosModules.dell-xps-13-9310
+          ];
+        };
+      };
     };
-  };
 }

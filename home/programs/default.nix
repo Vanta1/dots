@@ -74,6 +74,7 @@
     thunderbird # email client
     tree # display contents of a directory as a file tree
     typst # L_aT_eX like formatter, with rust-y stuff i like
+    unoconv # convert btwn LibreOffice supported formats (F U PowerPoint)
     vesktop # discord client that actually works
     vlc # media player
     which # find locations of executables

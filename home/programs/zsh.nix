@@ -1,15 +1,18 @@
-{config, ...}: {
+{ config, ... }: {
   programs.zsh = {
     enable = true;
     shellAliases = {
       bmount = "bashmount";
-      ls = "ls --color=auto";
-      la = "ls -a --color=auto";
+      l = "ls -p --colour=auto";
+      ls = "ls -p --color=auto";
+      la = "ls -ap --color=auto";
       mkdirenv = "echo \"use flake\" >> .envrc && direnv allow";
-      snerp = "sudo nixos-rebuild switch"; # used to be snrs, but I just started saying 'snerp' in my head and so here we are. meep merp :3 xD
       r = "ranger";
+      snerp = "sudo nixos-rebuild switch"; # used to be snrs, but I just started saying 'snerp' in my head and so here we are. meep merp :3 xD
       v = "vim";
+      woman = "man"; # level 3 woke
       zed = "zeditor";
+
     };
 
     # in 'PROMPT' the %1~ shows name of the current working directory, or ~ if that's the user's home directory
@@ -21,6 +24,7 @@
       export PATH=$PATH:$HOME/bin/vanta1
       eval "$(direnv hook zsh)"
     '';
+
     # don't need .zshrc cluttering up the home directory
     dotDir = "${config.xdg.configHome}/zsh";
   };

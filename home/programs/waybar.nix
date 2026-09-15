@@ -1,13 +1,7 @@
-{
-  pkgs,
-  inputs,
-  personal,
-  ...
-}:
+{ personal, ... }:
 {
   programs.waybar = {
     enable = true;
-    package = inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.waybar;
     settings = {
       bar = {
         position = "bottom";
@@ -158,7 +152,7 @@
         .modules-right { margin-right: 9px; }
 
         window#waybar {
-        	background-color: #272e33;
+        	background-color: rgba(39, 46, 51, 0.9);
         	color: #d3c6aa;
         	font-family: ${font-family};
         	font-size: 12pt;

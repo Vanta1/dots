@@ -61,8 +61,11 @@
       layout {
         background-color "transparent"
 
-        gaps 12
+        // gaps 12
+        gaps 0
+
         center-focused-column "never"
+
         preset-column-widths {
           proportion 0.4
           proportion 0.6
@@ -77,7 +80,7 @@
         border {
           width 4
           active-color "#374145"
-          inactive-color "#272e33"
+          inactive-color "#272e33d9"
           urgent-color "#4c3743"
         }
 
@@ -123,7 +126,7 @@
 
       window-rule {
         open-maximized true
-        geometry-corner-radius 12
+        // geometry-corner-radius 12
         clip-to-geometry true
       }
 
@@ -134,22 +137,40 @@
       }
 
       window-rule {
-        match app-id="Alacritty" is-active=true
-        match app-id="dev.zed.Zed" is-active=true
-        match app-id="obsidian" is-active=true
-        match app-id="org.pwmt.zathura" is-active=true
+        match is-active=true
 
         opacity 0.95
       }
 
       window-rule {
-        match app-id="Alacritty" is-active=false
-        match app-id="dev.zed.Zed" is-active=false
-        match app-id="obsidian" is-active=false
-        match app-id="org.pwmt.zathura" is-active=false
+        match is-active=false
 
         opacity 0.85
       }
+
+      window-rule {
+        match app-id="firefox"
+
+        opacity 1.0
+      }
+
+      //window-rule {
+      //  match app-id="Alacritty" is-active=true
+      //  match app-id="dev.zed.Zed" is-active=true
+      //  match app-id="obsidian" is-active=true
+      //  match app-id="org.pwmt.zathura" is-active=true
+      //
+      //  opacity 0.95
+      //}
+      //
+      //window-rule {
+      //  match app-id="Alacritty" is-active=false
+      //  match app-id="dev.zed.Zed" is-active=false
+      //  match app-id="obsidian" is-active=false
+      //  match app-id="org.pwmt.zathura" is-active=false
+      //
+      //  opacity 0.85
+      //}
 
       window-rule {
         match app-id="firefox"

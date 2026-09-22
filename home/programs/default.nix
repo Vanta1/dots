@@ -101,6 +101,7 @@
     XDG_PICTURES_DIR="$HOME/pictures"
     XDG_VIDEOS_DIR="$HOME/videos"
     XDG_TEMPLATES_DIR="$HOME/templates"
+    XDG_PROJECTS_DIR="$HOME/projects"
   '';
 
   xdg.configFile."user-dirs.dirs".force = true; # if a build fails this gets left over and it's really annoying to delete every time

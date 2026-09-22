@@ -148,12 +148,6 @@
         opacity 0.85
       }
 
-      window-rule {
-        match app-id="firefox"
-
-        opacity 1.0
-      }
-
       //window-rule {
       //  match app-id="Alacritty" is-active=true
       //  match app-id="dev.zed.Zed" is-active=true
@@ -195,6 +189,8 @@
       binds {
         Mod+Shift+Slash { show-hotkey-overlay; }
 
+        Mod+Ctrl+Q { close-window; }
+
         Mod+Return    hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
         Mod+O         hotkey-overlay-title="Run an Application: tofi"   { spawn-sh "pkill tofi-drun || tofi-drun --drun-launch=true"; }
         Mod+B         hotkey-overlay-title="Open Browser: Firefox"      { spawn "firefox"; }
@@ -207,6 +203,8 @@
         Mod+Period    hotkey-overlay-title="playerctl: track"           { spawn "playerctl" "next"; }
         Mod+Space     hotkey-overlay-title="playerctl: pause"           { spawn "playerctl" "play-pause"; }
         Mod+Shift+R   hotkey-overlay-title="restart waybar"             { spawn "systemctl" "--user" "restart" "niri-waybar.service"; }
+        Mod+Shift+O   hotkey-overlay-title="toggle opacity"             { toggle-window-rule-opacity; }
+        Mod+Ctrl+O    hotkey-overlay-title="show overview"              { toggle-overview; }
 
         Mod+Shift+P   hotkey-overlay-title=null                         { spawn "${script-dir}/manage_airpods.sh"; }
         Mod+Ctrl+B    hotkey-overlay-title=null allow-when-locked=true  { spawn "${script-dir}/sync_brightness.sh"; }
@@ -220,9 +218,7 @@
         // Brightness & Colour Temperature
         XF86MonBrightnessUp              allow-when-locked=true  { spawn "brightnessctl" "-e" "--min-value=1" "set" "5%+"; }
         XF86MonBrightnessDown            allow-when-locked=true  { spawn "brightnessctl" "-e" "--min-value=1" "set" "5%-"; }
-        Ctrl+XF86MonBrightnessDown       allow-when-locked=true  { spawn-sh "sunsetr p night"; }
-
-        Mod+Ctrl+Q { close-window; }
+        Ctrl+XF86MonBrightnessDown       allow-when-locked=true  hotkey-overlay-title="toggle blue light filter" { spawn-sh "sunsetr p night"; }
 
         //Navigation
         Mod+Left  { focus-column-left; }
@@ -234,11 +230,11 @@
         Mod+K     { focus-window-up; }
         Mod+L     { focus-column-right; }
 
-        Mod+Home { focus-column-first; }
-        Mod+End  { focus-column-last; }
+        Mod+Home  { focus-column-first; }
+        Mod+End   { focus-column-last; }
 
-        Mod+U              { focus-workspace-down; }
-        Mod+I              { focus-workspace-up; }
+        Mod+U     { focus-workspace-down; }
+        Mod+I     { focus-workspace-up; }
 
         // Moving Windows
         Mod+Shift+Left  { move-column-left; }
@@ -262,11 +258,11 @@
         Mod+Shift+Ctrl+K     { move-column-to-monitor-up; }
         Mod+Shift+Ctrl+L     { move-column-to-monitor-right; }
 
-        Mod+Ctrl+U         { move-column-to-workspace-down; }
-        Mod+Ctrl+I         { move-column-to-workspace-up; }
+        Mod+Ctrl+U hotkey-overlay-title="move column to workspace down" { move-column-to-workspace-down; }
+        Mod+Ctrl+I hotkey-overlay-title="move column to workspace up"   { move-column-to-workspace-up; }
 
-        Mod+Shift+U         { move-workspace-down; }
-        Mod+Shift+I         { move-workspace-up; }
+        Mod+Shift+U hotkey-overlay-title="move workspace down"  { move-workspace-down; }
+        Mod+Shift+I hotkey-overlay-title="move workspace up"    { move-workspace-up; }
 
         Mod+1 { focus-workspace 1; }
         Mod+2 { focus-workspace 2; }
@@ -289,15 +285,22 @@
         Mod+Shift+9 { move-column-to-workspace 9; }
 
         // The following binds move the focused window in and out of a column.
-        Mod+BracketLeft  { consume-or-expel-window-left; }
-        Mod+BracketRight { consume-or-expel-window-right; }
+        Mod+BracketLeft  hotkey-overlay-title="move window into column left"  { consume-or-expel-window-left; }
+        Mod+BracketRight hotkey-overlay-title="move window into column right" { consume-or-expel-window-right; }
 
-        // toggle between full-width and half-width
-        Mod+M { maximize-column; }
+        // toggling column width
+        Mod+M       hotkey-overlay-title="toggle column full width"   { maximize-column; }
+        Mod+Shift+M hotkey-overlay-title="toggle column width 60/40"  { switch-preset-column-width; }
+
+        // changing window/column size
+        Mod+Ctrl+H { set-column-width "-5%"; }
+        Mod+Ctrl+J { set-window-height "+5%"; }
+        Mod+Ctrl+K { set-window-height "-5%"; }
+        Mod+Ctrl+L { set-column-width "+5%"; }
 
         // Expand the focused column to space not taken up by other fully visible columns.
         // Makes the column "fill the rest of the space".
-        Mod+Ctrl+F { expand-column-to-available-width; }
+        Mod+Ctrl+M { expand-column-to-available-width; }
 
         Mod+F       { maximize-window-to-edges; } // leaves bar
         Mod+Shift+F { fullscreen-window; } // complete fullscreen
@@ -309,14 +312,11 @@
 
         // Center all fully visible columns on screen.
         Mod+Ctrl+C { center-visible-columns; }
-        Mod+Ctrl+H { set-column-width "-5%"; }
-        Mod+Ctrl+J { set-window-height "+5%"; }
-        Mod+Ctrl+K { set-window-height "-5%"; }
-        Mod+Ctrl+L { set-column-width "+5%"; }
 
         Mod+V       { toggle-window-floating; }
         Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
+        // toggle tab groups
         Mod+W { toggle-column-tabbed-display; }
 
         Mod+Shift+E { quit; }

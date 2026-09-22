@@ -64,9 +64,6 @@
 
     # needed for gnome-keyring
     libsecret
-
-    # other
-    tuigreet
   ];
 
   fonts.packages = with pkgs; [
@@ -144,6 +141,7 @@
   services.fwupd.enable = true;
 
   services.fprintd.enable = true;
+
   services.greetd = {
     enable = true;
     settings = {

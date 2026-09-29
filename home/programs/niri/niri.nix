@@ -148,28 +148,11 @@
         opacity 0.85
       }
 
-      //window-rule {
-      //  match app-id="Alacritty" is-active=true
-      //  match app-id="dev.zed.Zed" is-active=true
-      //  match app-id="obsidian" is-active=true
-      //  match app-id="org.pwmt.zathura" is-active=true
-      //
-      //  opacity 0.95
-      //}
-      //
-      //window-rule {
-      //  match app-id="Alacritty" is-active=false
-      //  match app-id="dev.zed.Zed" is-active=false
-      //  match app-id="obsidian" is-active=false
-      //  match app-id="org.pwmt.zathura" is-active=false
-      //
-      //  opacity 0.85
-      //}
-
       window-rule {
         match app-id="firefox"
         match app-id="dev.zed.Zed"
         match app-id="darktable"
+        match app-id="md.Obsidian"
 
         open-maximized-to-edges true
       }
@@ -192,7 +175,7 @@
         Mod+Ctrl+Q { close-window; }
 
         Mod+Return    hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
-        Mod+O         hotkey-overlay-title="Run an Application: tofi"   { spawn-sh "pkill tofi-drun || tofi-drun --drun-launch=true"; }
+        Mod+O         hotkey-overlay-title="Run an Application: tofi"   { spawn-sh "pkill tofi-drun || tofi-drun --drun-launch=true"; } // open/close (toggle) app launcher
         Mod+B         hotkey-overlay-title="Open Browser: Firefox"      { spawn "firefox"; }
         Mod+N         hotkey-overlay-title="Open File Explorer: Nemo"   { spawn "nemo"; }
         Mod+G         hotkey-overlay-title="Open Steam"                 { spawn "steam"; }
@@ -205,6 +188,9 @@
         Mod+Shift+R   hotkey-overlay-title="restart waybar"             { spawn "systemctl" "--user" "restart" "niri-waybar.service"; }
         Mod+Shift+O   hotkey-overlay-title="toggle opacity"             { toggle-window-rule-opacity; }
         Mod+Ctrl+O    hotkey-overlay-title="show overview"              { toggle-overview; }
+        Mod+S         hotkey-overlay-title="screenshot window"          { screenshot-window show-pointer=false; }
+        Mod+Shift+S   hotkey-overlay-title="screenshot interactively"   { screenshot; }
+        Mod+Ctrl+S    hotkey-overlay-title="screenshot entire screen"   { screenshot-screen; }
 
         Mod+Shift+P   hotkey-overlay-title=null                         { spawn "${script-dir}/manage_airpods.sh"; }
         Mod+Ctrl+B    hotkey-overlay-title=null allow-when-locked=true  { spawn "${script-dir}/sync_brightness.sh"; }
@@ -220,7 +206,7 @@
         XF86MonBrightnessDown            allow-when-locked=true  { spawn "brightnessctl" "-e" "--min-value=1" "set" "5%-"; }
         Ctrl+XF86MonBrightnessDown       allow-when-locked=true  hotkey-overlay-title="toggle blue light filter" { spawn-sh "sunsetr p night"; }
 
-        //Navigation
+        // Navigation
         Mod+Left  { focus-column-left; }
         Mod+Down  { focus-window-down; }
         Mod+Up    { focus-window-up; }
@@ -302,21 +288,18 @@
         // Makes the column "fill the rest of the space".
         Mod+Ctrl+M { expand-column-to-available-width; }
 
+        // Fullscreen
         Mod+F       { maximize-window-to-edges; } // leaves bar
         Mod+Shift+F { fullscreen-window; } // complete fullscreen
 
-        Mod+C { center-column; }
-
-        // screen mirroring
-        Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
-
-        // Center all fully visible columns on screen.
-        Mod+Ctrl+C { center-visible-columns; }
-
+        // Floating windows
         Mod+V       { toggle-window-floating; }
         Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
-        // toggle tab groups
+        // Screen mirroring
+        Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
+
+        // Tab groups
         Mod+W { toggle-column-tabbed-display; }
 
         Mod+Shift+E { quit; }

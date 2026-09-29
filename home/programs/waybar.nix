@@ -25,6 +25,7 @@
         modules-right = [
           "tray"
           "idle_inhibitor"
+          "custom/bluelight-filter"
           "custom/separator"
           #"cpu"
           #"custom/separator"
@@ -111,6 +112,14 @@
             activated = "";
             deactivated = "";
           };
+        };
+        "custom/bluelight-filter" = {
+          exec = "/home/${personal.user}/bin/vanta1/get_bluelight_filter.sh";
+          on-click = "/home/${personal.user}/bin/vanta1/toggle_bluelight_filter.sh";
+          format = "{}";
+          signal = 1;
+          tooltip = false;
+          return-type = "json";
         };
         battery = {
           interval = 60;
@@ -253,7 +262,7 @@
         }
 
         #idle_inhibitor {
-          font-family: 'Font Awesome 6 Free';
+          font-family: 'Font Awesome 6 Free Solid';
           font-size: 11pt;
           padding-left: 9px;
         }
@@ -264,6 +273,21 @@
 
         #idle_inhibitor.deactivated {
         	color: #9da9a0;
+        }
+
+        #custom-bluelight-filter {
+          font-family: 'Font Awesome 6 Free Solid';
+          font-size: 12pt;
+          padding-left: 9px;
+          margin-bottom: -1px;
+        }
+
+        #custom-bluelight-filter.day {
+        	color: #9da9a0;
+        }
+
+        #custom-bluelight-filter.night {
+        	color: #dbbc7f;
         }
 
         #battery {
@@ -290,6 +314,7 @@
         }
 
         #custom-power {
+          font-family: 'Font Awesome 6 Free Solid';
           margin-bottom: -1px;
         }
 

@@ -51,7 +51,7 @@
           exec = "/home/${personal.user}/bin/vanta1/get_weather.sh ${personal.city}";
           on-click = "/home/${personal.user}/bin/vanta1/notify_weather.sh";
           format = "WTR {}";
-          interval = 900;
+          signal = 2;
           tooltip = false;
         };
         "clock#date" = {
@@ -277,7 +277,7 @@
 
         #custom-bluelight-filter {
           font-family: 'Font Awesome 6 Free Solid';
-          font-size: 12pt;
+          font-size: 11pt;
           padding-left: 9px;
           margin-bottom: -1px;
         }
@@ -288,6 +288,7 @@
 
         #custom-bluelight-filter.night {
         	color: #dbbc7f;
+          font-size: 12pt;
         }
 
         #battery {
@@ -315,6 +316,8 @@
 
         #custom-power {
           font-family: 'Font Awesome 6 Free Solid';
+          font-size: 11pt;
+          color: #9da9a0;
           margin-bottom: -1px;
         }
 

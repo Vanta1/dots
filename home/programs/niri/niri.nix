@@ -185,7 +185,7 @@
         Mod+Comma     hotkey-overlay-title="playerctl: seek"            { spawn "playerctl" "previous"; }
         Mod+Period    hotkey-overlay-title="playerctl: track"           { spawn "playerctl" "next"; }
         Mod+Space     hotkey-overlay-title="playerctl: pause"           { spawn "playerctl" "play-pause"; }
-        Mod+Shift+R   hotkey-overlay-title="restart waybar"             { spawn "systemctl" "--user" "restart" "niri-waybar.service"; }
+        Mod+Shift+R   hotkey-overlay-title="fetch weather info"         { spawn "pkill" "-SIGRTMIN+2" "waybar"; }
         Mod+Shift+O   hotkey-overlay-title="toggle opacity"             { toggle-window-rule-opacity; }
         Mod+Ctrl+O    hotkey-overlay-title="show overview"              { toggle-overview; }
         Mod+S         hotkey-overlay-title="screenshot window"          { screenshot-window show-pointer=false; }
@@ -204,7 +204,7 @@
         // Brightness & Colour Temperature
         XF86MonBrightnessUp              allow-when-locked=true  { spawn "brightnessctl" "-e" "--min-value=1" "set" "5%+"; }
         XF86MonBrightnessDown            allow-when-locked=true  { spawn "brightnessctl" "-e" "--min-value=1" "set" "5%-"; }
-        Ctrl+XF86MonBrightnessDown       allow-when-locked=true  hotkey-overlay-title="toggle blue light filter" { spawn-sh "sunsetr p night"; }
+        Ctrl+XF86MonBrightnessDown       allow-when-locked=true  hotkey-overlay-title="toggle blue light filter" { spawn "${script-dir}/toggle_bluelight_filter.sh"; }
 
         // Navigation
         Mod+Left  { focus-column-left; }

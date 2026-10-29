@@ -1,5 +1,0 @@
-kitty @ set-colors background="#2D353B"
-kitty @ set-background-opacity 1.0
-nvim $*
-kitty @ set-colors --reset 
-kitty @ set-background-opacity 0.85

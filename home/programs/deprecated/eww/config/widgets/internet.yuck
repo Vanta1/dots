@@ -1,7 +1,0 @@
-(defpoll wifi_name :interval "5s" "nmcli -t -f NAME c show -a | head -1")
-
-(defwidget internet []
-    (box :class "internet ${ wifi_name != 'lo' ? 'connected' : 'disconnected' }"
-        "${ wifi_name != 'lo' ? wifi_name : 'disconnected' }"
-    )
-)

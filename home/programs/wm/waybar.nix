@@ -1,5 +1,20 @@
-{ personal, ... }:
+{ personal, pkgs, ... }:
 {
+  systemd.user.services.waybar = {
+    Unit = {
+      Description = "start waybar";
+      PartOf = "graphical-session.target";
+      After = "graphical-session.target";
+      Requisite = "graphical-session.target";
+    };
+    Install = {
+      WantedBy = [ "niri.service" ];
+    };
+    Service = {
+      ExecStart = "${pkgs.waybar}/bin/waybar";
+    };
+  };
+
   programs.waybar = {
     enable = true;
     settings = {
@@ -7,11 +22,13 @@
         position = "bottom";
         height = 30; # matches with hyprbar height, which feels satisfying with fullscreen windows imo
         output = "eDP-1";
+        layer = "top";
         modules-left = [
           "niri/workspaces"
           # workspace module already has padding, so here i use a separator without padding-left to make the space on either side equal
           "custom/workspace-separator"
-          "custom/weather" # see TODO for the module
+          #"custom/weather" # see TODO for the module
+          #"custom/window-list"
         ];
         modules-center = [
           "clock#date"
@@ -52,6 +69,12 @@
           on-click = "/home/${personal.user}/bin/vanta1/notify_weather.sh";
           format = "WTR {}";
           signal = 2;
+          tooltip = false;
+        };
+        "custom/window-list" = {
+          exec = "/home/${personal.user}/bin/vanta1/niri_workspaces.sh";
+          format = "{}";
+          signal = 3;
           tooltip = false;
         };
         "clock#date" = {

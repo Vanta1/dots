@@ -132,6 +132,8 @@
 
       window-rule {
         match app-id="Alacritty"
+        match app-id="nemo"
+
         open-maximized false
         default-column-width { proportion 0.5; }
       }

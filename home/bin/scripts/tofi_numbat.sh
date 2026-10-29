@@ -1,1 +1,0 @@
-echo "" | tofi --prompt-text="numbat: " --require-match=false | numbat | wl-copy

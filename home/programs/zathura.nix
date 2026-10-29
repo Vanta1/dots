@@ -1,4 +1,4 @@
-{...}: {
+{ ... }: {
   programs.zathura = {
     enable = true;
     mappings = {
@@ -38,8 +38,8 @@
   xdg.desktopEntries.zathura-detached = {
     type = "Application";
     name = "Zathura Detached";
-    exec = "detach-zathura.sh %U";
-    mimeType = ["application/pdf"];
+    exec = "detach_zathura.sh %U";
+    mimeType = [ "application/pdf" ];
     terminal = false;
   };
 }

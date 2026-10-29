@@ -3,9 +3,7 @@
     # shell
     ./zsh.nix
 
-    # window manager / desktop stuff
-    ./niri # window manager
-    ./waybar.nix # status bar
+    ./wm # window manager, currently niri
 
     # other programs
     ./alacritty.nix # terminal emulator
@@ -18,6 +16,9 @@
     ./vscode.nix # ide
     ./wob.nix # volume/brightness indicator
     ./zathura.nix # pdf viewer w/ vim like controls
+
+    # testing
+    ./ironbar
   ];
 
   home.packages = with pkgs; [
